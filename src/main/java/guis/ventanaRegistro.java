@@ -20,5 +20,6 @@ public class ventanaRegistro extends JFrame {
         add(panel);
         setVisible(true);
 
+
     }
 }
