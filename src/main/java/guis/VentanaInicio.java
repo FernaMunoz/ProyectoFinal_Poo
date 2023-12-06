@@ -5,8 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ventanaInicio extends JFrame implements ActionListener {
-    public ventanaInicio(){
+public class VentanaInicio extends JFrame implements ActionListener {
+    public VentanaInicio(){
         super("Inventario");
         setSize(375,667);
         setLocationRelativeTo(null);
@@ -40,12 +40,13 @@ public class ventanaInicio extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        dispose();
         if (e.getActionCommand().equals("Iniciar sesión")) {
-            ventanaInicioSesion VentanaIniciosesion = new ventanaInicioSesion();
-            VentanaIniciosesion.setVisible(true);
+            VentanaInicioSesion ventanaIniciosesion = new VentanaInicioSesion();
+            ventanaIniciosesion.setVisible(true);
         } else if(e.getActionCommand().equals("Registrar")) {
-            ventanaRegistro VentanaRegistro = new ventanaRegistro();
-            VentanaRegistro.setVisible(true);
+            VentanaRegistro ventanaRegistro = new VentanaRegistro();
+            ventanaRegistro.setVisible(true);
         }
     }
 }
