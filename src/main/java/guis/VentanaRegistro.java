@@ -63,7 +63,9 @@ public class VentanaRegistro extends JFrame {
         botonRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               registerUser();
+                registerUser();
+                dispose();
+
             }
         });
 
@@ -99,7 +101,6 @@ public class VentanaRegistro extends JFrame {
         String password = String.valueOf(contrasena.getPassword());
         String confPassword = String.valueOf(confContrasena.getPassword());
 
-        JOptionPane.showMessageDialog(null, "registro exitoso");
 
         if (name.isEmpty() || empresaName.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(this, "por favor llene todos los campos", "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
@@ -112,6 +113,14 @@ public class VentanaRegistro extends JFrame {
 
         gestorRegistroUsuarios gestorUsuarios = new gestorRegistroUsuarios();
         gestorUsuarios.anadirUsuario(name, empresaName, password);
+
+        JOptionPane.showMessageDialog(null, "registro exitoso");
+
+        dispose();
+
+        VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+        ventanaMenuPrincipal.setVisible(true);
+
 
     }
 }
