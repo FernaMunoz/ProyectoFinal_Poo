@@ -38,7 +38,6 @@ public class VentanaAgregarProducto extends JFrame{
             btnvolver.setBounds(18, 13, 45, 48);
 
 
-
             panel.add(nombreProducto);
             panel.add(etiqueta2);
             panel.add(stockInicial);
