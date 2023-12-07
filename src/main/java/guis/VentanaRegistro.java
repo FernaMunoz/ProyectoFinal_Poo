@@ -4,26 +4,34 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import modelo.Usuario;
+import datos.gestorUsuarios;
 
 public class VentanaRegistro extends JFrame {
+    public Usuario usuario;
+    private JTextField nombre;
+    private JTextField nombreEmpresa;
+    private JPasswordField contrasena;
+    private JPasswordField confContrasena;
+
     public VentanaRegistro() {
-        super("Inventario");
+        super("Registro de usuario");
         setSize(375, 667);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("Captura de pantalla 2023-12-05 195951.png"));
 
         JLabel etiqueta2 = new JLabel("Nombre*");
-        JTextField nombre = new JTextField();
+        nombre = new JTextField();
         JLabel etiqueta3 = new JLabel("Nombre empresa*");
-        JTextField nombreEmpresa = new JTextField();
+        nombreEmpresa = new JTextField();
         JLabel etiqueta4 = new JLabel("Contraseña*");
-        JTextField contrasena = new JTextField();
+        contrasena = new JPasswordField();
         JLabel etiqueta5 = new JLabel("Confirmar contraseña*");
-        JTextField confContrasena = new JTextField();
+        confContrasena = new JPasswordField();
 
         JButton botonRegistrar = new JButton("Registrar");
         JButton botonVolver = new JButton("Back");
@@ -52,6 +60,13 @@ public class VentanaRegistro extends JFrame {
         contrasena.setBorder(new LineBorder(Color.WHITE,2,true));
         confContrasena.setBorder(new LineBorder(Color.WHITE,2,true));
 
+        botonRegistrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               registerUser();
+            }
+        });
+
         botonVolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,6 +90,28 @@ public class VentanaRegistro extends JFrame {
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
+
+    }
+
+    private void registerUser() {
+        String name = nombre.getText();
+        String empresaName = nombreEmpresa.getText();
+        String password = String.valueOf(contrasena.getPassword());
+        String confPassword = String.valueOf(confContrasena.getPassword());
+
+        JOptionPane.showMessageDialog(null, "registro exitoso");
+
+        if (name.isEmpty() || empresaName.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "por favor llene todos los campos", "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if(!password.equals(confPassword)){
+            JOptionPane.showMessageDialog(this, "las contraseñas no coinciden", "prueba de nuevo", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        gestorUsuarios gestorUsuarios = new gestorUsuarios();
+        gestorUsuarios.anadirUsuario(name, empresaName, password);
 
     }
 }

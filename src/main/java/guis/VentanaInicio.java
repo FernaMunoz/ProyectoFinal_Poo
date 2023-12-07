@@ -1,4 +1,6 @@
 package guis;
+import modelo.Usuario;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -46,6 +48,8 @@ public class VentanaInicio extends JFrame implements ActionListener {
             ventanaIniciosesion.setVisible(true);
         } else if(e.getActionCommand().equals("Registrar")) {
             VentanaRegistro ventanaRegistro = new VentanaRegistro();
+         //   Usuario usuario = ventanaRegistro.usuario;
+
             ventanaRegistro.setVisible(true);
         }
     }
