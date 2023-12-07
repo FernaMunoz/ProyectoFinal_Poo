@@ -1,14 +1,13 @@
 package datos;
-
 import modelo.Usuario;
-
 import java.sql.*;
 
 public class gestorInicioUsuarios {
     public Usuario usuario;
 
-    public Usuario obtAutenticacion(String nombre, String contrasena) {
-        Usuario usuario = null;
+    public boolean obtAutenticacion(String nombre, String contrasena) {
+        boolean autenticacionExitosa = false;
+       // Usuario usuario = null;
         final String DB_URL = "jdbc:mysql://127.0.0.1:3306/registro_schema";
         final String Usuario = "root";
         final String Password = "Valeria32.";
@@ -25,17 +24,24 @@ public class gestorInicioUsuarios {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if(resultSet.next()){
+
+                autenticacionExitosa = true;
                 usuario = new Usuario();
                 usuario.setNombre(resultSet.getString("nombre"));
                 usuario.setNombreEmpresa(resultSet.getString("nombreEmpresa"));
                 usuario.setContrasena(resultSet.getString("contrasena"));
             }
+            resultSet.close();
+            preparedStatement.close();
+            connection.close();
+
 
         } catch (Exception e){
             e.printStackTrace();
         }
 
-        return usuario;
+        return autenticacionExitosa;
+
     }
 
 }

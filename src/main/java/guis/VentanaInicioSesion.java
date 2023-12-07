@@ -50,7 +50,15 @@ public class VentanaInicioSesion extends JFrame {
                 String password = String.valueOf(contrasena.getPassword());
 
                 gestorInicioUsuarios gestorUsuarios = new gestorInicioUsuarios();
-                gestorUsuarios.obtAutenticacion(usuario, password);
+                if (gestorUsuarios.obtAutenticacion(usuario, password)) {
+                    dispose();
+
+                    VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                    ventanaMenuPrincipal.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Autenticacion fallida" );
+                }
+
             }
         });
 
