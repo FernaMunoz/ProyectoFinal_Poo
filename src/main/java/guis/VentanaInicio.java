@@ -48,8 +48,6 @@ public class VentanaInicio extends JFrame implements ActionListener {
             ventanaIniciosesion.setVisible(true);
         } else if(e.getActionCommand().equals("Registrar")) {
             VentanaRegistro ventanaRegistro = new VentanaRegistro();
-         //   Usuario usuario = ventanaRegistro.usuario;
-
             ventanaRegistro.setVisible(true);
         }
     }

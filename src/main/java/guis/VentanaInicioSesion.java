@@ -4,7 +4,13 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import datos.gestorInicioUsuarios;
+import datos.gestorRegistroUsuarios;
+import modelo.Usuario;
 public class VentanaInicioSesion extends JFrame {
+    private JTextField nombre;
+    private JPasswordField contrasena;
     public VentanaInicioSesion(){
         super("Inicio sesion");
         setSize(375, 667);
@@ -15,9 +21,9 @@ public class VentanaInicioSesion extends JFrame {
         panel.setLayout(null);
         JLabel etiqueta1 = new JLabel(new ImageIcon("Captura de pantalla 2023-12-05 202200.png"));
         JLabel etiqueta2 = new JLabel("Nombre*");
-        JTextField nombre = new JTextField();
+        nombre = new JTextField();
         JLabel etiqueta3 = new JLabel("Contraseña*");
-        JTextField contrasena = new JTextField();
+        contrasena = new JPasswordField();
         JButton botonRegistrar = new JButton("Registrar");
         JButton botonVolver = new JButton("Back");
 
@@ -36,6 +42,17 @@ public class VentanaInicioSesion extends JFrame {
         botonVolver.setBackground(Color.CYAN);
         nombre.setBorder(new LineBorder(Color.WHITE,2,true));
         contrasena.setBorder(new LineBorder(Color.WHITE,2,true));
+
+        botonRegistrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String usuario = nombre.getText();
+                String password = String.valueOf(contrasena.getPassword());
+
+                gestorInicioUsuarios gestorUsuarios = new gestorInicioUsuarios();
+                gestorUsuarios.obtAutenticacion(usuario, password);
+            }
+        });
 
         botonVolver.addActionListener(new ActionListener() {
             @Override
@@ -57,8 +74,8 @@ public class VentanaInicioSesion extends JFrame {
         add(panel);
         setVisible(true);
 
-
+    }
 
     }
 
-}
+

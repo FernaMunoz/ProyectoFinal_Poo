@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import modelo.Usuario;
-import datos.gestorUsuarios;
+import datos.gestorRegistroUsuarios;
 
 public class VentanaRegistro extends JFrame {
     public Usuario usuario;
@@ -110,7 +110,7 @@ public class VentanaRegistro extends JFrame {
             return;
         }
 
-        gestorUsuarios gestorUsuarios = new gestorUsuarios();
+        gestorRegistroUsuarios gestorUsuarios = new gestorRegistroUsuarios();
         gestorUsuarios.anadirUsuario(name, empresaName, password);
 
     }

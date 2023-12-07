@@ -13,7 +13,7 @@ public class Usuario {
 
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
 
     }
 
@@ -22,7 +22,7 @@ public class Usuario {
     }
 
     public String getNombreEmpresa() {
-        return nombreEmpresa;
+        return this.nombreEmpresa;
     }
 
     public void setNombreEmpresa(String nombreEmpresa) {
@@ -30,13 +30,12 @@ public class Usuario {
     }
 
     public String getContrasena() {
-        return contrasena;
+        return this.contrasena;
     }
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
-
 
 }
 

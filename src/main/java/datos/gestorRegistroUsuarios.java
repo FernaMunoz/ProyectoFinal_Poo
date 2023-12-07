@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-public class gestorUsuarios {
+public class gestorRegistroUsuarios {
     public Usuario usuario;
 
     public Usuario anadirUsuario(String nombre, String nombreEmpresa, String contrasena){

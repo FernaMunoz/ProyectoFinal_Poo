@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventana inicio">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-j-8.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/gestorUsuarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventana registro de sesion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/gestorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/gestorRegistroUsuarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +94,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701825137081</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ventana registro de sesion">
+      <option name="closed" value="true" />
+      <created>1701914882353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701914882355</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ventana inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="ventana inicio" />
+    <MESSAGE value="ventana registro de sesion" />
+    <option name="LAST_COMMIT_MESSAGE" value="ventana registro de sesion" />
   </component>
 </project>
