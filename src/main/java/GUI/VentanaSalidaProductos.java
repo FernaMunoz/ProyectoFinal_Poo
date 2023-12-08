@@ -14,7 +14,7 @@ public class VentanaSalidaProductos extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo celeste.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo morado.png"));
 
         etiqueta1.setBounds(0, 0, 375, 667);
 

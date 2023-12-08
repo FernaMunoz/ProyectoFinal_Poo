@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaHistorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProductos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +79,22 @@
       <option name="project" value="LOCAL" />
       <updated>1702061067028</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ventana buscar">
+      <option name="closed" value="true" />
+      <created>1702072181100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702072181100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a ver si se hizo el commit" />
     <MESSAGE value="Ventanas realizadas, no funciona la VentanaBuscarPorTexto.java" />
     <MESSAGE value="redireccionamiento" />
-    <option name="LAST_COMMIT_MESSAGE" value="redireccionamiento" />
+    <MESSAGE value="ventana buscar" />
+    <option name="LAST_COMMIT_MESSAGE" value="ventana buscar" />
   </component>
 </project>

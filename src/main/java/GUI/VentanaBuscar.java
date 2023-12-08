@@ -14,7 +14,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosa1.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
 
         etiqueta1.setBounds(0, 0, 375, 667);
 
