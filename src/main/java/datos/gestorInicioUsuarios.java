@@ -1,6 +1,5 @@
 package datos;
 import modelo.Usuario;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -18,14 +17,10 @@ public class gestorInicioUsuarios {
 
                 String[] partes = linea.split(",");
 
-
                 if (partes.length == 3 && partes[0].equals("\"" + nombre + "\"") && partes[2].equals("\"" + contrasena + "\"")) {
                     autenticacionExitosa = true;
 
-                    usuario = new Usuario();
-                    usuario.setNombre(partes[0].replace("\"", ""));
-                    usuario.setNombreEmpresa(partes[1].replace("\"", ""));
-                    usuario.setContrasena(partes[2].replace("\"", ""));
+                    usuario = new Usuario(partes[0].replace("\"", ""), partes[1].replace("\"", ""), partes[2].replace("\"", ""));
 
                     break;
                 }
@@ -37,5 +32,6 @@ public class gestorInicioUsuarios {
         return autenticacionExitosa;
     }
 }
+
 
 
