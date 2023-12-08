@@ -15,5 +15,7 @@ public class Inventario {
         this.productos.add(producto);
     }
 
-
+    public Usuario getUsuario() {
+        return this.usuario;
+    }
 }
