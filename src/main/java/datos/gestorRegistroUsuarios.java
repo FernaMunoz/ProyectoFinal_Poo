@@ -23,10 +23,7 @@ public class gestorRegistroUsuarios {
 
             escritor.flush();
 
-                usuario = new Usuario();
-                usuario.setNombre(nombre);
-                usuario.setNombreEmpresa(nombreEmpresa);
-                usuario.setContrasena(contrasena);
+                usuario = new Usuario(nombre, nombreEmpresa, contrasena);
 
                 System.out.println("Registro exitoso");
 
@@ -35,6 +32,16 @@ public class gestorRegistroUsuarios {
         }
 
         return usuario;
+    }
+    public Usuario registrarUsuario(String nombre, String nombreEmpresa, String contrasena, String confContrasena) {
+        if (nombre.isEmpty() || nombreEmpresa.isEmpty() || contrasena.isEmpty()) {
+            throw new IllegalArgumentException("por favor llene todos los campos");
+        }
+        if(!contrasena.equals(confContrasena)){
+            throw new IllegalArgumentException("las contraseñas no coinciden");
+        }
+
+        return anadirUsuario(nombre, nombreEmpresa, contrasena);
     }
 
 }

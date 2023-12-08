@@ -13,6 +13,7 @@ public class VentanaRegistro extends JFrame {
     private JTextField nombreEmpresa;
     private JPasswordField contrasena;
     private JPasswordField confContrasena;
+    private gestorRegistroUsuarios gestor;
 
     public VentanaRegistro() {
         super("Registro de usuario");
@@ -21,6 +22,7 @@ public class VentanaRegistro extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(null);
+        gestor = new gestorRegistroUsuarios();
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("Captura de pantalla 2023-12-05 195951.png"));
 
@@ -63,8 +65,20 @@ public class VentanaRegistro extends JFrame {
         botonRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                registerUser();
-                dispose();
+                try {
+                    String name = nombre.getText();
+                    String empresaName = nombreEmpresa.getText();
+                    String password = String.valueOf(contrasena.getPassword());
+                    String confPassword = String.valueOf(confContrasena.getPassword());
+
+                    usuario = gestor.registrarUsuario(name, empresaName, password, confPassword);
+                    dispose();
+                } catch (IllegalArgumentException ex) {
+                        JOptionPane.showMessageDialog(null, ex.getMessage(), "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
+                }
+
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                ventanaMenuPrincipal.setVisible(true);
 
             }
         });
@@ -92,34 +106,6 @@ public class VentanaRegistro extends JFrame {
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
-
-    }
-
-    private void registerUser() {
-        String name = nombre.getText();
-        String empresaName = nombreEmpresa.getText();
-        String password = String.valueOf(contrasena.getPassword());
-        String confPassword = String.valueOf(confContrasena.getPassword());
-
-
-        if (name.isEmpty() || empresaName.isEmpty() || password.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "por favor llene todos los campos", "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        if(!password.equals(confPassword)){
-            JOptionPane.showMessageDialog(this, "las contraseñas no coinciden", "prueba de nuevo", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        gestorRegistroUsuarios gestorUsuarios = new gestorRegistroUsuarios();
-        gestorUsuarios.anadirUsuario(name, empresaName, password);
-
-        JOptionPane.showMessageDialog(null, "registro exitoso");
-
-        dispose();
-
-        VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
-        ventanaMenuPrincipal.setVisible(true);
 
 
     }
