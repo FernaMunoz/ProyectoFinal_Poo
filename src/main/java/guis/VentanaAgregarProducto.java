@@ -35,8 +35,16 @@ public class VentanaAgregarProducto extends JFrame{
 
             btnvolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(btnvolver.getWidth(), btnvolver.getHeight(), Image.SCALE_SMOOTH)));
 
-            btnvolver.setBounds(18, 13, 45, 48);
+            etiqueta2.setBounds(47,137,158,23);
+            nombreProducto.setBounds(40,160,281,51);
+            etiqueta3.setBounds(40,212,152,23);
+            stockInicial.setBounds(40,230,281,40);
+            etiqueta4.setBounds(40,284,100,23);
+            precio.setBounds(40,303,281,40);
+            agregarProducto.setBounds(76,515,209,50);
 
+            btnvolver.setBounds(18, 13, 45, 48);
+            etiqueta1.setBounds(0,0,375,667);
 
             panel.add(nombreProducto);
             panel.add(etiqueta2);
