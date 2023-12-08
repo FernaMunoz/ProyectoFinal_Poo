@@ -5,16 +5,14 @@ public class Usuario {
     private String nombreEmpresa;
     private String contrasena;
 
-    public Usuario() {
+    public Usuario(String nombre, String nombreEmpresa, String contrasena) {
         this.nombre = nombre;
         this.nombreEmpresa = nombreEmpresa;
         this.contrasena = contrasena;
     }
 
-
     public String getNombre() {
         return this.nombre;
-
     }
 
     public void setNombre(String nombre) {
@@ -36,6 +34,5 @@ public class Usuario {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
-
 }
 

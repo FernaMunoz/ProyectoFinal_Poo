@@ -22,10 +22,7 @@ public class gestorInicioUsuarios {
                 if (partes.length == 3 && partes[0].equals("\"" + nombre + "\"") && partes[2].equals("\"" + contrasena + "\"")) {
                     autenticacionExitosa = true;
 
-                    usuario = new Usuario();
-                    usuario.setNombre(partes[0].replace("\"", ""));
-                    usuario.setNombreEmpresa(partes[1].replace("\"", ""));
-                    usuario.setContrasena(partes[2].replace("\"", ""));
+                    usuario = new Usuario(partes[0].replace("\"", ""), partes[1].replace("\"", ""), partes[2].replace("\"", ""));
 
                     break;
                 }
