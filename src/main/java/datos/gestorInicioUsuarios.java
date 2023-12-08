@@ -1,47 +1,41 @@
 package datos;
 import modelo.Usuario;
-import java.sql.*;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class gestorInicioUsuarios {
     public Usuario usuario;
 
     public boolean obtAutenticacion(String nombre, String contrasena) {
         boolean autenticacionExitosa = false;
-       // Usuario usuario = null;
-        final String DB_URL = "jdbc:mysql://127.0.0.1:3306/registro_schema";
-        final String Usuario = "root";
-        final String Password = "Valeria32.";
+        String rutaCsv = "registro.csv";
 
-        try{
-            Connection connection = DriverManager.getConnection(DB_URL, Usuario, Password);
-            // conexion a la bases de datos exitoso...
-            Statement estado = connection.createStatement();
-            String sql = "SELECT * FROM usuario WHERE nombre=? AND contrasena=?";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, nombre);
-            preparedStatement.setString(2,contrasena);
+        try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))) {
+            String linea;
+            while ((linea = lector.readLine()) != null) {
 
-            ResultSet resultSet = preparedStatement.executeQuery();
+                String[] partes = linea.split(",");
 
-            if(resultSet.next()){
 
-                autenticacionExitosa = true;
-                usuario = new Usuario();
-                usuario.setNombre(resultSet.getString("nombre"));
-                usuario.setNombreEmpresa(resultSet.getString("nombreEmpresa"));
-                usuario.setContrasena(resultSet.getString("contrasena"));
+                if (partes.length == 3 && partes[0].equals("\"" + nombre + "\"") && partes[2].equals("\"" + contrasena + "\"")) {
+                    autenticacionExitosa = true;
+
+                    usuario = new Usuario();
+                    usuario.setNombre(partes[0].replace("\"", ""));
+                    usuario.setNombreEmpresa(partes[1].replace("\"", ""));
+                    usuario.setContrasena(partes[2].replace("\"", ""));
+
+                    break;
+                }
             }
-            resultSet.close();
-            preparedStatement.close();
-            connection.close();
-
-
-        } catch (Exception e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
         return autenticacionExitosa;
-
     }
-
 }
+
+
