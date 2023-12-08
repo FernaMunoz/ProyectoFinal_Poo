@@ -5,30 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AgregarProducto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Captura de pantalla 2023-12-05 181240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Captura de pantalla 2023-12-05 195951.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Captura de pantalla 2023-12-05 202200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buscarExistencias icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ic_round-history.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ingresarProductos icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu principal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mingcute_back-2-fill.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salidasProductos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/gestorRegistroUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/gestorRegistroUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
