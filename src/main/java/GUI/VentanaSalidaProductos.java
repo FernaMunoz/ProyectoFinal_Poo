@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public abstract class VentanaSalidaProductos extends JFrame implements ActionListener {
+public class VentanaSalidaProductos extends JFrame implements ActionListener {
     public VentanaSalidaProductos() {
         super("Entrada Productos");
         setSize(375, 667);

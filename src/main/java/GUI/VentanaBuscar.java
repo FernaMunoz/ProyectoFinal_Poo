@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public abstract class VentanaBuscar extends JFrame implements ActionListener {
+public  class VentanaBuscar extends JFrame implements ActionListener {
     public VentanaBuscar() {
         super("Buscar");
         setSize(375, 667);

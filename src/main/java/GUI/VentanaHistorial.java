@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 
 
-public abstract class VentanaHistorial extends JFrame implements ActionListener {
+public  class VentanaHistorial extends JFrame implements ActionListener {
     public VentanaHistorial(){
         super("Menu principal");
         setSize(375, 667);
