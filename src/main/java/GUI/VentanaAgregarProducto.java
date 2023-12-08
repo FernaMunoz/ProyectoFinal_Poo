@@ -1,5 +1,4 @@
 package GUI;
-import modelo.Usuario;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;

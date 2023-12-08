@@ -1,65 +1,78 @@
 package GUI;
+
+
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public abstract class VentanaBuscarPorTexto extends JFrame implements ActionListener {
+public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
     private JTextField buscar;
     public VentanaBuscarPorTexto() {
-        super("Buscar");
+        super("Buscar producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("Captura de pantalla 2023-12-06 150758.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
         etiqueta1.setBounds(0, 0, 375, 667);
-        JLabel etiqueta2 = new JLabel(new ImageIcon("FONDO ROSADO.png"));
-        etiqueta2.setBounds(21, 108, 126, 66);
-
+        JLabel etiqueta2 = new JLabel(new ImageIcon("buscar.png"));
+        etiqueta2.setBounds(22, 109, 327, 68);
         buscar = new JTextField();
-        buscar.setBounds(77, 168, 218, 61);
-        JButton buscarBoton = new JButton("Buscar");
-        etiqueta2.setBounds(115, 228, 137, 53);
-        JButton volver = new JButton();
 
-        volver.setIcon(new ImageIcon(volver.getName().getScaledInstance(volver.getWidth(), volver.getHeight(), Image.SCALE_SMOOTH)));
-        volver.setBounds(18, 13, 45, 48);
+        JButton boton1 = new JButton("Buscar");
+        JButton boton2 = new JButton();
 
-        buscar.setBackground(Color.CYAN);
-        volver.setBackground(Color.CYAN);
-        buscarBoton.setBackground(Color.PINK);
-        buscar.setBorder(new LineBorder(Color.WHITE, 2, true));
+        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
+
+        buscar.setBounds(26, 150, 310, 50);
+
+        boton1.setBounds(115, 228, 137, 53);
+        boton2.setBounds(18, 13, 45, 48);
+
+
+        boton2.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
+
+
+        boton1.setBackground(Color.pink);
+        boton2.setBackground(Color.pink);
+
+        boton1.setBorder(new LineBorder(Color.WHITE, 2, true));
+        boton2.setBorder(new LineBorder(Color.WHITE, 2, true));
 
         panel.add(etiqueta1);
         panel.add(etiqueta2);
-        panel.add(volver);
-        panel.add(buscarBoton);
+        panel.add(buscar);
+        panel.add(boton1);
+        panel.add(boton2);
 
         add(panel);
         setVisible(true);
 
-        volver.addActionListener(new ActionListener(){
+
+        boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
 
             }
         });
-
-        buscarBoton.addActionListener(new ActionListener(){
+        boton2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                dispose();
+                VentanaBuscar ventanaBuscar = new VentanaBuscar();
+                ventanaBuscar.setVisible(true);
             }
         });
-        buscar.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
 
-            }
-        });
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
     }
 }
