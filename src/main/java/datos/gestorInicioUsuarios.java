@@ -33,6 +33,10 @@ public class gestorInicioUsuarios {
 
         return autenticacionExitosa;
     }
+    public Usuario getUsuario(){
+        return usuario;
+    }
+
 }
 
 

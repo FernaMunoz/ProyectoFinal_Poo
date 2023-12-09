@@ -4,11 +4,13 @@ public class Usuario {
     private String nombre;
     private String nombreEmpresa;
     private String contrasena;
+    private Inventario inventario;
 
     public Usuario(String nombre, String nombreEmpresa, String contrasena) {
         this.nombre = nombre;
         this.nombreEmpresa = nombreEmpresa;
         this.contrasena = contrasena;
+        this.inventario = new Inventario(this);
     }
 
     public String getNombre() {
@@ -33,6 +35,9 @@ public class Usuario {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+    public Inventario getInventario(){
+        return this.inventario;
     }
 }
 

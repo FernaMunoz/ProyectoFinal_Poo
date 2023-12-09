@@ -1,4 +1,7 @@
 package guis;
+import modelo.Inventario;
+import modelo.Usuario;
+import datos.gestorInicioUsuarios;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -77,8 +80,6 @@ public class VentanaMenuPrincipal extends JFrame {
         add(panel);
         setVisible(true);
 
-
-
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -115,9 +116,10 @@ public class VentanaMenuPrincipal extends JFrame {
             public void actionPerformed(ActionEvent e){
                 dispose();
 
-                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto();
-                ventanaAgregarProducto.setVisible(true);
+                Usuario usuarioActual = this.usuario;
 
+                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto(usuarioActual);
+                ventanaAgregarProducto.setVisible(true);
             }
         });
         boton7.addActionListener(new ActionListener(){
@@ -129,9 +131,5 @@ public class VentanaMenuPrincipal extends JFrame {
                 ventanaInicio.setVisible(true);
             }
         });
-
-
     }
-
-
 }

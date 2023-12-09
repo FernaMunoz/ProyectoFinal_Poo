@@ -1,38 +1,38 @@
 package modelo;
+import modelo.Inventario;
 
 public class Producto {
+    private Inventario inventario;
     private String nombre;
     private int stock;
-    private int precio;
+    private double precio;
+    private String imagen;
 
-    public Producto(){
+    public Producto(Inventario inventario, String nombre, int stock, double precio, String imagen){
+        this.inventario = inventario;
         this.nombre = nombre;
         this.stock = stock;
         this.precio = precio;
+        this.imagen = imagen;
+    }
+
+    public Inventario getInventario() {
+        return this.inventario;
     }
 
     public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+        return this.nombre;
     }
 
     public int getStock() {
-        return stock;
+        return this.stock;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public double getPrecio() {
+        return this.precio;
     }
 
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    public String getImagen() {
+        return this.imagen;
     }
 }
-
