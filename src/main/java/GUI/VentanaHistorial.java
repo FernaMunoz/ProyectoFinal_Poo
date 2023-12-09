@@ -92,3 +92,4 @@ public class VentanaHistorial extends JFrame implements ActionListener {
 
     }
 }
+//hola

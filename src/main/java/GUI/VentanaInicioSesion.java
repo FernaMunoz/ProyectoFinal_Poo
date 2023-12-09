@@ -58,7 +58,7 @@ public class VentanaInicioSesion extends JFrame {
                     VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioAutenticado);
                     ventanaMenuPrincipal.setVisible(true);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Autenticacion fallida" );
+                    JOptionPane.showMessageDialog(null, "Autenticacion errorea" );
                 }
             }
         });
@@ -84,3 +84,4 @@ public class VentanaInicioSesion extends JFrame {
         setVisible(true);
     }
 }
+//hola

@@ -69,7 +69,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         add(panel);
         setVisible(true);
 
-        //buscarProducto(textoBusqueda);
+        ////buscarProducto(textoBusqueda);
 
         boton1.addActionListener(new ActionListener(){
             @Override
@@ -134,3 +134,4 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
     }
 }
+//hola
