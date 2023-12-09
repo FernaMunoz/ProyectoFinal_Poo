@@ -17,12 +17,13 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
+        setSize(375, 667);
         frame = new JFrame("Resultados de Búsqueda");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(375, 667);
         frame.setLayout(null);
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon(".png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("menu principal.png"));
 
         etiqueta1.setBounds(0, 0, 375, 667);
         comboBox = new JComboBox<>();
@@ -42,9 +43,9 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
         boton1.setBounds(50, 334, 117, 118);
-        boton2.setBounds(221, 330, 117, 118);
-        boton3.setBounds(18, 13, 117, 118);
-        boton4.setBounds(126, 492, 45, 48);
+        boton2.setBounds(221, 334, 117, 118);
+        boton3.setBounds(126, 492, 117, 118);
+        boton4.setBounds(18, 13, 45, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
         boton1.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));

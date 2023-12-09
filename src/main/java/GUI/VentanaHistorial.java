@@ -17,7 +17,7 @@ public class VentanaHistorial extends JFrame implements ActionListener {
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo naranjo1.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo naranja2.png"));
 
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
