@@ -2,7 +2,6 @@ package GUI;
 import Modelo.Usuario;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +11,7 @@ public class VentanaAgregarProducto extends JFrame implements ActionListener{
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
-    public VentanaAgregarProducto() {
+    public VentanaAgregarProducto(Usuario usuarioActual) {
         super("Agregar Producto");
         setSize(375, 667);
         setLocationRelativeTo(null);

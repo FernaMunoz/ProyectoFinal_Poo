@@ -1,4 +1,6 @@
 package GUI;
+import Modelo.Usuario;
+
 import javax.swing.border.LineBorder;
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public  class VentanaEntradaProductos extends JFrame implements ActionListener {
-    public VentanaEntradaProductos() {
+    public VentanaEntradaProductos(Usuario usuarioActual) {
         super("Entrada Productos");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -54,7 +56,7 @@ public  class VentanaEntradaProductos extends JFrame implements ActionListener {
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto();
+                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
                 ventanaBuscarPorTexto.setVisible(true);
             }
         });
@@ -68,7 +70,7 @@ public  class VentanaEntradaProductos extends JFrame implements ActionListener {
         boton3.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaMenuPrincipal ventanaMenuPrincipal =new VentanaMenuPrincipal();
+                VentanaMenuPrincipal ventanaMenuPrincipal =new VentanaMenuPrincipal(usuarioActual);
                 ventanaMenuPrincipal.setVisible(true);
             }
         });

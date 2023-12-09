@@ -1,4 +1,6 @@
 package GUI;
+import Modelo.Usuario;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -7,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
     private JTextField buscar;
-    public VentanaBuscarPorTexto() {
+    public VentanaBuscarPorTexto(Usuario usuarioActual) {
         super("Buscar producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -61,10 +63,14 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
-                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
                 ventanaMenuPrincipal.setVisible(true);
             }
         });
+
+    }
+
+    public VentanaBuscarPorTexto() {
 
     }
 

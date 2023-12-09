@@ -1,4 +1,6 @@
 package GUI;
+import Modelo.Usuario;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -7,7 +9,7 @@ import java.awt.event.ActionListener;
 
 
 public class VentanaHistorial extends JFrame implements ActionListener {
-    public VentanaHistorial(){
+    public VentanaHistorial(Usuario usuarioActual){
         super("Menu principal");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -79,7 +81,7 @@ public class VentanaHistorial extends JFrame implements ActionListener {
         boton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
                 ventanaMenuPrincipal.setVisible(true);
             }
         });

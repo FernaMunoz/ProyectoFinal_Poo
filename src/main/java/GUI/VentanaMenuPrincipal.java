@@ -9,9 +9,9 @@ import Modelo.Usuario;
 public class VentanaMenuPrincipal extends JFrame {
     private Usuario usuarioActual;
 
-    public VentanaMenuPrincipal(Usuario usuario) {
+    public VentanaMenuPrincipal(Usuario usuarioActual) {
         super("Menu principal");
-        this.usuarioActual = usuario;
+        this.usuarioActual = usuarioActual;
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
