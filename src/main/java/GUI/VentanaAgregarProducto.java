@@ -97,4 +97,3 @@ public class VentanaAgregarProducto extends JFrame{
         setVisible(true);
     }
 }
-//hola

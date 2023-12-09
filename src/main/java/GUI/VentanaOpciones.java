@@ -1,6 +1,8 @@
 package GUI;
-
 import Modelo.Usuario;
+import Modelo.Producto;
+import Modelo.Inventario;
+import datos.GestorProductos;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -9,33 +11,34 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+
 public class VentanaOpciones extends JFrame implements ActionListener{
+    private Usuario usuarioActual;
     private JFrame frame;
     private JComboBox<String> comboBox;
+    private GestorProductos gestorProductos = new GestorProductos();
 
-    public VentanaOpciones(Usuario textoBusqueda) {
-
+    public VentanaOpciones(Usuario usuarioActual, String textoBusqueda) {
+        this.usuarioActual = usuarioActual;
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        setSize(375, 667);
         frame = new JFrame("Resultados de Búsqueda");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(375, 667);
         frame.setLayout(null);
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("menu principal.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon(".png"));
 
         etiqueta1.setBounds(0, 0, 375, 667);
         comboBox = new JComboBox<>();
         comboBox.setBounds(33, 112, 316, 48);
-        frame.add(comboBox);
+        panel.add(comboBox);
 
 
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
         JButton boton3 = new JButton();
         JButton boton4 = new JButton();
-
 
         ImageIcon entrada = new ImageIcon("salidasProductos.png");
         ImageIcon salida = new ImageIcon("Group 5.png");
@@ -44,7 +47,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         boton1.setBounds(50, 334, 117, 118);
         boton2.setBounds(221, 334, 117, 118);
-        boton3.setBounds(126, 492, 117, 118);
+        boton3.setBounds(126,492, 117, 118);
         boton4.setBounds(18, 13, 45, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
@@ -61,7 +64,6 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton2.setBorder(new LineBorder(Color.WHITE, 6, true));
         boton3.setBorder(new LineBorder(Color.WHITE, 6, true));
 
-
         panel.add(boton1);
         panel.add(boton2);
         panel.add(boton3);
@@ -70,7 +72,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         add(panel);
         setVisible(true);
 
-        ////buscarProducto(textoBusqueda);
+        buscarProducto(textoBusqueda, usuarioActual);
 
         boton1.addActionListener(new ActionListener(){
             @Override
@@ -101,38 +103,23 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         });
     }
 
+    public VentanaOpciones(Usuario usuarioActual) {
+    }
 
+    private void buscarProducto(String textoBusqueda, Usuario usuarioActual) {
+        List<Producto> productos = gestorProductos.obtenerProductosSimilares(textoBusqueda, usuarioActual);
 
-
-    private void buscarProducto(String textoBusqueda) {
-
-        List<String> productos = obtenerProductosSimilares(textoBusqueda);
-
-
-        for (String producto : productos) {
-            comboBox.addItem(producto);
+        for (Producto producto : productos) {
+            comboBox.addItem(producto.getNombre());
         }
     }
-
-
-    private List<String> obtenerProductosSimilares(String textoBusqueda) {
-
-        List<String> productosSimilares = new ArrayList<>();
-        productosSimilares.add("Producto 1 - " + textoBusqueda);
-        productosSimilares.add("Producto 2 - " + textoBusqueda);
-        productosSimilares.add("Producto 3 - " + textoBusqueda);
-        return productosSimilares;
-    }
-
 
     public void mostrarVentana() {
         frame.setVisible(true);
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
     }
 }
-//hola

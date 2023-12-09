@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaHistorial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaOpciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702137120902</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="acomode los botones">
+      <option name="closed" value="true" />
+      <created>1702145582264</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702145582264</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +191,7 @@
     <MESSAGE value="agregue los constructores" />
     <MESSAGE value="redireccionamiento" />
     <MESSAGE value="hola" />
-    <option name="LAST_COMMIT_MESSAGE" value="hola" />
+    <MESSAGE value="acomode los botones" />
+    <option name="LAST_COMMIT_MESSAGE" value="acomode los botones" />
   </component>
 </project>
