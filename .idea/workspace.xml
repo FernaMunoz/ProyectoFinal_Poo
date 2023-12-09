@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventana agregar producto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProductos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProductos.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="actualizacion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerarCodigo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702082332791</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="actualizacion">
+      <option name="closed" value="true" />
+      <created>1702159311284</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702159311285</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +222,7 @@
     <MESSAGE value="ventana registrar usuario cambiado a csv" />
     <MESSAGE value="ventana inicio sesion cambiado a csv" />
     <MESSAGE value="ventana agregar producto" />
-    <option name="LAST_COMMIT_MESSAGE" value="ventana agregar producto" />
+    <MESSAGE value="actualizacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion" />
   </component>
 </project>

@@ -84,6 +84,8 @@ public class VentanaMenuPrincipal extends JFrame {
         boton2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                VentanaGenerarCodigo ventanaGenerarCodigo = new VentanaGenerarCodigo();
+                ventanaGenerarCodigo.setVisible(true);
 
             }
         });
