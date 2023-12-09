@@ -9,11 +9,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaHistorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProductos.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaMenuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaOpciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProductos.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702131262719</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="agregue los constructores">
+      <option name="closed" value="true" />
+      <created>1702132371904</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702132371904</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,6 +154,7 @@
     <MESSAGE value="commit codigo &quot;actualizado&quot;" />
     <MESSAGE value="codigo beta VentanaOpciones (combobox) comfirmar si funciona" />
     <MESSAGE value="errores logicos" />
-    <option name="LAST_COMMIT_MESSAGE" value="errores logicos" />
+    <MESSAGE value="agregue los constructores" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregue los constructores" />
   </component>
 </project>

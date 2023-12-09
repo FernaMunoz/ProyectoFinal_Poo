@@ -1,4 +1,7 @@
 package GUI;
+
+import Modelo.Usuario;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -10,7 +13,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
     private JFrame frame;
     private JComboBox<String> comboBox;
 
-    public VentanaOpciones(String textoBusqueda) {
+    public VentanaOpciones(Usuario textoBusqueda) {
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -66,7 +69,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         add(panel);
         setVisible(true);
 
-        buscarProducto(textoBusqueda);
+        //buscarProducto(textoBusqueda);
 
         boton1.addActionListener(new ActionListener(){
             @Override

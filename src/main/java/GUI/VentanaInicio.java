@@ -1,5 +1,7 @@
 package GUI;
 
+import Modelo.Usuario;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -39,6 +41,10 @@ public class VentanaInicio extends JFrame implements ActionListener {
         add(panel);
         setVisible(true);
     }
+
+    public VentanaInicio(Usuario usuarioActual) {
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         dispose();
