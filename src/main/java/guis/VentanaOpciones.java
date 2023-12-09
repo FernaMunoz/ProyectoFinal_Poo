@@ -32,7 +32,8 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         etiqueta1.setBounds(0, 0, 375, 667);
         comboBox = new JComboBox<>();
         comboBox.setBounds(33, 112, 316, 48);
-        frame.add(comboBox);
+        panel.add(comboBox);
+
 
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
