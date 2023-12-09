@@ -7,8 +7,8 @@ import java.io.IOException;
 public class gestorInicioUsuarios {
     public Usuario usuario;
 
-    public boolean obtAutenticacion(String nombre, String contrasena) {
-        boolean autenticacionExitosa = false;
+    public Usuario obtAutenticacion(String nombre, String contrasena) {
+        Usuario usuarioAutenticado = null;
         String rutaCsv = "registro.csv";
 
         try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))) {
@@ -18,10 +18,7 @@ public class gestorInicioUsuarios {
                 String[] partes = linea.split(",");
 
                 if (partes.length == 3 && partes[0].equals("\"" + nombre + "\"") && partes[2].equals("\"" + contrasena + "\"")) {
-                    autenticacionExitosa = true;
-
-                    usuario = new Usuario(partes[0].replace("\"", ""), partes[1].replace("\"", ""), partes[2].replace("\"", ""));
-
+                    usuarioAutenticado = new Usuario(partes[0].replace("\"", ""), partes[1].replace("\"", ""), partes[2].replace("\"", ""));
                     break;
                 }
             }
@@ -29,9 +26,8 @@ public class gestorInicioUsuarios {
             e.printStackTrace();
         }
 
-        return autenticacionExitosa;
+        return usuarioAutenticado;
     }
 }
-
 
 

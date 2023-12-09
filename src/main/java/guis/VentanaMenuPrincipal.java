@@ -4,10 +4,14 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import modelo.Usuario;
 
 public class VentanaMenuPrincipal extends JFrame {
-    public VentanaMenuPrincipal() {
+    private Usuario usuarioActual;
+
+    public VentanaMenuPrincipal(Usuario usuario) {
         super("Menu principal");
+        this.usuarioActual = usuario;
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -34,12 +38,12 @@ public class VentanaMenuPrincipal extends JFrame {
         ImageIcon agregar = new ImageIcon("Group 4.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
-        boton1.setBounds(44, 130, 118, 118);
-        boton2.setBounds(196, 130, 118, 118);
-        boton3.setBounds(44, 289, 118, 118);
-        boton4.setBounds(196, 289, 118, 118);
-        boton5.setBounds(44, 448, 118, 118);
-        boton6.setBounds(196, 448, 118, 118);
+        boton1.setBounds(44, 130, 117, 117);
+        boton2.setBounds(196, 130, 117, 117);
+        boton3.setBounds(44, 289, 117, 117);
+        boton4.setBounds(196, 289, 117, 117);
+        boton5.setBounds(44, 448, 117, 117);
+        boton6.setBounds(196, 448, 117, 117);
         boton7.setBounds(18, 13, 45, 48);
         etiqueta1.setBounds(0,0,375,667);
 
@@ -77,14 +81,12 @@ public class VentanaMenuPrincipal extends JFrame {
         add(panel);
         setVisible(true);
 
-
-
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
 
             }
-            });
+        });
 
         boton2.addActionListener(new ActionListener(){
             @Override
@@ -113,21 +115,18 @@ public class VentanaMenuPrincipal extends JFrame {
         boton6.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                VentanaMenuPrincipal.this.dispose();
+                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto(usuarioActual);
+                ventanaAgregarProducto.setVisible(true);
             }
         });
         boton7.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                dispose();
-
+                VentanaMenuPrincipal.this.dispose();
                 VentanaInicio ventanaInicio = new VentanaInicio();
                 ventanaInicio.setVisible(true);
             }
         });
-
-
     }
-
-
 }
