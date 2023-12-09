@@ -1,4 +1,5 @@
 package GUI;
+import Modelo.Usuario;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -6,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaAgregarProducto extends JFrame{
+public class VentanaAgregarProducto extends JFrame implements ActionListener{
 
     private JTextField nombreProducto;
     private JTextField stockInicial;
@@ -47,5 +48,10 @@ public class VentanaAgregarProducto extends JFrame{
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
