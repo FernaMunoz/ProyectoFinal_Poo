@@ -1,4 +1,5 @@
 package GUI;
+import GUI.VentanaBuscarPorTexto;
 import Modelo.Usuario;
 import Modelo.Producto;
 import Modelo.Inventario;
@@ -40,15 +41,15 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         JButton boton3 = new JButton();
         JButton boton4 = new JButton();
 
-        ImageIcon entrada = new ImageIcon("salidasProductos.png");
-        ImageIcon salida = new ImageIcon("Group 5.png");
+        ImageIcon entrada = new ImageIcon("ingresarProductos.png");
+        ImageIcon salida = new ImageIcon("salidasProductos.png");
         ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
         boton1.setBounds(50, 334, 117, 118);
-        boton2.setBounds(221, 334, 117, 118);
-        boton3.setBounds(126,492, 117, 118);
-        boton4.setBounds(18, 13, 45, 48);
+        boton2.setBounds(221, 330, 117, 118);
+        boton3.setBounds(18, 13, 117, 118);
+        boton4.setBounds(126, 492, 45, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
         boton1.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
@@ -77,6 +78,8 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                VentanaEntradaProducto ventanaEntradaProducto = new VentanaEntradaProducto(usuarioActual);
+                ventanaEntradaProducto.setVisible(true);
 
             }
         });
@@ -84,7 +87,8 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                VentanaSalidaProducto ventanaSalidaProducto = new VentanaSalidaProducto(usuarioActual);
+                ventanaSalidaProducto.setVisible(true);
             }
         });
         boton3.addActionListener(new ActionListener(){
@@ -97,7 +101,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton4.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto();
+                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
                 ventanaBuscarPorTexto.setVisible(true);
             }
         });
