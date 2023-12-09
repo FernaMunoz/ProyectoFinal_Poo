@@ -8,7 +8,7 @@ import modelo.Usuario;
 import datos.gestorRegistroUsuarios;
 
 public class VentanaRegistro extends JFrame {
-    public Usuario usuario;
+    private Usuario usuario;
     private JTextField nombre;
     private JTextField nombreEmpresa;
     private JPasswordField contrasena;
@@ -25,7 +25,6 @@ public class VentanaRegistro extends JFrame {
         gestor = new gestorRegistroUsuarios();
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("Captura de pantalla 2023-12-05 195951.png"));
-
         JLabel etiqueta2 = new JLabel("Nombre*");
         nombre = new JTextField();
         JLabel etiqueta3 = new JLabel("Nombre empresa*");
@@ -74,12 +73,8 @@ public class VentanaRegistro extends JFrame {
                     usuario = gestor.registrarUsuario(name, empresaName, password, confPassword);
                     dispose();
                 } catch (IllegalArgumentException ex) {
-                        JOptionPane.showMessageDialog(null, ex.getMessage(), "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
                 }
-
-                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
-                ventanaMenuPrincipal.setVisible(true);
-
             }
         });
 
@@ -87,7 +82,6 @@ public class VentanaRegistro extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-
                 VentanaInicio ventanaInicio = new VentanaInicio();
                 ventanaInicio.setVisible(true);
             }
@@ -106,7 +100,5 @@ public class VentanaRegistro extends JFrame {
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
-
-
     }
 }

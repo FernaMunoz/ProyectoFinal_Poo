@@ -65,7 +65,7 @@ public class VentanaAgregarProducto extends JFrame{
                 double precios = Double.parseDouble(precio.getText());
 
                 Inventario inventario = new Inventario(usuario);
-                Producto producto = new Producto(inventario, nombre, stock, precios, null);
+                Producto producto = new Producto(nombre, stock, precios, null);
 
                 GestorInventario gestorInventario = new GestorInventario();
                 gestorInventario.agregarProductoAInventario(usuario, producto);
@@ -74,15 +74,15 @@ public class VentanaAgregarProducto extends JFrame{
         });
 
 
-                btnvolver.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        dispose();
+        btnvolver.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
 
-                        VentanaInicio ventanaInicio = new VentanaInicio();
-                        ventanaInicio.setVisible(true);
-                    }
-                });
+                VentanaInicio ventanaInicio = new VentanaInicio();
+                ventanaInicio.setVisible(true);
+            }
+        });
 
         panel.add(nombreProducto);
         panel.add(etiqueta2);

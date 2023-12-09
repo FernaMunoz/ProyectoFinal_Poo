@@ -7,9 +7,11 @@ import java.awt.event.ActionListener;
 import datos.gestorInicioUsuarios;
 import datos.gestorRegistroUsuarios;
 import modelo.Usuario;
+
 public class VentanaInicioSesion extends JFrame {
     private JTextField nombre;
     private JPasswordField contrasena;
+
     public VentanaInicioSesion(){
         super("Inicio sesion");
         setSize(375, 667);
@@ -49,15 +51,15 @@ public class VentanaInicioSesion extends JFrame {
                 String password = String.valueOf(contrasena.getPassword());
 
                 gestorInicioUsuarios gestorUsuarios = new gestorInicioUsuarios();
-                if (gestorUsuarios.obtAutenticacion(usuario, password)) {
+                Usuario usuarioAutenticado = gestorUsuarios.obtAutenticacion(usuario, password);
+                if (usuarioAutenticado != null) {
                     dispose();
 
-                    VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                    VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioAutenticado);
                     ventanaMenuPrincipal.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(null, "Autenticacion fallida" );
                 }
-
             }
         });
 
@@ -80,9 +82,6 @@ public class VentanaInicioSesion extends JFrame {
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
-
     }
-
-    }
-
+}
 
