@@ -108,9 +108,7 @@ public class VentanaMenuPrincipal extends JFrame {
         boton4.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                dispose();
-                VentanaEntradaProductos ventanaEntradaProductos = new VentanaEntradaProductos();
-                ventanaEntradaProductos.setVisible(true);
+
             }
         });
         boton5.addActionListener(new ActionListener(){
@@ -129,16 +127,6 @@ public class VentanaMenuPrincipal extends JFrame {
                 ventanaAgregarProducto.setVisible(true);
             }
         });
-        boton7.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                dispose();
-
-                VentanaInicio ventanaInicio = new VentanaInicio();
-                ventanaInicio.setVisible(true);
-            }
-        });
-
 
     }
 }

@@ -7,5 +7,6 @@ import GUI.VentanaMenuPrincipal;
 public class Main {
     public static void main(String[] args) {
         VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+        ventanaMenuPrincipal.setVisible(true);
     }
 }

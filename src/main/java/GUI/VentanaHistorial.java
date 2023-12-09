@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-
 public class VentanaHistorial extends JFrame implements ActionListener {
     public VentanaHistorial(){
         super("Menu principal");
@@ -80,7 +79,8 @@ public class VentanaHistorial extends JFrame implements ActionListener {
         boton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                ventanaMenuPrincipal.setVisible(true);
             }
         });
     }

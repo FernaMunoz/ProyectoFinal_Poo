@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class VentanaSalidaProductos extends JFrame implements ActionListener {
     public VentanaSalidaProductos() {
-        super("Entrada Productos");
+        super("Salida Productos");
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -54,7 +54,8 @@ public class VentanaSalidaProductos extends JFrame implements ActionListener {
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                VentanaBuscarPorTexto ventanaBuscarPorTexto =new VentanaBuscarPorTexto();
+                ventanaBuscarPorTexto.setVisible(true);
             }
         });
 
@@ -67,7 +68,8 @@ public class VentanaSalidaProductos extends JFrame implements ActionListener {
         boton3.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
+                ventanaMenuPrincipal.setVisible(true);
             }
         });
     }

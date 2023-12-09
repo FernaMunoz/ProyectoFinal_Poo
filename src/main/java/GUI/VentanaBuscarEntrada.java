@@ -1,24 +1,22 @@
 package GUI;
 
-
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
+public class VentanaBuscarEntrada extends JFrame implements ActionListener{
     private JTextField buscar;
-    public VentanaBuscarPorTexto() {
-        super("Buscar producto");
+    public VentanaBuscarEntrada() {
+        super("Entrada Producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo azul1.png"));
         etiqueta1.setBounds(0, 0, 375, 667);
         JLabel etiqueta2 = new JLabel(new ImageIcon("buscar.png"));
         etiqueta2.setBounds(22, 109, 327, 68);
@@ -38,8 +36,8 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
         boton2.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
 
 
-        boton1.setBackground(Color.pink);
-        boton2.setBackground(Color.pink);
+        boton1.setBackground(Color.BLUE);
+        boton2.setBackground(Color.BLUE);
 
         boton1.setBorder(new LineBorder(Color.WHITE, 2, true));
         boton2.setBorder(new LineBorder(Color.WHITE, 2, true));
@@ -64,8 +62,8 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
-                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal();
-                ventanaMenuPrincipal.setVisible(true);
+                VentanaBuscar ventanaBuscar = new VentanaBuscar();
+                ventanaBuscar.setVisible(true);
             }
         });
 
@@ -75,4 +73,6 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
     }
+
 }
+
