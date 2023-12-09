@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBusqueda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaInicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaInicioSesion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Inventario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Producto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInicioUsuarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorRegistroUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarEntrada.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaMenuPrincipal.java" afterDir="false" />
-    </list>
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702084768300</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit codigo &quot;actualizado&quot;">
+      <option name="closed" value="true" />
+      <created>1702094556160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702094556160</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +117,7 @@
     <MESSAGE value="redireccionamiento" />
     <MESSAGE value="ventana buscar" />
     <MESSAGE value="arregle errores logicos" />
-    <option name="LAST_COMMIT_MESSAGE" value="arregle errores logicos" />
+    <MESSAGE value="commit codigo &quot;actualizado&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit codigo &quot;actualizado&quot;" />
   </component>
 </project>
