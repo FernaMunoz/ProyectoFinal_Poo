@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProductos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaMenuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaOpciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProductos.java" beforeDir="false" />
-    </list>
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="redireccionamiento" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,19 +132,27 @@
       <option name="project" value="LOCAL" />
       <updated>1702132371904</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="redireccionamiento">
+      <option name="closed" value="true" />
+      <created>1702134983269</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702134983269</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a ver si se hizo el commit" />
     <MESSAGE value="Ventanas realizadas, no funciona la VentanaBuscarPorTexto.java" />
-    <MESSAGE value="redireccionamiento" />
     <MESSAGE value="ventana buscar" />
     <MESSAGE value="arregle errores logicos" />
     <MESSAGE value="commit codigo &quot;actualizado&quot;" />
     <MESSAGE value="codigo beta VentanaOpciones (combobox) comfirmar si funciona" />
     <MESSAGE value="errores logicos" />
     <MESSAGE value="agregue los constructores" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregue los constructores" />
+    <MESSAGE value="redireccionamiento" />
+    <option name="LAST_COMMIT_MESSAGE" value="redireccionamiento" />
   </component>
 </project>
