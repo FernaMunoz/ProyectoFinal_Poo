@@ -19,7 +19,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         frame.setSize(375, 667);
         frame.setLayout(null);
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo azul1.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon(".png"));
 
         etiqueta1.setBounds(0, 0, 375, 667);
         comboBox = new JComboBox<>();
