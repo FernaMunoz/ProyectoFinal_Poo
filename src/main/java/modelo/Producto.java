@@ -1,23 +1,20 @@
 package modelo;
 
 public class Producto {
-    private Inventario inventario;
     private String nombre;
     private int stock;
     private double precio;
     private String imagen;
 
-    public Producto(Inventario inventario, String nombre, int stock, double precio, String imagen) {
-        this.inventario = inventario;
+    public Producto(String nombre, int stock, double precio, String imagen) {
+
         this.nombre = nombre;
         this.stock = stock;
         this.precio = precio;
         this.imagen = imagen;
     }
 
-    public Inventario getInventario() {
-        return this.inventario;
-    }
+
 
     public String getNombre() {
         return this.nombre;

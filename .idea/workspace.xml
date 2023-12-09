@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="gestor inventario, inventario y producto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProductos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProductos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/gestorInicioUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="powell" />
+        <entry key="$PROJECT_DIR$" value="Muñoz_F" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
