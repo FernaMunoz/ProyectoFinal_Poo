@@ -20,15 +20,17 @@ public class VentanaGenerarCodigo extends JFrame {
                 JPanel panel = new JPanel();
                 panel.setLayout(null);
                 JLabel etiqueta1 = new JLabel(new ImageIcon("Group 8.png"));
+                ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
                 JButton botonVolver = new JButton("Back");
 
-                ImageIcon volver = new ImageIcon("Group 9.png");
-                botonVolver.setBounds(18, 13, 45, 48);
+                botonVolver.setBounds(18, 13, 40, 40);
+                botonVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonVolver.getWidth(), botonVolver.getHeight(), Image.SCALE_SMOOTH)));
 
                 etiqueta1.setBounds(0, 0, 375, 667);
+                botonVolver.setBackground(Color.PINK);
 
-                botonVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonVolver.getWidth(), botonVolver.getHeight(), Image.SCALE_SMOOTH)));
+
 
                 add(botonVolver);
                 add(etiqueta1);
