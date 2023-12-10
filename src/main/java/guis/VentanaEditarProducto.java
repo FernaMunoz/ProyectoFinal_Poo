@@ -3,7 +3,7 @@ package guis;
 import datos.GestorInventario;
 import modelo.Usuario;
 import datos.GestorProductos;
-import datos.GestorInventario;
+import datos.GestorHistorial;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +16,7 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
     private JTextField precioEditar;
     private GestorProductos gestorProductos;
 
+
     public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
         super("Editar Producto");
         setSize(375, 667);
@@ -23,6 +24,7 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         gestorProductos = new GestorProductos();
+        GestorHistorial gestorHistorial = new GestorHistorial();
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -60,8 +62,9 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
         add(panel);
         setVisible(true);
 
-        GestorInventario gestorUsuario = new GestorInventario();
-        List<String> atributosProducto = gestorUsuario.buscarProducto(usuarioActual, productoSeleccionado);
+        GestorInventario gestorInventario = new GestorInventario();
+
+        List<String> atributosProducto = gestorInventario.buscarProducto(usuarioActual, productoSeleccionado);
         if (atributosProducto != null) {
             nombreLabel.setText(atributosProducto.get(0));
             stockLabel.setText(atributosProducto.get(1));
@@ -78,6 +81,7 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
                     double precio = Double.parseDouble(precioEditar.getText());
 
                     gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
+                    gestorHistorial.registrarModificacion(usuarioActual, productoSeleccionado, nombre);
                     new VentanaNotificadorExito(productoSeleccionado);
                     dispose();
                 } catch (NumberFormatException ex) {

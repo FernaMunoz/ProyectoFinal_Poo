@@ -1,4 +1,5 @@
 package guis;
+import datos.GestorHistorial;
 import datos.GestorInventario;
 import modelo.Inventario;
 import modelo.Producto;
@@ -16,6 +17,10 @@ public class VentanaAgregarProducto extends JFrame{
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
+
+
+
+
     public VentanaAgregarProducto(Usuario usuarioActual) {
         super("Agregar Producto");
         setSize(375, 667);
@@ -24,6 +29,7 @@ public class VentanaAgregarProducto extends JFrame{
         JPanel panel = new JPanel();
         panel.setLayout(null);
         this.usuario = usuarioActual;
+        GestorHistorial gestorHistorial = new GestorHistorial();
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("AgregarProducto.png"));
         JButton btnvolver = new JButton();
@@ -70,6 +76,7 @@ public class VentanaAgregarProducto extends JFrame{
                 GestorInventario gestorInventario = new GestorInventario();
                 gestorInventario.agregarProductoAInventario(usuario, producto);
 
+                gestorHistorial.registrarNuevoProducto(usuario, producto);
             }
         });
 
