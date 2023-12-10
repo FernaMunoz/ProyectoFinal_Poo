@@ -1,4 +1,5 @@
 package GUI;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -6,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Modelo.Usuario;
 import datos.GestorRegistroUsuarios;
+import datos.GestorHistorial;
 
 public class VentanaRegistro extends JFrame {
     private Usuario usuario;
@@ -14,6 +16,7 @@ public class VentanaRegistro extends JFrame {
     private JPasswordField contrasena;
     private JPasswordField confContrasena;
     private GestorRegistroUsuarios gestor;
+    private GestorHistorial gestorHistorial;
 
     public VentanaRegistro() {
         super("Registro de usuario");
@@ -23,6 +26,7 @@ public class VentanaRegistro extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(null);
         gestor = new GestorRegistroUsuarios();
+        gestorHistorial = new GestorHistorial();
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("Captura de pantalla 2023-12-05 195951.png"));
         JLabel etiqueta2 = new JLabel("Nombre*");
@@ -71,6 +75,7 @@ public class VentanaRegistro extends JFrame {
                     String confPassword = String.valueOf(confContrasena.getPassword());
 
                     usuario = gestor.registrarUsuario(name, empresaName, password, confPassword);
+                    gestorHistorial.crearHistorial(usuario);
                     dispose();
                 } catch (IllegalArgumentException ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);

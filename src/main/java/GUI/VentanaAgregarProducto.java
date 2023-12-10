@@ -26,7 +26,7 @@ public class VentanaAgregarProducto extends JFrame{
         this.usuario = usuarioActual;
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("AgregarProducto.png"));
-        JButton btnvolver = new JButton();
+
 
         JLabel etiqueta2 = new JLabel("Nombre del producto*");
         nombreProducto = new JTextField();
@@ -36,8 +36,9 @@ public class VentanaAgregarProducto extends JFrame{
         precio = new JTextField();
 
         JButton agregarProducto = new JButton("Agregar producto");
-        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
+        JButton btnvolver = new JButton();
         ImageIcon agregar = new ImageIcon("Group 7 (2).png");
+        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
         etiqueta2.setBounds(47,137,158,23);
         nombreProducto.setBounds(40,160,281,40);
@@ -79,8 +80,8 @@ public class VentanaAgregarProducto extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                VentanaInicio ventanaInicio = new VentanaInicio();
-                ventanaInicio.setVisible(true);
+                VentanaMenuPrincipal ventanaMenuPrincipal =new VentanaMenuPrincipal(usuarioActual);
+                ventanaMenuPrincipal.setVisible(true);
             }
         });
 

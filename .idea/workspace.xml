@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventanaEditar y ventanaMostrar listas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaNotificadorExito.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fer_inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/fer_inventario.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaEditarProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaEntradaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaMostrarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaSalidaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/VentanaRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702216310686</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ventanaEditar y ventanaMostrar listas">
+      <option name="closed" value="true" />
+      <created>1702219592380</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702219592380</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -271,6 +279,7 @@
     <MESSAGE value="ventanahistorial funciona pero mas o menos" />
     <MESSAGE value="ventanahistorial y gestorHistorial" />
     <MESSAGE value="orden de las ventanas hasta la de opciones," />
-    <option name="LAST_COMMIT_MESSAGE" value="orden de las ventanas hasta la de opciones," />
+    <MESSAGE value="ventanaEditar y ventanaMostrar listas" />
+    <option name="LAST_COMMIT_MESSAGE" value="ventanaEditar y ventanaMostrar listas" />
   </component>
 </project>
