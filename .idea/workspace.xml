@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ahora si se ve el combobox">
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="nuevo metodo en gestorinventario y funciona el buscarproducto">
+      <change afterPath="$PROJECT_DIR$/Anaihv_inventario.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702156945155</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nuevo metodo en gestorinventario y funciona el buscarproducto">
+      <option name="closed" value="true" />
+      <created>1702169591703</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702169591703</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -101,6 +107,7 @@
     <MESSAGE value="gestor inventario, inventario y producto" />
     <MESSAGE value="ventanaopciones yagregue metodo a gestor productos" />
     <MESSAGE value="ahora si se ve el combobox" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahora si se ve el combobox" />
+    <MESSAGE value="nuevo metodo en gestorinventario y funciona el buscarproducto" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuevo metodo en gestorinventario y funciona el buscarproducto" />
   </component>
 </project>
