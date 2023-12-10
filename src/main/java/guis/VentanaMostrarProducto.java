@@ -79,7 +79,9 @@ public class VentanaMostrarProducto extends JFrame implements ActionListener {
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual,null);
+                dispose();
+
+                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, "");
                 ventanaOpciones.setVisible(true);
             }
         });
