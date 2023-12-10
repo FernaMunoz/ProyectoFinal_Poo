@@ -22,6 +22,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         super("Resultados de Búsqueda");
         setSize(375, 667);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         JPanel panel = new JPanel();
@@ -31,9 +32,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         JLabel etiqueta1 = new JLabel(new ImageIcon(".png"));
 
-        etiqueta1.setBounds(0, 0, 375, 667);
         comboBox = new JComboBox<>();
-        comboBox.setBounds(33, 112, 316, 48);
 
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
@@ -49,6 +48,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton2.setBounds(221, 330, 117, 118);
         boton3.setBounds(18, 13, 117, 118);
         boton4.setBounds(126, 492, 45, 48);
+        comboBox.setBounds(33, 112, 316, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
         boton1.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
