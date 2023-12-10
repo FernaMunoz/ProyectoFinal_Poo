@@ -1,4 +1,5 @@
 package GUI;
+import datos.GestorHistorial;
 import Modelo.Usuario;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -56,11 +57,13 @@ public class VentanaSalidaProducto extends JFrame implements ActionListener {
 
         JButton confirmarButton = new JButton("Confirmar Entrada");
         confirmarButton.setBounds(95, 316, 166, 42);
+        GestorHistorial gestorHistorial = new GestorHistorial();
         confirmarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarCantidad();
                 gestorProductos.salidaStock(cantidad, usuarioActual, productoSeleccionado);
+                gestorHistorial.registrarSalida(usuarioActual, productoSeleccionado, cantidad);
             }
         });
         frame.add(confirmarButton);

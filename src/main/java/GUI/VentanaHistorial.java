@@ -1,36 +1,32 @@
 package GUI;
 
+import datos.GestorHistorial;
 import Modelo.Usuario;
-
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.util.Date;
+import java.awt.*;
+import java.util.List;
 
 public class VentanaHistorial extends JFrame {
-    private JTable tablaHistorial;
-    private DefaultTableModel modeloHistorial;
+    private Usuario usuario;
 
     public VentanaHistorial(Usuario usuarioActual) {
-        super("Historial de Productos");
-        setSize(400, 300);
+        super("Historial");
+        setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.usuario = usuarioActual;
 
-        // Crear la tabla para mostrar el historial
-        modeloHistorial = new DefaultTableModel();
-        modeloHistorial.addColumn("Fecha y Hora");
-        modeloHistorial.addColumn("Producto");
-        tablaHistorial = new JTable(modeloHistorial);
+        GestorHistorial gestorHistorial = new GestorHistorial();
 
-        JScrollPane scrollPane = new JScrollPane(tablaHistorial);
-        add(scrollPane);
+        List<String> historial = gestorHistorial.leerHistorial(usuario);
 
-        setVisible(false);
-    }
+        JTextArea areaTexto = new JTextArea();
+        for (String linea : historial) {
+            areaTexto.append(linea + "\n");
+        }
 
-    // Método para agregar una entrada al historial
-    public void agregarEntradaHistorial(String producto) {
-        Date fechaHoraActual = new Date();
-        modeloHistorial.addRow(new Object[]{fechaHoraActual, producto});
+        add(new JScrollPane(areaTexto));
+
+        setVisible(true);
     }
 }

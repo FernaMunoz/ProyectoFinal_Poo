@@ -1,7 +1,7 @@
 package GUI;
+import datos.GestorHistorial;
 import Modelo.Usuario;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import datos.GestorProductos;
@@ -14,6 +14,7 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
     private Usuario usuarioActual;
     private String productoSeleccionado;
     private GestorProductos gestorProductos = new GestorProductos();
+
 
     public VentanaEntradaProducto(Usuario usuarioActual, String productoSeleccionado) {
         this.usuarioActual = usuarioActual;
@@ -28,17 +29,15 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
         etiqueta1.setBounds(0, 0, 375, 667);
 
         JLabel label = new JLabel("Cantidad");
-        label.setBounds(135, 230, 150, 25);
+        label.setBounds(150, 230, 150, 25);
         frame.add(label);
 
         textFieldCantidad = new JTextField("0");
-        textFieldCantidad.setBounds(135, 250, 120, 25);
+        textFieldCantidad.setBounds(150, 250, 150, 25);
         frame.add(textFieldCantidad);
 
-        JButton masButton = new JButton();
-        ImageIcon mas = new ImageIcon("mas.png");
+        JButton masButton = new JButton("+");
         masButton.setBounds(265, 235, 52, 49);
-        masButton.setIcon(new ImageIcon(mas.getImage().getScaledInstance(masButton.getWidth(), masButton.getHeight(), Image.SCALE_SMOOTH)));
         masButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,10 +46,8 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
         });
         frame.add(masButton);
 
-        JButton menosButton = new JButton();
-        ImageIcon menos = new ImageIcon("menos1.png");
+        JButton menosButton = new JButton("-");
         menosButton.setBounds(45, 235, 52, 49);
-        menosButton.setIcon(new ImageIcon(menos.getImage().getScaledInstance(menosButton.getWidth(), menosButton.getHeight(), Image.SCALE_SMOOTH)));
         menosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,24 +58,13 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
 
         JButton confirmarButton = new JButton("Confirmar Entrada");
         confirmarButton.setBounds(95, 316, 166, 42);
+        GestorHistorial gestorHistorial = new GestorHistorial();
         confirmarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarCantidad();
                 gestorProductos.entradaStock(cantidad, usuarioActual, productoSeleccionado);
-            }
-        });
-        frame.add(confirmarButton);
-
-        JButton botonVolver = new JButton();
-        botonVolver.setBounds(18, 13, 45, 48);
-        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
-        botonVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonVolver.getWidth(), botonVolver.getHeight(), Image.SCALE_SMOOTH)));
-        botonVolver.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado);
-                ventanaOpciones.setVisible(true);
+                gestorHistorial.registrarEntrada(usuarioActual, productoSeleccionado, cantidad);
             }
         });
         frame.add(confirmarButton);

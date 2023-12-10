@@ -1,8 +1,5 @@
 package org.example;
-
-import GUI.VentanaEntradaProducto;
 import GUI.VentanaInicio;
-import GUI.VentanaOpciones;
 import Modelo.Usuario;
 
 

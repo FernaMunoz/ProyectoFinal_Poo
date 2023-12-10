@@ -1,4 +1,5 @@
 package GUI;
+import datos.GestorHistorial;
 import datos.GestorInventario;
 import Modelo.Inventario;
 import Modelo.Producto;
@@ -16,6 +17,8 @@ public class VentanaAgregarProducto extends JFrame{
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
+
+
     public VentanaAgregarProducto(Usuario usuarioActual) {
         super("Agregar Producto");
         setSize(375, 667);
@@ -24,9 +27,10 @@ public class VentanaAgregarProducto extends JFrame{
         JPanel panel = new JPanel();
         panel.setLayout(null);
         this.usuario = usuarioActual;
+        GestorHistorial gestorHistorial = new GestorHistorial();
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("AgregarProducto.png"));
-
+        JButton btnvolver = new JButton();
 
         JLabel etiqueta2 = new JLabel("Nombre del producto*");
         nombreProducto = new JTextField();
@@ -36,9 +40,8 @@ public class VentanaAgregarProducto extends JFrame{
         precio = new JTextField();
 
         JButton agregarProducto = new JButton("Agregar producto");
-        JButton btnvolver = new JButton();
+        ImageIcon volver = new ImageIcon("Group 6.png");
         ImageIcon agregar = new ImageIcon("Group 7 (2).png");
-        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
         etiqueta2.setBounds(47,137,158,23);
         nombreProducto.setBounds(40,160,281,40);
@@ -71,6 +74,7 @@ public class VentanaAgregarProducto extends JFrame{
                 GestorInventario gestorInventario = new GestorInventario();
                 gestorInventario.agregarProductoAInventario(usuario, producto);
 
+                gestorHistorial.registrarNuevoProducto(usuario, producto);
             }
         });
 
@@ -80,7 +84,7 @@ public class VentanaAgregarProducto extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                VentanaMenuPrincipal ventanaMenuPrincipal =new VentanaMenuPrincipal(usuarioActual);
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
                 ventanaMenuPrincipal.setVisible(true);
             }
         });

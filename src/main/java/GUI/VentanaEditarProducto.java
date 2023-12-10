@@ -3,10 +3,9 @@ package GUI;
 import datos.GestorInventario;
 import Modelo.Usuario;
 import datos.GestorProductos;
-import datos.GestorInventario;
+import datos.GestorHistorial;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -17,6 +16,7 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
     private JTextField precioEditar;
     private GestorProductos gestorProductos;
 
+
     public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
         super("Editar Producto");
         setSize(375, 667);
@@ -24,17 +24,10 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         gestorProductos = new GestorProductos();
+        GestorHistorial gestorHistorial = new GestorHistorial();
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondoMostrar.png"));
-        etiqueta1.setBounds(0, 0, 375, 667);
-
-        JButton btnvolver = new JButton();
-        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
-        btnvolver.setBounds(18, 13, 45, 48);
-        btnvolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(btnvolver.getWidth(), btnvolver.getHeight(), Image.SCALE_SMOOTH)));
-        btnvolver.setBackground(Color.pink);
 
         JLabel nombreLabel = new JLabel();
         nombreLabel.setBounds(50, 150, 200, 30);
@@ -56,7 +49,7 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
 
 
         JButton boton = new JButton("Confirmar");
-        boton.setBounds(50, 450, 200, 30);
+        boton.setBounds(50, 430, 200, 30);
 
         panel.add(nombreLabel);
         panel.add(nombreEditar);
@@ -66,13 +59,12 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
         panel.add(precioLabel);
         panel.add(precioEditar);
         panel.add(boton);
-        panel.add(btnvolver);
-        panel.add(etiqueta1);
         add(panel);
         setVisible(true);
 
-        GestorInventario gestorUsuario = new GestorInventario();
-        List<String> atributosProducto = gestorUsuario.buscarProducto(usuarioActual, productoSeleccionado);
+        GestorInventario gestorInventario = new GestorInventario();
+
+        List<String> atributosProducto = gestorInventario.buscarProducto(usuarioActual, productoSeleccionado);
         if (atributosProducto != null) {
             nombreLabel.setText(atributosProducto.get(0));
             stockLabel.setText(atributosProducto.get(1));
@@ -89,19 +81,12 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
                     double precio = Double.parseDouble(precioEditar.getText());
 
                     gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
+                    gestorHistorial.registrarModificacion(usuarioActual, productoSeleccionado, nombre);
                     new VentanaNotificadorExito(productoSeleccionado);
                     dispose();
                 } catch (NumberFormatException ex) {
                     System.out.println("Por favor, introduce un número válido.");
                 }
-            }
-        });
-
-        btnvolver.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
-                ventanaMostrarProducto.setVisible(true);
             }
         });
     }
