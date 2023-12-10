@@ -55,6 +55,7 @@ public class CodigoBarra {
         return new CodigoBarraInfo(producto, codigoBarras, imagenCodigoBarras);
     }
 
+
     private String generarCodigoBarras() {
         Random random = new Random();
         StringBuilder identificador = new StringBuilder();
