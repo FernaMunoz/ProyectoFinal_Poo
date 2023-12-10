@@ -72,7 +72,7 @@ public class GestorProductos {
         return productosSimilares;
     }
 
-    public void modificarStockProducto(int stockNuevo, Usuario usuarioActual, String productoSeleccionado){
+    public void entradaStock(int cantidadStock, Usuario usuarioActual, String productoSeleccionado){
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
         List<String> lineas = new ArrayList<>();
 
@@ -81,9 +81,11 @@ public class GestorProductos {
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
                 String nombreProducto = partes[0].replace("\"", "");
+                int stockActual = Integer.parseInt(partes[1].replace("\"", ""));
 
                 if (nombreProducto.equals(productoSeleccionado)) {
-                    lineas.add("\"" + nombreProducto + "\",\"" + stockNuevo + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                    int nuevoStock = stockActual + cantidadStock;
+                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
                 } else {
                     lineas.add(linea);
                 }
@@ -92,6 +94,35 @@ public class GestorProductos {
             e.printStackTrace();
         }
 
+        escribirCSV(rutaCsv, lineas);
+    }
+
+    public void salidaStock(int cantidadStock, Usuario usuarioActual, String productoSeleccionado){
+        String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
+        List<String> lineas = new ArrayList<>();
+
+        try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))) {
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] partes = linea.split(",");
+                String nombreProducto = partes[0].replace("\"", "");
+                int stockActual = Integer.parseInt(partes[1].replace("\"", ""));
+
+                if (nombreProducto.equals(productoSeleccionado)) {
+                    int nuevoStock = stockActual - cantidadStock;
+                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                } else {
+                    lineas.add(linea);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        escribirCSV(rutaCsv, lineas);
+    }
+
+    private void escribirCSV(String rutaCsv, List<String> lineas) {
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv))) {
             for (String linea : lineas) {
                 escritor.write(linea);
@@ -100,7 +131,7 @@ public class GestorProductos {
 
             escritor.flush();
 
-            System.out.println("Stock del producto modificado exitosamente");
+            System.out.println("Stock modificado exitosamente");
 
         } catch (IOException e) {
             e.printStackTrace();

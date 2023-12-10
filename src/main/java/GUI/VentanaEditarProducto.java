@@ -1,70 +1,109 @@
 package GUI;
 
+import datos.GestorInventario;
 import Modelo.Usuario;
+import datos.GestorProductos;
+import datos.GestorInventario;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class VentanaEditarProducto extends JFrame implements ActionListener {
-    private JTextField nombre;
-    private JTextField stock;
-    private JTextField codigo;
-    private JTextField precio;
+    private JTextField nombreEditar;
+    private JTextField stockEditar;
+    private JTextField precioEditar;
+    private GestorProductos gestorProductos;
 
-
-    public VentanaEditarProducto(Usuario usuarioActual) {
+    public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
         super("Editar Producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+        gestorProductos = new GestorProductos();
+
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo mostrar.png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondoMostrar.png"));
         etiqueta1.setBounds(0, 0, 375, 667);
 
+        JButton btnvolver = new JButton();
+        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
+        btnvolver.setBounds(18, 13, 45, 48);
+        btnvolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(btnvolver.getWidth(), btnvolver.getHeight(), Image.SCALE_SMOOTH)));
+        btnvolver.setBackground(Color.pink);
 
-        nombre = new JTextField();
-        stock = new JTextField();
-        codigo = new JTextField();
-        precio = new JTextField();
+        JLabel nombreLabel = new JLabel();
+        nombreLabel.setBounds(50, 150, 200, 30);
+        nombreEditar = new JTextField();
+        nombreEditar.setBounds(50, 180, 200, 30);
+
+        JLabel stockLabel = new JLabel();
+        stockLabel.setBounds(50, 220, 200, 30);
+        stockEditar = new JTextField();
+        stockEditar.setBounds(50, 250, 200, 30);
+
+        JLabel precioLabel = new JLabel();
+        precioLabel.setBounds(50, 290, 200, 30);
+        precioEditar = new JTextField();
+        precioEditar.setBounds(50, 320, 200, 30);
+
+        JLabel imagenLabel = new JLabel();
+        imagenLabel.setBounds(50, 360, 200, 30);
+
 
         JButton boton = new JButton("Confirmar");
+        boton.setBounds(50, 450, 200, 30);
 
-        JButton boton1 = new JButton();
-        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
-
-        etiqueta1.setBounds(198, 184, 375, 667);
-        nombre.setBounds(198, 184, 200, 29);
-        stock.setBounds(41, 283, 200, 23);
-        codigo.setBounds(41, 334, 200, 23);
-        precio.setBounds(41, 414, 235, 30);
-        boton.setBounds(26, 150, 39, 36);
-        boton1.setBounds(18, 13, 45, 48);
-
-
-        panel.add(boton1);
+        panel.add(nombreLabel);
+        panel.add(nombreEditar);
+        panel.add(stockLabel);
+        panel.add(stockEditar);
+        panel.add(imagenLabel);
+        panel.add(precioLabel);
+        panel.add(precioEditar);
+        panel.add(boton);
+        panel.add(btnvolver);
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
 
+        GestorInventario gestorUsuario = new GestorInventario();
+        List<String> atributosProducto = gestorUsuario.buscarProducto(usuarioActual, productoSeleccionado);
+        if (atributosProducto != null) {
+            nombreLabel.setText(atributosProducto.get(0));
+            stockLabel.setText(atributosProducto.get(1));
+            precioLabel.setText(atributosProducto.get(2));
+            imagenLabel.setText(atributosProducto.get(3));
+        }
+
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    String nombre = nombreEditar.getText();
+                    int stock = Integer.parseInt(stockEditar.getText());
+                    double precio = Double.parseDouble(precioEditar.getText());
 
+                    gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
+                    new VentanaNotificadorExito(productoSeleccionado);
+                    dispose();
+                } catch (NumberFormatException ex) {
+                    System.out.println("Por favor, introduce un número válido.");
+                }
             }
         });
 
-        boton1.addActionListener(new ActionListener() {
+        btnvolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual);
+                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
                 ventanaMostrarProducto.setVisible(true);
             }
         });
-
     }
 
     @Override

@@ -36,7 +36,7 @@ public class VentanaAgregarProducto extends JFrame{
         precio = new JTextField();
 
         JButton agregarProducto = new JButton("Agregar producto");
-        ImageIcon volver = new ImageIcon("Group 6.png");
+        ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
         ImageIcon agregar = new ImageIcon("Group 7 (2).png");
 
         etiqueta2.setBounds(47,137,158,23);
