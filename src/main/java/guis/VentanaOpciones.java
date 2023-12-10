@@ -46,15 +46,15 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         boton1.setBounds(50, 334, 117, 118);
         boton2.setBounds(221, 330, 117, 118);
-        boton3.setBounds(18, 13, 117, 118);
-        boton4.setBounds(126, 492, 45, 48);
+        boton3.setBounds(18, 13, 45, 48);
+        boton4.setBounds(126, 492, 117, 118);
         comboBox.setBounds(33, 112, 316, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
         boton1.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
         boton2.setIcon(new ImageIcon(salida.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
-        boton3.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
-        boton4.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
+        boton3.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
+        boton4.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
 
         boton1.setBackground(Color.WHITE);
         boton2.setBackground(Color.WHITE);

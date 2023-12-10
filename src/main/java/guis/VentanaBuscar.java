@@ -24,7 +24,6 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         JButton boton2 = new JButton();
         JButton boton3 = new JButton();
 
-
         ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
         ImageIcon scanner = new ImageIcon("Group 5.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
@@ -33,7 +32,6 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton2.setBounds(113, 330, 143, 144);
         boton3.setBounds(18, 13, 45, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
-
 
         boton1.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
         boton2.setIcon(new ImageIcon(scanner.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
