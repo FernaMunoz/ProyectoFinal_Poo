@@ -27,10 +27,10 @@ public class CodigoBarra {
     }
 
     public CodigoBarraInfo generarCodigoBarra(Usuario usuarioActual, Producto producto) {
-
         GestorProductos gestorProductos = new GestorProductos();
-        if(gestorProductos.productoTieneCodigoBarra(usuarioActual, producto)){
-            System.out.println("el producto ya tiene un codigo de barra");
+
+        if (gestorProductos.productoTieneCodigoBarra(usuarioActual, producto)) {
+            System.out.println("El producto ya tiene un código de barras");
             return null;
         }
 
@@ -46,6 +46,7 @@ public class CodigoBarra {
         String codigoBarras = productoIdentificador + digitoControl;
         producto.setCodigoDebarra(codigoBarras);
 
+        // Actualizar CSV
         gestorProductos.actualizarCSV(usuarioActual, producto);
 
         // Cargar la imagen del código de barras desde el archivo (ajusta la ruta según tu estructura)

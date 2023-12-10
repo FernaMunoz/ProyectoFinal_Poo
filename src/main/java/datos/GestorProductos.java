@@ -156,14 +156,8 @@ public class GestorProductos {
                 String nombreProducto = partes[0].replace("\"", "");
 
                 if (nombreProducto.equals(producto.getNombre())) {
-                    // Verificar que hay suficientes elementos en el array antes de acceder a partes[4]
-                    if (partes.length >= 5) {
-                        // Agregar el código de barras al CSV
-                        lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + (producto.getCodigoBarra() != null ? producto.getCodigoBarra() : "null") + "\"");
-                    } else {
-                        // Si el array no tiene suficientes elementos, simplemente agrega la línea original
-                        lineas.add(linea);
-                    }
+                    // Agregar el código de barras al CSV
+                    lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
                 } else {
                     lineas.add(linea);
                 }
@@ -174,7 +168,6 @@ public class GestorProductos {
 
         escribirCSV(rutaCsv, lineas);
     }
-
 
     private void escribirCSV(String rutaCsv, List<String> lineas) {
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv))) {
