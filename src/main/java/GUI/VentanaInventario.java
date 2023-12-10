@@ -21,7 +21,7 @@ public class VentanaInventario extends JFrame {
 
         // Crear el fondo con una etiqueta
         JLabel etiqueta1 = new JLabel(new ImageIcon("fondo naranja2.png"));
-        etiqueta1.setOpaque(false); // Hacer la etiqueta transparente
+        etiqueta1.setOpaque(false); //
         panel.add(etiqueta1, BorderLayout.CENTER);
 
         // Crear el modelo de la tabla
@@ -59,10 +59,8 @@ public class VentanaInventario extends JFrame {
             ventanaMenuPrincipal.setVisible(true);
         });
 
-        // Agregar el botón al panel en la esquina superior izquierda
-        panel.add(boton, BorderLayout.NORTH);
 
-        // Agregar el panel a la ventana
+        panel.add(boton, BorderLayout.NORTH);
         add(panel);
         setVisible(true);
     }

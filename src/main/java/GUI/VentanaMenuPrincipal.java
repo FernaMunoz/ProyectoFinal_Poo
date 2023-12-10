@@ -103,7 +103,8 @@ public class VentanaMenuPrincipal extends JFrame {
         boton4.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto(usuarioActual);
+                VentanaHistorial ventanaHistorial = null;
+                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto(usuarioActual, ventanaHistorial);
                 ventanaAgregarProducto.setVisible(true);
 
             }

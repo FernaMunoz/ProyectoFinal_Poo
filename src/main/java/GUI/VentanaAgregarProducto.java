@@ -5,18 +5,16 @@ import Modelo.Producto;
 import Modelo.Usuario;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VentanaAgregarProducto extends JFrame{
     private Usuario usuario;
-
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
-    public VentanaAgregarProducto(Usuario usuarioActual) {
+    public VentanaAgregarProducto(Usuario usuarioActual, VentanaHistorial ventanaHistorial) {
         super("Agregar Producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -70,9 +68,11 @@ public class VentanaAgregarProducto extends JFrame{
                 GestorInventario gestorInventario = new GestorInventario();
                 gestorInventario.agregarProductoAInventario(usuario, producto);
 
+                // Agregar entrada al historial
+                VentanaHistorial ventanaHistorial= new VentanaHistorial(usuarioActual);
+                ventanaHistorial.agregarEntradaHistorial(nombre);
             }
         });
-
 
         btnvolver.addActionListener(new ActionListener() {
             @Override
