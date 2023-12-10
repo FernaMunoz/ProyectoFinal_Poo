@@ -31,8 +31,8 @@ public class VentanaMostrarProducto extends JFrame implements ActionListener {
         List<String> atributosProducto = gestorInventario.buscarProducto(usuarioActual, productoSeleccionado);
 
         JLabel etiqueta3 = new JLabel("Stock: " + atributosProducto.get(1));
-        JLabel etiqueta4 = new JLabel("Codigo de barras: " + atributosProducto.get(2));
-        JLabel etiqueta5 = new JLabel("Precio: " + atributosProducto.get(3));
+        JLabel etiqueta4 = new JLabel("Precio: " + atributosProducto.get(2));
+        JLabel etiqueta5 = new JLabel("Imagen: " + atributosProducto.get(3));
 
         JButton boton = new JButton();
         ImageIcon editar = new ImageIcon("icono Editar.png");

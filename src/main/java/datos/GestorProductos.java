@@ -1,13 +1,14 @@
 package datos;
-import modelo.Inventario;
+
 import modelo.Producto;
 import modelo.Usuario;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GestorProductos {
-    public void modificarProducto(Producto producto, Usuario usuarioActual, String nuevoNombre, int nuevoStock, double nuevoPrecio, String nuevaImagen){
+    public void modificarProducto(String productoSeleccionado, String nuevoNombre, int nuevoStock, double nuevoPrecio, Usuario usuarioActual){
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
         List<String> lineas = new ArrayList<>();
 
@@ -16,11 +17,11 @@ public class GestorProductos {
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
 
-                if (partes[0].equals("\"" + producto.getNombre() + "\"")) {
+                String nombreProducto = partes[0].replace("\"", "");
 
-                    lineas.add("\"" + nuevoNombre + "\",\"" + nuevoStock + "\",\"" + nuevoPrecio + "\",\"" + nuevaImagen + "\"");
+                if (nombreProducto.equals(productoSeleccionado)) {
+                    lineas.add("\"" + nuevoNombre + "\",\"" + nuevoStock + "\",\"" + nuevoPrecio + "\",\"null\"");
                 } else {
-
                     lineas.add(linea);
                 }
             }
@@ -42,6 +43,9 @@ public class GestorProductos {
             e.printStackTrace();
         }
     }
+
+
+
 
     public List<Producto> obtenerProductosSimilares(String textoBusqueda, Usuario usuarioActual) {
         List<Producto> productosSimilares = new ArrayList<>();
@@ -70,6 +74,4 @@ public class GestorProductos {
 
         return productosSimilares;
     }
-
-
 }
