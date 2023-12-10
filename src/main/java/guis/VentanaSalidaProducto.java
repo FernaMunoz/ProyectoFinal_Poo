@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import datos.GestorProductos;
 
-public class VentanaEntradaProducto extends JFrame implements ActionListener {
+public class VentanaSalidaProducto extends JFrame implements ActionListener {
 
     private JFrame frame;
     private JTextField textFieldCantidad;
@@ -14,7 +14,7 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
     private String productoSeleccionado;
     private GestorProductos gestorProductos = new GestorProductos();
 
-    public VentanaEntradaProducto(Usuario usuarioActual, String productoSeleccionado) {
+    public VentanaSalidaProducto(Usuario usuarioActual, String productoSeleccionado) {
         this.usuarioActual = usuarioActual;
         this.productoSeleccionado = productoSeleccionado;
 
@@ -60,7 +60,7 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarCantidad();
-                gestorProductos.entradaStock(cantidad, usuarioActual, productoSeleccionado);
+                gestorProductos.salidaStock(cantidad, usuarioActual, productoSeleccionado);
             }
         });
         frame.add(confirmarButton);
@@ -98,7 +98,3 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
 
     }
 }
-
-
-
-

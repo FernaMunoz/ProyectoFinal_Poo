@@ -77,7 +77,8 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                String productoSeleccionado = (String) comboBox.getSelectedItem();
+                new VentanaSalidaProducto(usuarioActual, productoSeleccionado);
             }
         });
 
