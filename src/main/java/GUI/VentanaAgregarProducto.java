@@ -9,11 +9,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaAgregarProducto extends JFrame{
+public class VentanaAgregarProducto extends JFrame implements ActionListener{
     private Usuario usuario;
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
+    private VentanaHistorial ventanaHistorial;
     public VentanaAgregarProducto(Usuario usuarioActual, VentanaHistorial ventanaHistorial) {
         super("Agregar Producto");
         setSize(375, 667);
@@ -22,6 +23,7 @@ public class VentanaAgregarProducto extends JFrame{
         JPanel panel = new JPanel();
         panel.setLayout(null);
         this.usuario = usuarioActual;
+        this.ventanaHistorial = ventanaHistorial;
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("AgregarProducto.png"));
         JButton btnvolver = new JButton();
@@ -95,5 +97,10 @@ public class VentanaAgregarProducto extends JFrame{
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
