@@ -16,7 +16,7 @@ public class VentanaMenuPrincipal extends JFrame {
         this.usuarioActual = usuarioActual;
         setSize(375, 667);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -30,7 +30,6 @@ public class VentanaMenuPrincipal extends JFrame {
         JButton boton3 = new JButton();
         JButton boton4 = new JButton();
         JButton boton5 = new JButton();
-
 
         ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
         ImageIcon generador = new ImageIcon("Group 5.png");
@@ -58,7 +57,7 @@ public class VentanaMenuPrincipal extends JFrame {
         boton5.setBackground(Color.CYAN);
 
 
-        boton1.setBorder(new LineBorder(Color.WHITE,6,true));
+        boton1.setBorder(new LineBorder(Color.WHITE,10,true));
         boton2.setBorder(new LineBorder(Color.WHITE,6,true));
         boton3.setBorder(new LineBorder(Color.WHITE,8,true));
         boton4.setBorder(new LineBorder(Color.WHITE,6,true));

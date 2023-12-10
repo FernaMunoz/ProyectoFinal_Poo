@@ -41,8 +41,8 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton2.setBackground(Color.WHITE);
         boton3.setBackground(Color.pink);
 
-        boton1.setBorder(new LineBorder(Color.WHITE, 6, true));
-        boton2.setBorder(new LineBorder(Color.WHITE, 6, true));
+        boton1.setBorder(new LineBorder(Color.WHITE, 11, true));
+        boton2.setBorder(new LineBorder(Color.WHITE, 10, true));
 
         panel.add(boton1);
         panel.add(boton2);

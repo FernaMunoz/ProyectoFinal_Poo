@@ -15,11 +15,11 @@ public class VentanaGenerarCodigo extends JFrame {
 
                 setLocationRelativeTo(null);
 
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
                 JPanel panel = new JPanel();
                 panel.setLayout(null);
-                JLabel etiqueta1 = new JLabel(new ImageIcon("Group 8.png"));
+                JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
                 ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
                 JButton botonVolver = new JButton("Back");
@@ -29,8 +29,6 @@ public class VentanaGenerarCodigo extends JFrame {
 
                 etiqueta1.setBounds(0, 0, 375, 667);
                 botonVolver.setBackground(Color.PINK);
-
-
 
                 add(botonVolver);
                 add(etiqueta1);

@@ -30,35 +30,37 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         this.usuarioActual = usuarioActual;
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon(".png"));
+        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
 
         comboBox = new JComboBox<>();
 
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
         JButton boton3 = new JButton();
-        JButton boton4 = new JButton();
+        JButton botonvolver = new JButton();
 
-        ImageIcon entrada = new ImageIcon("salidasProductos.png");
-        ImageIcon salida = new ImageIcon("Group 5.png");
-        ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
+        ImageIcon salida = new ImageIcon("salidasProductos.png");
+        ImageIcon entrada = new ImageIcon("ingresarProductos icon.png");
+        ImageIcon buscar = new ImageIcon("Group 10.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
-        boton1.setBounds(50, 334, 117, 118);
-        boton2.setBounds(221, 330, 117, 118);
-        boton3.setBounds(18, 13, 45, 48);
-        boton4.setBounds(126, 492, 117, 118);
-        comboBox.setBounds(33, 112, 316, 48);
+        boton1.setBounds(41, 295, 117, 118);
+        boton2.setBounds(210, 295, 117, 118);
+        boton3.setBounds(128, 451, 117, 118);
+        botonvolver.setBounds(18, 13, 45, 48);
+        comboBox.setBounds(29, 173, 316, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
-        boton1.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
-        boton2.setIcon(new ImageIcon(salida.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
-        boton3.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
-        boton4.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
+        boton1.setIcon(new ImageIcon(salida.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
+        boton2.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
+        boton3.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
+        botonvolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonvolver.getWidth(), botonvolver.getHeight(), Image.SCALE_SMOOTH)));
 
         boton1.setBackground(Color.WHITE);
         boton2.setBackground(Color.WHITE);
         boton3.setBackground(Color.WHITE);
+        botonvolver.setBackground(Color.PINK);
+        comboBox.setBackground(Color.WHITE);
 
         boton1.setBorder(new LineBorder(Color.WHITE, 6, true));
         boton2.setBorder(new LineBorder(Color.WHITE, 6, true));
@@ -68,7 +70,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         panel.add(boton1);
         panel.add(boton2);
         panel.add(boton3);
-        panel.add(boton4);
+        panel.add(botonvolver);
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
@@ -95,7 +97,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
             }
         });
 
-        boton4.addActionListener(new ActionListener(){
+        botonvolver.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto();
