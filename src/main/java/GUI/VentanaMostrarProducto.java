@@ -75,4 +75,9 @@ public class VentanaMostrarProducto extends JFrame implements ActionListener {
         });
 
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 }

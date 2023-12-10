@@ -1,5 +1,4 @@
 package GUI;
-import GUI.VentanaBuscarPorTexto;
 import Modelo.Usuario;
 import Modelo.Producto;
 import Modelo.Inventario;
@@ -41,8 +40,8 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         JButton boton3 = new JButton();
         JButton boton4 = new JButton();
 
-        ImageIcon entrada = new ImageIcon("ingresarProductos.png");
-        ImageIcon salida = new ImageIcon("salidasProductos.png");
+        ImageIcon entrada = new ImageIcon("salidasProductos.png");
+        ImageIcon salida = new ImageIcon("Group 5.png");
         ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
@@ -78,8 +77,6 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaEntradaProducto ventanaEntradaProducto = new VentanaEntradaProducto(usuarioActual);
-                ventanaEntradaProducto.setVisible(true);
 
             }
         });
@@ -87,8 +84,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaSalidaProducto ventanaSalidaProducto = new VentanaSalidaProducto(usuarioActual);
-                ventanaSalidaProducto.setVisible(true);
+
             }
         });
         boton3.addActionListener(new ActionListener(){
@@ -101,7 +97,7 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         boton4.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
+                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto();
                 ventanaBuscarPorTexto.setVisible(true);
             }
         });

@@ -59,25 +59,7 @@ public class VentanaHistorial extends JFrame implements ActionListener {
         add(panel);
         setVisible(true);
 
-        boton1.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
 
-            }
-        });
-
-        boton2.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-
-            }
-        });
-        boton3.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-
-            }
-        });
         boton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
