@@ -8,10 +8,13 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class VentanaHistorial extends JFrame {
     private JTextArea historialTextArea;
+    private List<String> listaProductosAgregados;
 
     public VentanaHistorial(Usuario usuarioActual) {
         super("Historial");
@@ -25,20 +28,23 @@ public class VentanaHistorial extends JFrame {
         JScrollPane scrollPane = new JScrollPane(historialTextArea);
         add(scrollPane, BorderLayout.CENTER);
 
+        listaProductosAgregados = new ArrayList<>();
+
         cargarHistorial();
 
         setVisible(true);
     }
 
     private void cargarHistorial() {
-        // Lógica para cargar el historial desde el archivo CSV
-        // Implementa esto según tus necesidades
+        // Lógica para cargar el historial desde el archivo CSV (si es necesario)
+        // Puedes implementar esto según tus necesidades
         // ...
 
         // Ejemplo de cómo podría verse el contenido del historial
-        historialTextArea.setText("Historial de productos:\n\n" +
-                "Producto A - 2023-01-01 12:00:00\n" +
-                "Producto B - 2023-01-02 14:30:00\n");
+        historialTextArea.setText("Historial de productos:\n\n");
+        for (String entrada : listaProductosAgregados) {
+            historialTextArea.append(entrada + "\n");
+        }
     }
 
     public void agregarEntradaHistorial(String producto) {
@@ -46,7 +52,9 @@ public class VentanaHistorial extends JFrame {
         String horaActual = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
         // Agregar entrada al historial
-        historialTextArea.append(producto + " - " + horaActual + "\n");
+        String entrada = producto + " - " + horaActual;
+        historialTextArea.append(entrada + "\n");
+        listaProductosAgregados.add(entrada);
 
         // Guardar en el archivo CSV
         try {
