@@ -130,10 +130,11 @@ public class GestorProductos {
             String linea;
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
-                if (partes.length >= 5) {  // Verifica la longitud del array antes de acceder al índice 4
+                if (partes.length >= 5) {
                     String nombreProducto = partes[0].replace("\"", "");
-                    String codigoBarra = partes[4].replace("\"", "");  // Accede al índice 4
-                    if (nombreProducto.equals(producto) && codigoBarra != null && !codigoBarra.isEmpty()) {
+                    String codigoBarra = partes[4].replace("\"", "");
+
+                    if (nombreProducto.equals(producto.getNombre()) && codigoBarra != null && !codigoBarra.isEmpty()) {
                         return true;
                     }
                 }
@@ -156,8 +157,14 @@ public class GestorProductos {
                 String nombreProducto = partes[0].replace("\"", "");
 
                 if (nombreProducto.equals(producto.getNombre())) {
-                    // Agregar el código de barras al CSV
-                    lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
+
+                    if (partes.length == 5 && partes[4] != null && !partes[4].isEmpty()) {
+
+                        lineas.add(linea);
+                    } else {
+
+                        lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
+                    }
                 } else {
                     lineas.add(linea);
                 }
@@ -168,6 +175,7 @@ public class GestorProductos {
 
         escribirCSV(rutaCsv, lineas);
     }
+
 
     private void escribirCSV(String rutaCsv, List<String> lineas) {
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv))) {
