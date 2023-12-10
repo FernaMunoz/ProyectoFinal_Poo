@@ -14,18 +14,20 @@ import java.util.List;
 
 public class VentanaOpciones extends JFrame implements ActionListener{
     private Usuario usuarioActual;
-    private JFrame frame;
+
     private JComboBox<String> comboBox;
     private GestorProductos gestorProductos = new GestorProductos();
 
     public VentanaOpciones(Usuario usuarioActual, String textoBusqueda) {
-        this.usuarioActual = usuarioActual;
+
+        super("Resultados de Búsqueda");
+        setSize(375, 667);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        frame = new JFrame("Resultados de Búsqueda");
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(375, 667);
-        frame.setLayout(null);
+
+        this.usuarioActual = usuarioActual;
 
         JLabel etiqueta1 = new JLabel(new ImageIcon(".png"));
 
@@ -110,9 +112,9 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         }
     }
 
-    public void mostrarVentana() {
-        frame.setVisible(true);
-    }
+   /* public void mostrarVentana() {
+        .setVisible(true);
+    }*/
 
     @Override
     public void actionPerformed(ActionEvent e) {
