@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VentanaOpciones extends JFrame implements ActionListener{
+public class VentanaOpciones extends JFrame {
     private Usuario usuarioActual;
 
     private JComboBox<String> comboBox;
@@ -77,29 +77,36 @@ public class VentanaOpciones extends JFrame implements ActionListener{
 
         buscarProducto(textoBusqueda, usuarioActual);
 
-        boton1.addActionListener(new ActionListener(){
+        boton1.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
+                String productoSeleccionado = (String) comboBox.getSelectedItem();
+                new VentanaSalidaProducto(usuarioActual, productoSeleccionado);
 
             }
         });
 
-        boton2.addActionListener(new ActionListener(){
+        boton2.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
+                String productoSeleccionado = (String) comboBox.getSelectedItem();
+                new VentanaEntradaProducto(usuarioActual, productoSeleccionado);
 
             }
         });
-        boton3.addActionListener(new ActionListener(){
+        boton3.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
+                String productoSeleccionado = (String) comboBox.getSelectedItem();
+                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
+                ventanaMostrarProducto.setVisible(true);
 
             }
         });
 
-        botonvolver.addActionListener(new ActionListener(){
+        botonvolver.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto();
                 ventanaBuscarPorTexto.setVisible(true);
             }
@@ -112,14 +119,5 @@ public class VentanaOpciones extends JFrame implements ActionListener{
         for (Producto producto : productos) {
             comboBox.addItem(producto.getNombre());
         }
-    }
-
-   /* public void mostrarVentana() {
-        .setVisible(true);
-    }*/
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
     }
 }
