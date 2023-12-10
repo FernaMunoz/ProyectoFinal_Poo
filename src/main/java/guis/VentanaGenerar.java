@@ -96,16 +96,16 @@ public class VentanaGenerar extends JFrame {
                         CodigoBarra codigoBarraGenerator = new CodigoBarra();
                         CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
 
-                        // Actualizar el CSV solo si se generó un nuevo código de barras
                         gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
 
-                        // Muestra la imagen del código de barras generado
                         JOptionPane.showMessageDialog(this,
                                 "Código generado para '" + productoSeleccionadoNombre + "':\n" + codigoBarraInfo.getCodigoBarras(),
                                 "Código de Barras",
                                 JOptionPane.INFORMATION_MESSAGE,
                                 codigoBarraInfo.getImagenCodigoBarras());
                         System.out.println("El producto '" + productoSeleccionadoNombre + "' ya tiene un código de barras.");
+
+                    } else {
                         JOptionPane.showMessageDialog(this,
                                 "El producto '" + productoSeleccionadoNombre + "' ya tiene un código de barras.",
                                 "Código de Barras Existente",
