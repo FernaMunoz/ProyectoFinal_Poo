@@ -3,13 +3,15 @@ package datos;
 import modelo.Usuario;
 import modelo.Producto;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GestorHistorial {
+
+
 
     public void crearHistorial(Usuario usuarioActual) {
         String rutaCsv = usuarioActual.getNombre() + "_historial.csv";
@@ -20,6 +22,21 @@ public class GestorHistorial {
         } catch (IOException e){
             e.printStackTrace();
         }
+    }
+    public List<String> leerHistorial(Usuario usuarioActual) {
+        String rutaCsv = usuarioActual.getNombre() + "_historial.csv";
+        List<String> historial = new ArrayList<>();
+
+        try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))){
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                historial.add(linea);
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return historial;
     }
 
     public void registrarModificacion(Usuario usuarioActual, String productoAnterior, String productoNuevo) {

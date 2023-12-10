@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventanas de entrada y salida de productos funcionan y modifique el gestor de productos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial">
+      <change afterPath="$PROJECT_DIR$/2_historial.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_inventario.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702217271225</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial">
+      <option name="closed" value="true" />
+      <created>1702221939442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702221939442</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -157,7 +161,8 @@
     <MESSAGE value="funciona VentanaEntradaProducto" />
     <MESSAGE value="agregue el boton de para ver inventario en ventanamenuprincipal pero aun no tiene funcionalidad" />
     <MESSAGE value="ventanas de entrada y salida de productos funcionan y modifique el gestor de productos" />
-    <option name="LAST_COMMIT_MESSAGE" value="ventanas de entrada y salida de productos funcionan y modifique el gestor de productos" />
+    <MESSAGE value="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial" />
+    <option name="LAST_COMMIT_MESSAGE" value="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

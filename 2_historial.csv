@@ -1,0 +1,6 @@
+Fecha y Hora, Acción, Producto, Detalles
+2023-12-10 11:49:41, Nuevo Producto, taza, Se agregó al inventario
+2023-12-10 12:09:44, Modificación, taza, taza modificada
+2023-12-10 12:17:58, Entrada, taza modificada, Se agregaron 3 unidades
+2023-12-10 12:21:58, Entrada, taza modificada, Se agregaron 2 unidades
+2023-12-10 12:22:57, Salida, taza modificada, Se retiraron 1 unidades
