@@ -44,9 +44,6 @@ public class GestorProductos {
         }
     }
 
-
-
-
     public List<Producto> obtenerProductosSimilares(String textoBusqueda, Usuario usuarioActual) {
         List<Producto> productosSimilares = new ArrayList<>();
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
@@ -74,4 +71,40 @@ public class GestorProductos {
 
         return productosSimilares;
     }
+
+    public void modificarStockProducto(int stockNuevo, Usuario usuarioActual, String productoSeleccionado){
+        String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
+        List<String> lineas = new ArrayList<>();
+
+        try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))) {
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] partes = linea.split(",");
+                String nombreProducto = partes[0].replace("\"", "");
+
+                if (nombreProducto.equals(productoSeleccionado)) {
+                    lineas.add("\"" + nombreProducto + "\",\"" + stockNuevo + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                } else {
+                    lineas.add(linea);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv))) {
+            for (String linea : lineas) {
+                escritor.write(linea);
+                escritor.newLine();
+            }
+
+            escritor.flush();
+
+            System.out.println("Stock del producto modificado exitosamente");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="avance con la ventana de editar producto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaNotificadorExito.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="funciona editar producto">
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProductos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702174926675</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="funciona editar producto">
+      <option name="closed" value="true" />
+      <created>1702179734270</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702179734270</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -118,7 +126,8 @@
     <MESSAGE value="ahora si se ve el combobox" />
     <MESSAGE value="nuevo metodo en gestorinventario y funciona el buscarproducto" />
     <MESSAGE value="avance con la ventana de editar producto" />
-    <option name="LAST_COMMIT_MESSAGE" value="avance con la ventana de editar producto" />
+    <MESSAGE value="funciona editar producto" />
+    <option name="LAST_COMMIT_MESSAGE" value="funciona editar producto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
