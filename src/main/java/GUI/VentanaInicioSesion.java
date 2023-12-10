@@ -25,7 +25,7 @@ public class VentanaInicioSesion extends JFrame {
         nombre = new JTextField();
         JLabel etiqueta3 = new JLabel("Contraseña*");
         contrasena = new JPasswordField();
-        JButton botonRegistrar = new JButton("Registrar");
+        JButton botonRegistrar = new JButton("Iniciar Sesión");
         JButton botonVolver = new JButton("Back");
 
         etiqueta1.setBounds(0,0,375,667);
@@ -84,4 +84,3 @@ public class VentanaInicioSesion extends JFrame {
         setVisible(true);
     }
 }
-//hola

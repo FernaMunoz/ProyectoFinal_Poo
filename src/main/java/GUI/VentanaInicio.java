@@ -57,4 +57,3 @@ public class VentanaInicio extends JFrame implements ActionListener {
         }
     }
 }
-//hola

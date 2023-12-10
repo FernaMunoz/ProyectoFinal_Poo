@@ -102,4 +102,3 @@ public class VentanaRegistro extends JFrame {
         setVisible(true);
     }
 }
-//hola

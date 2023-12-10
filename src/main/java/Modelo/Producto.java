@@ -6,7 +6,7 @@ public class Producto {
     private double precio;
     private String imagen;
 
-    public Producto(Inventario inventario, String nombre, int stock, double precio, String imagen) {
+    public Producto(String nombre, int stock, double precio, String imagen) {
 
         this.nombre = nombre;
         this.stock = stock;

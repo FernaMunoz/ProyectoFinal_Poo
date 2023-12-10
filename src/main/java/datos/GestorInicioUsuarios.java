@@ -1,5 +1,4 @@
 package datos;
-
 import Modelo.Usuario;
 import java.io.BufferedReader;
 import java.io.FileReader;

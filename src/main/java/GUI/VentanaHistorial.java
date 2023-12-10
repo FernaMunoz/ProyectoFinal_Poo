@@ -1,49 +1,36 @@
 package GUI;
 
 import Modelo.Usuario;
-import datos.GestorHistorial;
 
 import javax.swing.*;
-import java.awt.*;
-import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import java.util.Date;
 
 public class VentanaHistorial extends JFrame {
-    private JTextArea historialTextArea;
-    private GestorHistorial gestorHistorial;
+    private JTable tablaHistorial;
+    private DefaultTableModel modeloHistorial;
 
-    public VentanaHistorial(Usuario usuarioActual, GestorHistorial gestorHistorial) {
-        super("Historial");
+    public VentanaHistorial(Usuario usuarioActual) {
+        super("Historial de Productos");
         setSize(400, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        this.gestorHistorial = gestorHistorial;
+        // Crear la tabla para mostrar el historial
+        modeloHistorial = new DefaultTableModel();
+        modeloHistorial.addColumn("Fecha y Hora");
+        modeloHistorial.addColumn("Producto");
+        tablaHistorial = new JTable(modeloHistorial);
 
-        historialTextArea = new JTextArea();
-        historialTextArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(tablaHistorial);
+        add(scrollPane);
 
-        JScrollPane scrollPane = new JScrollPane(historialTextArea);
-        add(scrollPane, BorderLayout.CENTER);
-
-        cargarHistorial();
-
-        setVisible(true);
+        setVisible(false);
     }
 
-    public VentanaHistorial(Usuario usuarioActual) {
-    }
-
-    private void cargarHistorial() {
-        List<String> historial = gestorHistorial.getHistorial();
-
-        historialTextArea.setText("Historial de productos:\n\n");
-        for (String entrada : historial) {
-            historialTextArea.append(entrada + "\n");
-        }
-    }
-
+    // Método para agregar una entrada al historial
     public void agregarEntradaHistorial(String producto) {
-        gestorHistorial.agregarEntradaHistorial(producto);
-        cargarHistorial();
+        Date fechaHoraActual = new Date();
+        modeloHistorial.addRow(new Object[]{fechaHoraActual, producto});
     }
 }

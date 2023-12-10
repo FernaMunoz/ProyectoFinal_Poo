@@ -104,7 +104,7 @@ public class VentanaMenuPrincipal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 VentanaHistorial ventanaHistorial = null;
-                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto(usuarioActual, ventanaHistorial);
+                VentanaAgregarProducto ventanaAgregarProducto = new VentanaAgregarProducto(usuarioActual);
                 ventanaAgregarProducto.setVisible(true);
 
             }

@@ -5,17 +5,18 @@ import Modelo.Producto;
 import Modelo.Usuario;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaAgregarProducto extends JFrame implements ActionListener{
+public class VentanaAgregarProducto extends JFrame{
     private Usuario usuario;
+
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
-    private VentanaHistorial ventanaHistorial;
-    public VentanaAgregarProducto(Usuario usuarioActual, VentanaHistorial ventanaHistorial) {
+    public VentanaAgregarProducto(Usuario usuarioActual) {
         super("Agregar Producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -23,7 +24,6 @@ public class VentanaAgregarProducto extends JFrame implements ActionListener{
         JPanel panel = new JPanel();
         panel.setLayout(null);
         this.usuario = usuarioActual;
-        this.ventanaHistorial = ventanaHistorial;
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("AgregarProducto.png"));
         JButton btnvolver = new JButton();
@@ -65,24 +65,22 @@ public class VentanaAgregarProducto extends JFrame implements ActionListener{
                 double precios = Double.parseDouble(precio.getText());
 
                 Inventario inventario = new Inventario(usuario);
-                Producto producto = new Producto(inventario, nombre, stock, precios, null);
+                Producto producto = new Producto(nombre, stock, precios, null);
 
                 GestorInventario gestorInventario = new GestorInventario();
                 gestorInventario.agregarProductoAInventario(usuario, producto);
 
-                // Agregar entrada al historial
-                VentanaHistorial ventanaHistorial= new VentanaHistorial(usuarioActual);
-                ventanaHistorial.agregarEntradaHistorial(nombre);
             }
         });
+
 
         btnvolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
-                ventanaMenuPrincipal.setVisible(true);
+                VentanaInicio ventanaInicio = new VentanaInicio();
+                ventanaInicio.setVisible(true);
             }
         });
 
@@ -97,10 +95,5 @@ public class VentanaAgregarProducto extends JFrame implements ActionListener{
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
     }
 }

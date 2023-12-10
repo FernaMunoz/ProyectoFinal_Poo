@@ -56,11 +56,12 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual);
+                String textoBusqueda = buscar.getText();
+                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, textoBusqueda);
                 ventanaOpciones.setVisible(true);
-
             }
         });
+
         boton2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -81,4 +82,3 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
 
     }
 }
-//hola
