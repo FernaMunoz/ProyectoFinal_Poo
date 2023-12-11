@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="commit casi final">
-      <change afterPath="$PROJECT_DIR$/Buscar producto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CantidadEntrada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Captura de pantalla 2023-12-08 170631.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 16 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 23 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 25 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 7 (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group 9 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Historial.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buscarExistencias-buscarNombre-lentes1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buscarNueva.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cantidadSalida.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entradaProductos-Nombre.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fondo rosado3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons8-código-de-barras-50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="commit final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,7 +188,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702330774897</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="commit final">
+      <option name="closed" value="true" />
+      <created>1702332395097</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702332395097</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit final">
+      <option name="closed" value="true" />
+      <created>1702332446204</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702332446204</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -249,7 +228,8 @@
     <MESSAGE value="actualizacion de estetica ventanas&#10;en mostrarproducto ya se ve el codigo de barras" />
     <MESSAGE value="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial" />
     <MESSAGE value="commit casi final" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit casi final" />
+    <MESSAGE value="commit final" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
