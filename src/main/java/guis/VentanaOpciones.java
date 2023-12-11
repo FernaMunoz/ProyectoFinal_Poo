@@ -1,15 +1,14 @@
 package guis;
-import modelo.Usuario;
-import modelo.Producto;
-import modelo.Inventario;
+
 import datos.GestorProductos;
+import modelo.Producto;
+import modelo.Usuario;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 public class VentanaOpciones extends JFrame {
