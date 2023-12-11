@@ -12,7 +12,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         super("Buscar");
         setSize(375, 667);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -69,6 +69,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton3.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                dispose();
                 VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
                 ventanaMenuPrincipal.setVisible(true);
 

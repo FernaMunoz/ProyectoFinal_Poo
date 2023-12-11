@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
+public class VentanaBuscarPorTexto extends JFrame {
     private JTextField buscar;
     public VentanaBuscarPorTexto(Usuario usuarioActual) {
         super("Buscar producto");
@@ -50,10 +50,10 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
         add(panel);
         setVisible(true);
 
-
         boton1.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                dispose();
                 String textoBusqueda = buscar.getText();
                 VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, textoBusqueda);
                 ventanaOpciones.setVisible(true);
@@ -71,12 +71,4 @@ public class VentanaBuscarPorTexto extends JFrame implements ActionListener {
 
     }
 
-    public VentanaBuscarPorTexto() {
-
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
 }

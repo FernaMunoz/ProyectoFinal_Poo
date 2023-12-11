@@ -15,7 +15,7 @@ public class VentanaMenuPrincipal extends JFrame {
         this.usuarioActual = usuarioActual;
         setSize(375, 667);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
