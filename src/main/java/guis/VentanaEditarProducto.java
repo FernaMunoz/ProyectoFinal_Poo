@@ -15,10 +15,11 @@ public class VentanaEditarProducto extends JFrame {
     private JTextField stockEditar;
     private JTextField precioEditar;
     private GestorProductos gestorProductos;
+    private String tipoBusqueda;
 
     private Usuario usuarioActual;
 
-    public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
+    public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado,String tipoBusqueda ) {
         super("Editar Producto");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -113,7 +114,7 @@ public class VentanaEditarProducto extends JFrame {
                     gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
 
                     dispose();
-                    JOptionPane.showMessageDialog(null, "Producto modificado con éxito","Exito", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Producto modificado con éxito", "Exito", JOptionPane.INFORMATION_MESSAGE);
                 } catch (NumberFormatException ex) {
                     System.out.println("Por favor, introduce un número válido.");
                 }
@@ -121,13 +122,17 @@ public class VentanaEditarProducto extends JFrame {
         });
 
         btnvolver.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed (ActionEvent e){
-            dispose();
-
-            VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
-            ventanaMostrarProducto.setVisible(true);
-        }
-    });
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                if ("porTexto".equals(tipoBusqueda)) {
+                    VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado, tipoBusqueda);
+                    ventanaMostrarProducto.setVisible(true);
+                } else if ("porBarras".equals(tipoBusqueda)) {
+                    VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado, tipoBusqueda);
+                    ventanaMostrarProducto.setVisible(true);
+                }
+            }
+        });
     }
 }

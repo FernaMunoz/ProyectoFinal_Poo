@@ -13,11 +13,13 @@ import java.util.List;
 public class VentanaMostrarProducto extends JFrame {
     private Usuario usuarioActual;
     private String productoSeleccionado;
+    private String tipoBusqueda;
 
-    public VentanaMostrarProducto(Usuario usuarioActual, String productoSeleccionado) {
+    public VentanaMostrarProducto(Usuario usuarioActual, String productoSeleccionado, String tipoBusqueda) {
         super("Mostrar Producto");
         this.usuarioActual = usuarioActual;
         this.productoSeleccionado = productoSeleccionado;
+        this.tipoBusqueda = tipoBusqueda;
 
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -77,8 +79,9 @@ public class VentanaMostrarProducto extends JFrame {
             boton.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
+
                     dispose();
-                    VentanaEditarProducto ventanaEditarProducto = new VentanaEditarProducto(usuarioActual, productoSeleccionado);
+                    VentanaEditarProducto ventanaEditarProducto = new VentanaEditarProducto(usuarioActual, productoSeleccionado, tipoBusqueda);
                     ventanaEditarProducto.setVisible(true);
                 }
             });
@@ -87,8 +90,13 @@ public class VentanaMostrarProducto extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e){
                     dispose();
-                    VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado);
-                    ventanaOpciones.setVisible(true);
+                    if ("porTexto".equals(tipoBusqueda)) {
+                        VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado, "PorTexto");
+                        ventanaOpciones.setVisible(true);
+                    } else if ("porBarras".equals(tipoBusqueda)) {
+                        VentanaOpcionesBarras ventanaOpcionesBarras = new VentanaOpcionesBarras(usuarioActual, productoSeleccionado);
+                        ventanaOpcionesBarras.setVisible(true);
+                    }
                 }
             });
         }

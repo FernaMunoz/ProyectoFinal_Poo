@@ -13,10 +13,11 @@ import java.util.List;
 
 public class VentanaOpciones extends JFrame {
     private Usuario usuarioActual;
+    private String tipoBusqueda;
     private JComboBox<String> comboBox;
     private GestorProductos gestorProductos = new GestorProductos();
 
-    public VentanaOpciones(Usuario usuarioActual, String textoBusqueda) {
+    public VentanaOpciones(Usuario usuarioActual, String textoBusqueda, String tipoBusqueda) {
 
         super("Resultados de Búsqueda");
         setSize(375, 667);
@@ -27,6 +28,7 @@ public class VentanaOpciones extends JFrame {
         panel.setLayout(null);
 
         this.usuarioActual = usuarioActual;
+        this.tipoBusqueda = tipoBusqueda;
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
 
@@ -80,7 +82,7 @@ public class VentanaOpciones extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 String productoSeleccionado = (String) comboBox.getSelectedItem();
-                new VentanaSalidaProducto(usuarioActual, productoSeleccionado);
+                new VentanaSalidaProducto(usuarioActual, productoSeleccionado, "porTexto");
             }
         });
 
@@ -89,7 +91,7 @@ public class VentanaOpciones extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 String productoSeleccionado = (String) comboBox.getSelectedItem();
-                new VentanaEntradaProducto(usuarioActual, productoSeleccionado);
+                new VentanaEntradaProducto(usuarioActual, productoSeleccionado,"porTexto");
             }
         });
         boton3.addActionListener(new ActionListener() {
@@ -97,7 +99,7 @@ public class VentanaOpciones extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 String productoSeleccionado = (String) comboBox.getSelectedItem();
-                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
+                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado, "porTexto");
                 ventanaMostrarProducto.setVisible(true);
             }
         });

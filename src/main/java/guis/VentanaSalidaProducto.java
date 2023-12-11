@@ -14,8 +14,9 @@ public class VentanaSalidaProducto extends JFrame{
     private Usuario usuarioActual;
     private String productoSeleccionado;
     private GestorProductos gestorProductos = new GestorProductos();
+    private String tipoBusqueda;
 
-    public VentanaSalidaProducto(Usuario usuarioActual, String productoSeleccionado) {
+    public VentanaSalidaProducto(Usuario usuarioActual, String productoSeleccionado, String tipoBusqueda) {
         super("Salida de productos");
         setSize(375, 667);
         setLocationRelativeTo(null);
@@ -26,6 +27,7 @@ public class VentanaSalidaProducto extends JFrame{
 
         this.usuarioActual = usuarioActual;
         this.productoSeleccionado = productoSeleccionado;
+        this.tipoBusqueda = tipoBusqueda;
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("Group 14.png"));
         ImageIcon volver = new ImageIcon("Group 15.png");
@@ -92,10 +94,16 @@ public class VentanaSalidaProducto extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado);
-                ventanaOpciones.setVisible(true);
-            }
-        });
+                if ("porTexto".equals(tipoBusqueda)) {
+                    VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado,tipoBusqueda);
+                    ventanaOpciones.setVisible(true);
+            } else if ("porBarras".equals(tipoBusqueda)) {
+                    VentanaOpcionesBarras ventanaOpcionesBarras = new VentanaOpcionesBarras(usuarioActual, productoSeleccionado);
+                    ventanaOpcionesBarras.setVisible(true);
+                }
+
+                }
+            });
     }
 
     private void aumentarCantidad() {
