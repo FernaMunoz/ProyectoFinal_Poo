@@ -65,7 +65,9 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton2.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-
+                dispose();
+                VentanaBuscarCodigoBarras ventanaBuscarCodigoBarras = new VentanaBuscarCodigoBarras(usuarioActual);
+                ventanaBuscarCodigoBarras.setVisible(true);
             }
         });
         boton3.addActionListener(new ActionListener(){

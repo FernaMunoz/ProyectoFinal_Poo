@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial">
-      <change afterPath="$PROJECT_DIR$/2_historial.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_inventario.csv" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventanaHistorial agregada, falta arreglarla para que quede mas estetica">
+      <change afterPath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarCodigoBarras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerarCodigo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/CodigoBarra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_inventario.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_historial.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_inventario.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anaihv_inventario.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +67,7 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="guis" />
+      <recent name="modelo" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -144,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702221939442</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ventanaHistorial agregada, falta arreglarla para que quede mas estetica">
+      <option name="closed" value="true" />
+      <created>1702223356696</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702223356696</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -162,7 +185,8 @@
     <MESSAGE value="agregue el boton de para ver inventario en ventanamenuprincipal pero aun no tiene funcionalidad" />
     <MESSAGE value="ventanas de entrada y salida de productos funcionan y modifique el gestor de productos" />
     <MESSAGE value="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial" />
-    <option name="LAST_COMMIT_MESSAGE" value="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial" />
+    <MESSAGE value="ventanaHistorial agregada, falta arreglarla para que quede mas estetica" />
+    <option name="LAST_COMMIT_MESSAGE" value="ventanaHistorial agregada, falta arreglarla para que quede mas estetica" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,0 +1,11 @@
+Fecha y Hora, Acción, Producto, Detalles
+2023-12-10 18:12:25, Nuevo Producto, libro 1, Se agregó al inventario
+2023-12-10 18:12:28, Nuevo Producto, libro 2, Se agregó al inventario
+2023-12-10 18:12:40, Nuevo Producto, libro 3, Se agregó al inventario
+2023-12-10 18:17:09, Salida, libro 2, Se retiraron 4 unidades
+2023-12-10 18:17:59, Modificación, libro 2, libro 2.0
+2023-12-10 18:18:09, Entrada, libro 3, Se agregaron 10 unidades
+2023-12-10 18:18:16, Entrada, libro 2, Se agregaron 2 unidades
+2023-12-10 18:18:25, Salida, libro 1, Se retiraron 1 unidades
+2023-12-10 21:17:49, Entrada, "libro 1", Se agregaron 3 unidades
+2023-12-10 22:03:18, Modificación, libro 3, libro modificado
