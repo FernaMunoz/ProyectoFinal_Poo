@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import datos.gestorInicioUsuarios;
-import datos.gestorRegistroUsuarios;
 import modelo.Usuario;
 
 public class VentanaInicioSesion extends JFrame {
@@ -25,26 +24,26 @@ public class VentanaInicioSesion extends JFrame {
         nombre = new JTextField();
         JLabel etiqueta3 = new JLabel("Contraseña*");
         contrasena = new JPasswordField();
-        JButton botonRegistrar = new JButton("Registrar");
-        JButton botonVolver = new JButton("Back");
+        JButton botonInicioSesion = new JButton("Inicio sesión");
+        JButton botonVolver = new JButton("Volver");
 
         etiqueta1.setBounds(0,0,375,667);
         etiqueta2.setBounds(60,238,82,23);
         etiqueta3.setBounds(60,322,102,23);
         nombre.setBounds(47,261,281,51);
         contrasena.setBounds(47,347,281,52);
-        botonRegistrar.setBounds(104,418,166,42);
+        botonInicioSesion.setBounds(104,418,166,42);
         botonVolver.setBounds(5,5,70,30);
 
         etiqueta2.setForeground(Color.GRAY);
         etiqueta3.setForeground(Color.GRAY);
 
-        botonRegistrar.setBackground(Color.CYAN);
+        botonInicioSesion.setBackground(Color.CYAN);
         botonVolver.setBackground(Color.CYAN);
         nombre.setBorder(new LineBorder(Color.WHITE,2,true));
         contrasena.setBorder(new LineBorder(Color.WHITE,2,true));
 
-        botonRegistrar.addActionListener(new ActionListener() {
+        botonInicioSesion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String usuario = nombre.getText();
@@ -78,7 +77,7 @@ public class VentanaInicioSesion extends JFrame {
         panel.add(botonVolver);
         panel.add(nombre);
         panel.add(contrasena);
-        panel.add(botonRegistrar);
+        panel.add(botonInicioSesion);
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);

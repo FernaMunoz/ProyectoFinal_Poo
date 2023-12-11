@@ -17,40 +17,40 @@ public class VentanaBuscarPorTexto extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
+        JLabel labelFondo = new JLabel(new ImageIcon("fondo rosado3.png"));
 
-        JLabel etiqueta2 = new JLabel(new ImageIcon("buscar.png"));
+        JLabel BordeRosa = new JLabel(new ImageIcon("buscarNueva.png"));
         buscar = new JTextField();
 
-        JButton boton1 = new JButton("Buscar");
-        JButton boton2 = new JButton();
+        JButton botonBuscar = new JButton("Buscar");
+        JButton botonVolver = new JButton();
 
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
-        boton1.setBounds(115, 228, 137, 53);
-        boton2.setBounds(18, 13, 45, 48);
-        etiqueta2.setBounds(22, 109, 327, 68);
+        botonBuscar.setBounds(115, 228, 137, 53);
+        botonVolver.setBounds(18, 13, 45, 48);
+        BordeRosa.setBounds(18, 141, 327, 68);
         buscar.setBounds(26, 150, 310, 50);
-        etiqueta1.setBounds(0, 0, 375, 667);
+        labelFondo.setBounds(0, 0, 375, 667);
 
-        boton2.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
+        botonVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonVolver.getWidth(), botonVolver.getHeight(), Image.SCALE_SMOOTH)));
 
-        boton1.setBackground(Color.pink);
-        boton2.setBackground(Color.pink);
+        botonBuscar.setBackground(Color.pink);
+        botonVolver.setBackground(Color.pink);
 
-        boton1.setBorder(new LineBorder(Color.WHITE, 2, true));
-        boton2.setBorder(new LineBorder(Color.WHITE, 2, true));
+        botonBuscar.setBorder(new LineBorder(Color.WHITE, 2, true));
+        botonVolver.setBorder(new LineBorder(Color.WHITE, 2, true));
 
-        panel.add(etiqueta2);
+        panel.add(BordeRosa);
         panel.add(buscar);
-        panel.add(boton1);
-        panel.add(boton2);
-        panel.add(etiqueta1);
+        panel.add(botonBuscar);
+        panel.add(botonVolver);
+        panel.add(labelFondo);
 
         add(panel);
         setVisible(true);
 
-        boton1.addActionListener(new ActionListener(){
+        botonBuscar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
@@ -60,7 +60,7 @@ public class VentanaBuscarPorTexto extends JFrame {
             }
         });
 
-        boton2.addActionListener(new ActionListener(){
+        botonVolver.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();

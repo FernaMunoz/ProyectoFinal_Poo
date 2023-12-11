@@ -156,7 +156,13 @@ public class GestorProductos {
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
                 String nombreProducto = partes[0].replace("\"", "");
-                String codigoBarra = partes[4].replace("\"", "");
+                String codigoBarra = "";
+
+                if(partes.length > 4) {
+                    codigoBarra = partes[4].replace("\"", "");
+                } else {
+                    codigoBarra = "no hay código de barras asignado";
+                }
 
                 if (nombreProducto.equals(producto.getNombre())) {
                     if (codigoBarra == null || codigoBarra.isEmpty() || codigoBarra.equals("no hay código de barras asignado")) {
@@ -174,6 +180,7 @@ public class GestorProductos {
 
         escribirCSV(rutaCsv, lineas);
     }
+
 
 
 

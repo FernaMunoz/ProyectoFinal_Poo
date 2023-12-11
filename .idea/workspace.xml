@@ -4,10 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="actualizacion de estetica ventanas&#10;en mostrarproducto ya se ve el codigo de barras">
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial">
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInventario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaNotificadorExito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/CodigoBarra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/CodigoBarra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702261819000</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial">
+      <option name="closed" value="true" />
+      <created>1702262867457</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702262867457</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -198,14 +226,14 @@
     <MESSAGE value="buscarporcodigobarras" />
     <MESSAGE value="actualizacion de estetica ventanas" />
     <MESSAGE value="actualizacion de estetica ventanas&#10;en mostrarproducto ya se ve el codigo de barras" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion de estetica ventanas&#10;en mostrarproducto ya se ve el codigo de barras" />
+    <MESSAGE value="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java</url>
-          <line>68</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -1,12 +1,10 @@
 package guis;
 import modelo.Usuario;
-
 import javax.swing.border.LineBorder;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class VentanaBuscar extends JFrame implements ActionListener {
     public VentanaBuscar(Usuario usuarioActual) {
         super("Buscar");
@@ -20,40 +18,40 @@ public class VentanaBuscar extends JFrame implements ActionListener {
 
         etiqueta1.setBounds(0, 0, 375, 667);
 
-        JButton boton1 = new JButton();
-        JButton boton2 = new JButton();
-        JButton boton3 = new JButton();
+        JButton botonBuscar = new JButton();
+        JButton botonScaner = new JButton();
+        JButton botonVolver = new JButton();
 
 
         ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
         ImageIcon scanner = new ImageIcon("Group 5.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
-        boton1.setBounds(113, 150, 143, 144);
-        boton2.setBounds(113, 330, 143, 144);
-        boton3.setBounds(18, 13, 45, 48);
+        botonBuscar.setBounds(113, 150, 143, 144);
+        botonScaner.setBounds(113, 330, 143, 144);
+        botonVolver.setBounds(18, 13, 45, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
 
-        boton1.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
-        boton2.setIcon(new ImageIcon(scanner.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
-        boton3.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
+        botonBuscar.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(botonBuscar.getWidth(), botonBuscar.getHeight(), Image.SCALE_SMOOTH)));
+        botonScaner.setIcon(new ImageIcon(scanner.getImage().getScaledInstance(botonScaner.getWidth(), botonScaner.getHeight(), Image.SCALE_SMOOTH)));
+        botonVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonVolver.getWidth(), botonVolver.getHeight(), Image.SCALE_SMOOTH)));
 
-        boton1.setBackground(Color.WHITE);
-        boton2.setBackground(Color.WHITE);
-        boton3.setBackground(Color.pink);
+        botonBuscar.setBackground(Color.WHITE);
+        botonScaner.setBackground(Color.WHITE);
+        botonVolver.setBackground(Color.pink);
 
-        boton1.setBorder(new LineBorder(Color.WHITE, 6, true));
-        boton2.setBorder(new LineBorder(Color.WHITE, 6, true));
+        botonBuscar.setBorder(new LineBorder(Color.WHITE, 6, true));
+        botonScaner.setBorder(new LineBorder(Color.WHITE, 6, true));
 
-        panel.add(boton1);
-        panel.add(boton2);
-        panel.add(boton3);
+        panel.add(botonBuscar);
+        panel.add(botonScaner);
+        panel.add(botonVolver);
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
 
-        boton1.addActionListener(new ActionListener(){
+        botonBuscar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
@@ -62,7 +60,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
             }
         });
 
-        boton2.addActionListener(new ActionListener(){
+        botonScaner.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
@@ -70,7 +68,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
                 ventanaBuscarCodigoBarras.setVisible(true);
             }
         });
-        boton3.addActionListener(new ActionListener(){
+        botonVolver.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);

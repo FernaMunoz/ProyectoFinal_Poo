@@ -1,6 +1,4 @@
 package guis;
-import modelo.Usuario;
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -20,21 +18,21 @@ public class VentanaInicio extends JFrame implements ActionListener {
 
         etiqueta1.setBounds(0,0,375,667);
 
-        JButton boton1 = new JButton("Iniciar sesión");
-        JButton boton2 = new JButton("Registrar");
-        boton1.setBackground(Color.WHITE);
-        boton2.setBackground(Color.WHITE);
-        boton1.setBorder(new LineBorder(Color.WHITE,2,true));
-        boton2.setBorder(new LineBorder(Color.WHITE,2,true));
+        JButton iniciarSesion = new JButton("Iniciar sesión");
+        JButton resgistrar = new JButton("Registrar");
+        iniciarSesion.setBackground(Color.WHITE);
+        resgistrar.setBackground(Color.WHITE);
+        iniciarSesion.setBorder(new LineBorder(Color.WHITE,2,true));
+        resgistrar.setBorder(new LineBorder(Color.WHITE,2,true));
 
-        boton1.setBounds(87,333,200,50);
-        boton2.setBounds(87,400,200,50);
+        iniciarSesion.setBounds(87,333,200,50);
+        resgistrar.setBounds(87,400,200,50);
 
-        boton1.addActionListener(this);
-        boton2.addActionListener(this);
+        iniciarSesion.addActionListener(this);
+        resgistrar.addActionListener(this);
 
-        panel.add(boton1);
-        panel.add(boton2);
+        panel.add(iniciarSesion);
+        panel.add(resgistrar);
         panel.add(etiqueta1);
 
         add(panel);

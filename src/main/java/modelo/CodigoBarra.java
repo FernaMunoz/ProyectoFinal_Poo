@@ -1,5 +1,4 @@
 package modelo;
-
 import datos.GestorProductos;
 import java.util.Random;
 import javax.swing.*;
@@ -42,14 +41,9 @@ public class CodigoBarra {
             suma += (i % 2 == 0) ? digito * 3 : digito;
         }
         int digitoControl = (10 - (suma % 10)) % 10;
-
         String codigoBarras = productoIdentificador + digitoControl;
         producto.setCodigoDebarra(codigoBarras);
-
-        // Actualizar CSV
         gestorProductos.actualizarCSV(usuarioActual, producto);
-
-        // Cargar la imagen del código de barras desde el archivo (ajusta la ruta según tu estructura)
         ImageIcon imagenCodigoBarras = new ImageIcon("icons8-código-de-barras-50.png");
 
         return new CodigoBarraInfo(producto, codigoBarras, imagenCodigoBarras);
@@ -66,3 +60,4 @@ public class CodigoBarra {
         return identificador.toString();
     }
 }
+

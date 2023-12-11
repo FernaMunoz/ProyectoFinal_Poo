@@ -39,7 +39,7 @@ public class VentanaRegistro extends JFrame {
         confContrasena = new JPasswordField();
 
         JButton botonRegistrar = new JButton("Registrar");
-        JButton botonVolver = new JButton("Back");
+        JButton botonVolver = new JButton("Volver");
 
         etiqueta1.setBounds(0,0,375,667);
         etiqueta2.setBounds(65,215,82,23);

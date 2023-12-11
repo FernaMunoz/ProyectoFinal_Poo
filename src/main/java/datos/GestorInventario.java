@@ -1,8 +1,10 @@
 package datos;
 import modelo.Usuario;
 import modelo.Producto;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.io.*;
-import javax.swing.JOptionPane;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,8 +16,7 @@ public class GestorInventario {
             escritor.write("\"" + producto.getNombre() + "\",");
             escritor.write("\"" + producto.getStock() + "\",");
             escritor.write("\"" + producto.getPrecio() + "\",");
-            escritor.write("\"" + producto.getImagen() + "\",");
-            escritor.write("\"no hay código de barras asignado\"");
+            escritor.write("\"" + producto.getImagen() + "\"");
             escritor.newLine();
 
             escritor.flush();
@@ -26,6 +27,26 @@ public class GestorInventario {
             e.printStackTrace();
         }
     }
+
+    public static DefaultTableModel cargarInventario(String nombre) {
+        DefaultTableModel modeloTabla = new DefaultTableModel();
+        modeloTabla.addColumn("nombre");
+        modeloTabla.addColumn("stock");
+        modeloTabla.addColumn("precio");
+
+        try (BufferedReader br = new BufferedReader(new FileReader(nombre + "_inventario.csv"))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(",");
+                modeloTabla.addRow(datos);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return modeloTabla;
+    }
+
 
     public List<String> buscarProducto(Usuario usuarioActual, String productoSeleccionado) {
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";

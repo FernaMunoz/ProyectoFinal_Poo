@@ -1,15 +1,12 @@
 package guis;
 import modelo.Usuario;
 import modelo.Producto;
-import modelo.Inventario;
 import datos.GestorProductos;
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 public class VentanaOpciones extends JFrame {
@@ -32,51 +29,55 @@ public class VentanaOpciones extends JFrame {
         JLabel etiqueta1 = new JLabel(new ImageIcon("fondo rosado3.png"));
 
         comboBox = new JComboBox<>();
+        JLabel BordeRosa = new JLabel(new ImageIcon("buscarNueva.png"));
 
-        JButton boton1 = new JButton();
-        JButton boton2 = new JButton();
-        JButton boton3 = new JButton();
-        JButton botonvolver = new JButton();
+        JButton botonSalida = new JButton();
+        JButton botonEntrada = new JButton();
+        JButton botonBuscar = new JButton();
+        JButton botonVolver = new JButton();
 
         ImageIcon salida = new ImageIcon("salidasProductos.png");
         ImageIcon entrada = new ImageIcon("ingresarProductos icon.png");
         ImageIcon buscar = new ImageIcon("Group 10.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
 
-        boton1.setBounds(41, 295, 117, 118);
-        boton2.setBounds(210, 295, 117, 118);
-        boton3.setBounds(128, 451, 117, 118);
-        botonvolver.setBounds(18, 13, 45, 48);
+        botonSalida.setBounds(41, 295, 117, 118);
+        botonEntrada.setBounds(210, 295, 117, 118);
+        botonBuscar.setBounds(128, 451, 117, 118);
+        botonVolver.setBounds(18, 13, 45, 48);
         comboBox.setBounds(29, 173, 316, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
+        BordeRosa.setBounds(18, 161, 341, 69);
 
-        boton1.setIcon(new ImageIcon(salida.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
-        boton2.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
-        boton3.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
-        botonvolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonvolver.getWidth(), botonvolver.getHeight(), Image.SCALE_SMOOTH)));
+        botonSalida.setIcon(new ImageIcon(salida.getImage().getScaledInstance(botonSalida.getWidth(), botonSalida.getHeight(), Image.SCALE_SMOOTH)));
+        botonEntrada.setIcon(new ImageIcon(entrada.getImage().getScaledInstance(botonEntrada.getWidth(), botonEntrada.getHeight(), Image.SCALE_SMOOTH)));
+        botonBuscar.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(botonBuscar.getWidth(), botonBuscar.getHeight(), Image.SCALE_SMOOTH)));
+        botonVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(botonVolver.getWidth(), botonVolver.getHeight(), Image.SCALE_SMOOTH)));
 
-        boton1.setBackground(Color.WHITE);
-        boton2.setBackground(Color.WHITE);
-        boton3.setBackground(Color.WHITE);
-        botonvolver.setBackground(Color.PINK);
+        botonSalida.setBackground(Color.WHITE);
+        botonEntrada.setBackground(Color.WHITE);
+        botonBuscar.setBackground(Color.WHITE);
+        botonVolver.setBackground(Color.PINK);
         comboBox.setBackground(Color.WHITE);
 
-        boton1.setBorder(new LineBorder(Color.WHITE, 6, true));
-        boton2.setBorder(new LineBorder(Color.WHITE, 6, true));
-        boton3.setBorder(new LineBorder(Color.WHITE, 6, true));
+        botonSalida.setBorder(new LineBorder(Color.WHITE, 6, true));
+        botonEntrada.setBorder(new LineBorder(Color.WHITE, 6, true));
+        botonBuscar.setBorder(new LineBorder(Color.WHITE, 6, true));
+
 
         panel.add(comboBox);
-        panel.add(boton1);
-        panel.add(boton2);
-        panel.add(boton3);
-        panel.add(botonvolver);
+        panel.add(BordeRosa);
+        panel.add(botonSalida);
+        panel.add(botonEntrada);
+        panel.add(botonBuscar);
+        panel.add(botonVolver);
         panel.add(etiqueta1);
         add(panel);
         setVisible(true);
 
         buscarProducto(textoBusqueda, usuarioActual);
 
-        boton1.addActionListener(new ActionListener() {
+        botonSalida.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
@@ -85,7 +86,7 @@ public class VentanaOpciones extends JFrame {
             }
         });
 
-        boton2.addActionListener(new ActionListener() {
+        botonEntrada.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
@@ -93,7 +94,7 @@ public class VentanaOpciones extends JFrame {
                 new VentanaEntradaProducto(usuarioActual, productoSeleccionado);
             }
         });
-        boton3.addActionListener(new ActionListener() {
+        botonBuscar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
@@ -103,7 +104,7 @@ public class VentanaOpciones extends JFrame {
             }
         });
 
-        botonvolver.addActionListener(new ActionListener() {
+        botonVolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();

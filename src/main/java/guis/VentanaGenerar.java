@@ -5,7 +5,6 @@ import datos.GestorProductos;
 import modelo.Producto;
 import modelo.Usuario;
 import modelo.CodigoBarra;
-//import modelo.CodigoBarra.CodigoBarraInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -98,7 +97,6 @@ public class VentanaGenerar extends JFrame {
                     CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
 
                     gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
-
                     GestorHistorial gestorHistorial = new GestorHistorial();
                     gestorHistorial.registrarGeneracionCodigo(usuarioActual, productoSeleccionado);
 
@@ -123,14 +121,12 @@ public class VentanaGenerar extends JFrame {
         }
     }
 
-
     private Producto obtenerProducto(String nombreProducto) {
         List<Producto> productos = gestorProductos.obtenerProductosSimilares(nombreProducto, usuarioActual);
 
         if (!productos.isEmpty()) {
             return productos.get(0);
         } else {
-
             throw new IllegalArgumentException("Producto no encontrado: " + nombreProducto);
         }
     }

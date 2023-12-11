@@ -33,7 +33,15 @@ public class VentanaMostrarProducto extends JFrame {
         JLabel etiqueta3 = new JLabel("Stock: " + atributosProducto.get(1));
         JLabel etiqueta4 = new JLabel("Precio: " + atributosProducto.get(2));
         JLabel etiqueta5 = new JLabel("Imagen: " + atributosProducto.get(3));
-        JLabel etiqueta6 = new JLabel("Código de barras: " + atributosProducto.get(4));
+
+        String codigoBarras;
+        if (atributosProducto.size() > 4) {
+            codigoBarras = atributosProducto.get(4);
+        } else {
+            codigoBarras = "No tiene código de barras";
+        }
+        JLabel etiqueta6 = new JLabel("Código de barras: " + codigoBarras);
+
 
         JButton boton = new JButton();
         ImageIcon editar = new ImageIcon("Group 24.png");

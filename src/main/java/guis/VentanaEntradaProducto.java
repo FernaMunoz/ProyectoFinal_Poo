@@ -1,4 +1,5 @@
 package guis;
+import datos.GestorHistorial;
 import modelo.Usuario;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -15,9 +16,11 @@ public class VentanaEntradaProducto extends JFrame  {
     private String productoSeleccionado;
     private GestorProductos gestorProductos = new GestorProductos();
 
+    private GestorHistorial gestorHistorial = new GestorHistorial();
+
     public VentanaEntradaProducto(Usuario usuarioActual, String productoSeleccionado) {
 
-        super("Salida de productos");
+        super("Entrada de productos");
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -28,34 +31,38 @@ public class VentanaEntradaProducto extends JFrame  {
         this.usuarioActual = usuarioActual;
         this.productoSeleccionado = productoSeleccionado;
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("entradaProductos-Nombre.png"));
+        JLabel fondo = new JLabel(new ImageIcon("entradaProductos-Nombre.png"));
+        JLabel label = new JLabel();
         ImageIcon volver = new ImageIcon("Group 19.png");
+        ImageIcon imagenCantidad = new ImageIcon("cantidadEntrada.png");
         ImageIcon sumar = new ImageIcon("Group 20.png");
         ImageIcon restar = new ImageIcon("Group 21.png");
         ImageIcon btnCompletar = new ImageIcon("Group 23.png");
 
-        etiqueta1.setBounds(0, 0, 375, 667);
 
-        JLabel label = new JLabel("Cantidad");
+        fondo.setBounds(0, 0, 375, 667);
+
+
         textFieldCantidad = new JTextField("0");
         JButton masButton = new JButton();
         JButton menosButton = new JButton();
         JButton confirmarButton = new JButton();
         JButton btnVolver = new JButton();
 
-        label.setBounds(140, 220, 100, 30);
-        textFieldCantidad.setBounds(133, 250, 95, 50);
-        masButton.setBounds(248, 251, 52, 49);
-        menosButton.setBounds(73, 270, 50, 20);
-        confirmarButton.setBounds(108, 316, 166, 42);
+        label.setBounds(130, 151, 112, 38);
+        textFieldCantidad.setBounds(133, 213, 105, 63);
+        masButton.setBounds(256, 210, 58, 62);
+        menosButton.setBounds(62, 236, 56, 25);
+        confirmarButton.setBounds(105, 316, 166, 42);
         btnVolver.setBounds(18, 13, 45, 48);
 
         btnVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(btnVolver.getWidth(), btnVolver.getHeight(), Image.SCALE_SMOOTH)));
         masButton.setIcon(new ImageIcon(sumar.getImage().getScaledInstance(masButton.getWidth(), masButton.getHeight(), Image.SCALE_SMOOTH)));
         menosButton.setIcon(new ImageIcon(restar.getImage().getScaledInstance(menosButton.getWidth(), menosButton.getHeight(), Image.SCALE_SMOOTH)));
         confirmarButton.setIcon(new ImageIcon(btnCompletar.getImage().getScaledInstance(confirmarButton.getWidth(), confirmarButton.getHeight(), Image.SCALE_SMOOTH)));
+        label.setIcon(new ImageIcon(imagenCantidad.getImage().getScaledInstance(label.getWidth(), confirmarButton.getHeight(), Image.SCALE_SMOOTH)));
 
-        label.setForeground(Color.WHITE);
+        label.setBorder(new LineBorder(Color.BLACK, 1, true));
         textFieldCantidad.setBorder(new LineBorder(Color.WHITE, 3, true));
 
         panel.add(label);
@@ -64,7 +71,7 @@ public class VentanaEntradaProducto extends JFrame  {
         panel.add(menosButton);
         panel.add(confirmarButton);
         panel.add(btnVolver);
-        panel.add(etiqueta1);
+        panel.add(fondo);
         add(panel);
         setVisible(true);
 
@@ -85,16 +92,22 @@ public class VentanaEntradaProducto extends JFrame  {
         confirmarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    cantidad = Integer.parseInt(textFieldCantidad.getText());
+                } catch (NumberFormatException ex) {
+                }
                 mostrarCantidad();
                 gestorProductos.salidaStock(cantidad, usuarioActual, productoSeleccionado);
+                gestorHistorial.registrarSalida(usuarioActual, productoSeleccionado, cantidad);
             }
         });
+
         btnVolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
-                ventanaBuscarPorTexto.setVisible(true);
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
+                ventanaMenuPrincipal.setVisible(true);
             }
         });
     }

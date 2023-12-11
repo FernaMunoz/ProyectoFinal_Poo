@@ -1,23 +1,24 @@
 package guis;
-import modelo.Usuario;
+
 import datos.GestorInventario;
+import modelo.Usuario;
 import datos.GestorProductos;
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-public class VentanaEditarProducto extends JFrame implements ActionListener {
+public class VentanaEditarProducto extends JFrame {
     private JTextField nombreEditar;
     private JTextField stockEditar;
     private JTextField precioEditar;
     private GestorProductos gestorProductos;
-
     private Usuario usuarioActual;
 
     public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
         super("Editar Producto");
-        this.usuarioActual = usuarioActual;
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -27,45 +28,57 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
+        JLabel etiqueta1 = new JLabel(new ImageIcon("buscarExistencias-buscarNombre-lentes1.png"));
+
+        ImageIcon volver = new ImageIcon("Group 23 (1).png");
+
         JLabel nombreLabel = new JLabel();
-        nombreLabel.setBounds(50, 50, 200, 30);
         nombreEditar = new JTextField();
-        nombreEditar.setBounds(50, 80, 200, 30);
-
         JLabel stockLabel = new JLabel();
-        stockLabel.setBounds(50, 120, 200, 30);
         stockEditar = new JTextField();
-        stockEditar.setBounds(50, 150, 200, 30);
-
         JLabel precioLabel = new JLabel();
-        precioLabel.setBounds(50, 190, 200, 30);
         precioEditar = new JTextField();
-        precioEditar.setBounds(50, 220, 200, 30);
 
         JLabel imagenTitleLabel = new JLabel("Imagen:");
-        imagenTitleLabel.setBounds(50, 250, 200, 30);
         JLabel imagenLabel = new JLabel();
-        imagenLabel.setBounds(50, 280, 200, 30);
-
         JLabel barcodeTitleLabel = new JLabel("Código de barras:");
-        barcodeTitleLabel.setBounds(50, 320, 200, 30);
         JLabel barcodeLabel = new JLabel();
-        barcodeLabel.setBounds(50, 350, 200, 30);
-
         JButton boton = new JButton("Confirmar");
-        boton.setBounds(50, 390, 200, 30);
+
+        JButton btnvolver = new JButton();
+
+        nombreLabel.setBounds(50, 148, 200, 30);
+        nombreEditar.setBounds(50, 178, 200, 30);
+        stockLabel.setBounds(50, 218, 200, 30);
+        stockEditar.setBounds(50, 248, 200, 30);
+        precioLabel.setBounds(50, 278, 200, 30);
+        precioEditar.setBounds(50, 308, 200, 30);
+        imagenTitleLabel.setBounds(50, 348, 200, 30);
+        imagenLabel.setBounds(50, 378, 200, 30);
+        barcodeTitleLabel.setBounds(50, 418, 200, 30);
+        barcodeLabel.setBounds(50, 458, 200, 30);
+        boton.setBounds(85, 500, 200, 30);
+        btnvolver.setBounds(18, 13, 45, 48);
+        etiqueta1.setBounds(0, 0, 375, 667);
+
+        btnvolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(btnvolver.getWidth(), btnvolver.getHeight(), Image.SCALE_SMOOTH)));
+
+        boton.setBackground(Color.WHITE);
 
         panel.add(nombreLabel);
         panel.add(nombreEditar);
         panel.add(stockLabel);
         panel.add(stockEditar);
-        panel.add(imagenTitleLabel); // Add new JLabel to panel
+        panel.add(imagenTitleLabel);
+        panel.add(imagenLabel);
         panel.add(imagenLabel);
         panel.add(precioLabel);
         panel.add(precioEditar);
-        panel.add(barcodeTitleLabel); // Add new JLabel to panel
+        panel.add(barcodeTitleLabel);
         panel.add(barcodeLabel);
         panel.add(boton);
+        panel.add(btnvolver);
+        panel.add(etiqueta1);
         add(panel);
         setVisible(true);
 
@@ -76,7 +89,13 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
             stockLabel.setText(atributosProducto.get(1));
             precioLabel.setText(atributosProducto.get(2));
             imagenLabel.setText(atributosProducto.get(3));
-            barcodeLabel.setText(atributosProducto.get(4));
+            String barcode;
+            if (atributosProducto.size() > 4) {
+                barcode = atributosProducto.get(4);
+            } else {
+                barcode = "No tiene código de barras";
+            }
+            barcodeLabel.setText(barcode);
         }
 
         boton.addActionListener(new ActionListener() {
@@ -90,21 +109,20 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
                     gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
 
                     dispose();
-                    JOptionPane.showMessageDialog(null, "Producto modificado con éxito","Exito", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Producto modificado con éxito", "Exito", JOptionPane.INFORMATION_MESSAGE);
                 } catch (NumberFormatException ex) {
                     System.out.println("Por favor, introduce un número válido.");
                 }
             }
         });
-    }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
+        btnvolver.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
+                ventanaMostrarProducto.setVisible(true);
+            }
+        });
     }
 }
-
-
-
-
-
