@@ -1,5 +1,6 @@
 package guis;
 
+import datos.GestorHistorial;
 import datos.GestorProductos;
 import modelo.Producto;
 import modelo.Usuario;
@@ -97,6 +98,8 @@ public class VentanaGenerar extends JFrame {
                     CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
 
                     gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
+                    GestorHistorial gestorHistorial = new GestorHistorial();
+                    gestorHistorial.registrarGeneracionCodigo(usuarioActual, productoSeleccionado);
 
                     JOptionPane.showMessageDialog(this,
                             "Código generado para '" + productoSeleccionadoNombre + "':\n" + codigoBarraInfo.getCodigoBarras(),
