@@ -14,7 +14,8 @@ public class GestorInventario {
             escritor.write("\"" + producto.getNombre() + "\",");
             escritor.write("\"" + producto.getStock() + "\",");
             escritor.write("\"" + producto.getPrecio() + "\",");
-            escritor.write("\"" + producto.getImagen() + "\"");
+            escritor.write("\"" + producto.getImagen() + "\",");
+            escritor.write("\"no hay código de barras asignado\"");
             escritor.newLine();
 
             escritor.flush();

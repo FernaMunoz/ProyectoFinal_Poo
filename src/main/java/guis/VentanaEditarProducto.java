@@ -1,10 +1,7 @@
 package guis;
-
-import datos.GestorInventario;
 import modelo.Usuario;
+import datos.GestorInventario;
 import datos.GestorProductos;
-import datos.GestorHistorial;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,15 +13,16 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
     private JTextField precioEditar;
     private GestorProductos gestorProductos;
 
+    private Usuario usuarioActual;
 
     public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
         super("Editar Producto");
+        this.usuarioActual = usuarioActual;
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         gestorProductos = new GestorProductos();
-        GestorHistorial gestorHistorial = new GestorHistorial();
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -44,32 +42,41 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
         precioEditar = new JTextField();
         precioEditar.setBounds(50, 220, 200, 30);
 
+        JLabel imagenTitleLabel = new JLabel("Imagen:");
+        imagenTitleLabel.setBounds(50, 250, 200, 30);
         JLabel imagenLabel = new JLabel();
-        imagenLabel.setBounds(50, 260, 200, 30);
+        imagenLabel.setBounds(50, 280, 200, 30);
 
+        JLabel barcodeTitleLabel = new JLabel("Código de barras:");
+        barcodeTitleLabel.setBounds(50, 320, 200, 30);
+        JLabel barcodeLabel = new JLabel();
+        barcodeLabel.setBounds(50, 350, 200, 30);
 
         JButton boton = new JButton("Confirmar");
-        boton.setBounds(50, 330, 200, 30);
+        boton.setBounds(50, 390, 200, 30);
 
         panel.add(nombreLabel);
         panel.add(nombreEditar);
         panel.add(stockLabel);
         panel.add(stockEditar);
+        panel.add(imagenTitleLabel); // Add new JLabel to panel
         panel.add(imagenLabel);
         panel.add(precioLabel);
         panel.add(precioEditar);
+        panel.add(barcodeTitleLabel); // Add new JLabel to panel
+        panel.add(barcodeLabel);
         panel.add(boton);
         add(panel);
         setVisible(true);
 
-        GestorInventario gestorInventario = new GestorInventario();
-
-        List<String> atributosProducto = gestorInventario.buscarProducto(usuarioActual, productoSeleccionado);
+        GestorInventario gestorUsuario = new GestorInventario();
+        List<String> atributosProducto = gestorUsuario.buscarProducto(usuarioActual, productoSeleccionado);
         if (atributosProducto != null) {
             nombreLabel.setText(atributosProducto.get(0));
             stockLabel.setText(atributosProducto.get(1));
             precioLabel.setText(atributosProducto.get(2));
             imagenLabel.setText(atributosProducto.get(3));
+            barcodeLabel.setText(atributosProducto.get(4));
         }
 
         boton.addActionListener(new ActionListener() {
@@ -81,9 +88,9 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
                     double precio = Double.parseDouble(precioEditar.getText());
 
                     gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
-                    gestorHistorial.registrarModificacion(usuarioActual, productoSeleccionado, nombre);
-                    new VentanaNotificadorExito(productoSeleccionado);
+
                     dispose();
+                    JOptionPane.showMessageDialog(null, "Producto modificado con éxito","Exito", JOptionPane.INFORMATION_MESSAGE);
                 } catch (NumberFormatException ex) {
                     System.out.println("Por favor, introduce un número válido.");
                 }
@@ -96,6 +103,8 @@ public class VentanaEditarProducto extends JFrame implements ActionListener {
 
     }
 }
+
+
 
 
 

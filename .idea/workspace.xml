@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="buscarporcodigobarras">
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="actualizacion de estetica ventanas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702256689047</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="actualizacion de estetica ventanas">
+      <option name="closed" value="true" />
+      <created>1702257357967</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702257357967</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -180,14 +193,15 @@
     <MESSAGE value="cada vez que se hacen modicaciones, se agrega un producto y se hace una entrada o salida se registra en el csv de historial" />
     <MESSAGE value="ventanaHistorial agregada, falta arreglarla para que quede mas estetica" />
     <MESSAGE value="buscarporcodigobarras" />
-    <option name="LAST_COMMIT_MESSAGE" value="buscarporcodigobarras" />
+    <MESSAGE value="actualizacion de estetica ventanas" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion de estetica ventanas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java</url>
-          <line>61</line>
+          <line>68</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

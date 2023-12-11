@@ -9,3 +9,5 @@ Fecha y Hora, Acción, Producto, Detalles
 2023-12-10 18:18:25, Salida, libro 1, Se retiraron 1 unidades
 2023-12-10 21:17:49, Entrada, "libro 1", Se agregaron 3 unidades
 2023-12-10 22:03:18, Modificación, libro 3, libro modificado
+2023-12-10 22:20:55, Salida, libro modificado, Se retiraron 4 unidades
+2023-12-10 22:37:13, Nuevo Producto, libro 5, Se agregó al inventario
