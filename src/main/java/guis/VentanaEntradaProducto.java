@@ -1,13 +1,14 @@
 package guis;
 import modelo.Usuario;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import datos.GestorProductos;
 
-public class VentanaEntradaProducto extends JFrame implements ActionListener {
+public class VentanaEntradaProducto extends JFrame  {
 
-    private JFrame frame;
     private JTextField textFieldCantidad;
     private int cantidad = 0;
     private Usuario usuarioActual;
@@ -15,58 +16,89 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
     private GestorProductos gestorProductos = new GestorProductos();
 
     public VentanaEntradaProducto(Usuario usuarioActual, String productoSeleccionado) {
+
+        super("Salida de productos");
+        setSize(375, 667);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+
         this.usuarioActual = usuarioActual;
         this.productoSeleccionado = productoSeleccionado;
 
-        frame = new JFrame("Seleccionar Stock");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(375, 667);
-        frame.setLayout(null);
+        JLabel etiqueta1 = new JLabel(new ImageIcon("entradaProductos-Nombre.png"));
+        ImageIcon volver = new ImageIcon("Group 19.png");
+        ImageIcon sumar = new ImageIcon("Group 20.png");
+        ImageIcon restar = new ImageIcon("Group 21.png");
+        ImageIcon btnCompletar = new ImageIcon("Group 23.png");
 
-        JLabel etiqueta1 = new JLabel(new ImageIcon("fondoEntrada.png"));
         etiqueta1.setBounds(0, 0, 375, 667);
 
         JLabel label = new JLabel("Cantidad");
-        label.setBounds(150, 230, 150, 25);
-        frame.add(label);
-
         textFieldCantidad = new JTextField("0");
-        textFieldCantidad.setBounds(150, 250, 150, 25);
-        frame.add(textFieldCantidad);
+        JButton masButton = new JButton();
+        JButton menosButton = new JButton();
+        JButton confirmarButton = new JButton();
+        JButton btnVolver = new JButton();
 
-        JButton masButton = new JButton("+");
-        masButton.setBounds(265, 235, 52, 49);
+        label.setBounds(140, 220, 100, 30);
+        textFieldCantidad.setBounds(133, 250, 95, 50);
+        masButton.setBounds(248, 251, 52, 49);
+        menosButton.setBounds(73, 270, 50, 20);
+        confirmarButton.setBounds(108, 316, 166, 42);
+        btnVolver.setBounds(18, 13, 45, 48);
+
+        btnVolver.setIcon(new ImageIcon(volver.getImage().getScaledInstance(btnVolver.getWidth(), btnVolver.getHeight(), Image.SCALE_SMOOTH)));
+        masButton.setIcon(new ImageIcon(sumar.getImage().getScaledInstance(masButton.getWidth(), masButton.getHeight(), Image.SCALE_SMOOTH)));
+        menosButton.setIcon(new ImageIcon(restar.getImage().getScaledInstance(menosButton.getWidth(), menosButton.getHeight(), Image.SCALE_SMOOTH)));
+        confirmarButton.setIcon(new ImageIcon(btnCompletar.getImage().getScaledInstance(confirmarButton.getWidth(), confirmarButton.getHeight(), Image.SCALE_SMOOTH)));
+
+        label.setForeground(Color.WHITE);
+        textFieldCantidad.setBorder(new LineBorder(Color.WHITE, 3, true));
+
+        panel.add(label);
+        panel.add(textFieldCantidad);
+        panel.add(masButton);
+        panel.add(menosButton);
+        panel.add(confirmarButton);
+        panel.add(btnVolver);
+        panel.add(etiqueta1);
+        add(panel);
+        setVisible(true);
+
         masButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 aumentarCantidad();
             }
         });
-        frame.add(masButton);
 
-        JButton menosButton = new JButton("-");
-        menosButton.setBounds(45, 235, 52, 49);
         menosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 disminuirCantidad();
             }
         });
-        frame.add(menosButton);
 
-        JButton confirmarButton = new JButton("Confirmar Entrada");
-        confirmarButton.setBounds(95, 316, 166, 42);
         confirmarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarCantidad();
-                gestorProductos.entradaStock(cantidad, usuarioActual, productoSeleccionado);
+                gestorProductos.salidaStock(cantidad, usuarioActual, productoSeleccionado);
             }
         });
-        frame.add(confirmarButton);
-
-        frame.setVisible(true);
+        btnVolver.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
+                ventanaBuscarPorTexto.setVisible(true);
+            }
+        });
     }
+
 
     private void aumentarCantidad() {
         cantidad = Integer.parseInt(textFieldCantidad.getText());
@@ -87,16 +119,10 @@ public class VentanaEntradaProducto extends JFrame implements ActionListener {
     }
 
     private void mostrarCantidad() {
-        JOptionPane.showMessageDialog(frame, "Cantidad seleccionada: " + cantidad);
+        JOptionPane.showMessageDialog(this, "Cantidad seleccionada: " + cantidad);
     }
 
-    public void setVisible(boolean b) {
-    }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
 }
 
 
