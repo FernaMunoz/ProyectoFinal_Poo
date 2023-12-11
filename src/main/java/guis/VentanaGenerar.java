@@ -86,38 +86,39 @@ public class VentanaGenerar extends JFrame {
     }
 
     private void generarYMostrarCodigoAutomatico() {
-            try {
-                String productoSeleccionadoNombre = (String) comboBox.getSelectedItem();
-                Producto productoSeleccionado = obtenerProducto(productoSeleccionadoNombre);
+        try {
+            String productoSeleccionadoNombre = (String) comboBox.getSelectedItem();
+            Producto productoSeleccionado = obtenerProducto(productoSeleccionadoNombre);
 
-                if (productoSeleccionado != null) {
-                    if (!gestorProductos.productoTieneCodigoBarra(usuarioActual, productoSeleccionado)) {
+            if (productoSeleccionado != null) {
+                if (!gestorProductos.productoTieneCodigoBarra(usuarioActual, productoSeleccionado)) {
 
-                        CodigoBarra codigoBarraGenerator = new CodigoBarra();
-                        CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
+                    CodigoBarra codigoBarraGenerator = new CodigoBarra();
+                    CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
 
-                        gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
+                    // Actualizar CSV después de generar el código de barras
+                    gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
 
-                        JOptionPane.showMessageDialog(this,
-                                "Código generado para '" + productoSeleccionadoNombre + "':\n" + codigoBarraInfo.getCodigoBarras(),
-                                "Código de Barras",
-                                JOptionPane.INFORMATION_MESSAGE,
-                                codigoBarraInfo.getImagenCodigoBarras());
-                        System.out.println("El producto '" + productoSeleccionadoNombre + "' ya tiene un código de barras.");
+                    JOptionPane.showMessageDialog(this,
+                            "Código generado para '" + productoSeleccionadoNombre + "':\n" + codigoBarraInfo.getCodigoBarras(),
+                            "Código de Barras",
+                            JOptionPane.INFORMATION_MESSAGE,
+                            codigoBarraInfo.getImagenCodigoBarras());
 
-                    } else {
-                        JOptionPane.showMessageDialog(this,
-                                "El producto '" + productoSeleccionadoNombre + "' ya tiene un código de barras.",
-                                "Código de Barras Existente",
-                                JOptionPane.INFORMATION_MESSAGE);
-                    }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Producto no encontrado: " + productoSeleccionadoNombre, "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this,
+                            "El producto '" + productoSeleccionadoNombre + "' ya tiene un código de barras.",
+                            "Código de Barras Existente",
+                            JOptionPane.INFORMATION_MESSAGE);
                 }
-            } catch (IllegalArgumentException ex) {
-                JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Producto no encontrado: " + productoSeleccionadoNombre, "Error", JOptionPane.ERROR_MESSAGE);
             }
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
+
 
     private Producto obtenerProducto(String nombreProducto) {
         List<Producto> productos = gestorProductos.obtenerProductosSimilares(nombreProducto, usuarioActual);

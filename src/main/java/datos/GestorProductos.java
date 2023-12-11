@@ -156,14 +156,10 @@ public class GestorProductos {
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
                 String nombreProducto = partes[0].replace("\"", "");
-                String codigoBarra = partes[4].replace("\"", "");
 
                 if (nombreProducto.equals(producto.getNombre())) {
-                    if (codigoBarra == null || codigoBarra.isEmpty() || codigoBarra.equals("no hay código de barras asignado")) {
-                        lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
-                    } else {
-                        lineas.add(linea);
-                    }
+                    // Actualiza solo la línea del producto modificado
+                    lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
                 } else {
                     lineas.add(linea);
                 }
@@ -190,6 +186,7 @@ public class GestorProductos {
 
         } catch (IOException e) {
             e.printStackTrace();
+            System.err.println("Error al escribir en el archivo CSV: " + e.getMessage());
         }
     }
 
