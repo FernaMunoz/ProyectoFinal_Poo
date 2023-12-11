@@ -77,8 +77,10 @@ public class VentanaAgregarProducto extends JFrame{
                 gestorInventario.agregarProductoAInventario(usuario, producto);
 
                 gestorHistorial.registrarNuevoProducto(usuario, producto);
+                JOptionPane.showMessageDialog(null, "Producto agregado al inventario exitosamente!");
             }
         });
+
 
 
         btnvolver.addActionListener(new ActionListener() {
@@ -86,8 +88,8 @@ public class VentanaAgregarProducto extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                VentanaInicio ventanaInicio = new VentanaInicio();
-                ventanaInicio.setVisible(true);
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuario);
+                ventanaMenuPrincipal.setVisible(true);
             }
         });
 

@@ -1,32 +1,9 @@
 Fecha y Hora, Acción, Producto, Detalles
-2023-12-11 11:03:17, Nuevo Producto, libro 1, Se agregó al inventario
-2023-12-11 11:03:20, Nuevo Producto, libro 2, Se agregó al inventario
-2023-12-11 11:03:23, Nuevo Producto, libro 3, Se agregó al inventario
-2023-12-11 11:03:54, Modificación, libro 3, libro 3.0
-2023-12-11 11:07:43, Generación de Código, libro 2, Se generó un código de barras
-2023-12-11 11:07:51, Generación de Código, libro 3.0, Se generó un código de barras
-2023-12-11 11:07:54, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:07:59, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:00, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:02, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:03, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:04, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:05, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:06, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:06, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:06, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:08:07, Generación de Código, libro 1, Se generó un código de barras
-2023-12-11 11:22:58, Nuevo Producto, libro 1, Se agregó al inventario
-2023-12-11 11:23:02, Nuevo Producto, libro 2, Se agregó al inventario
-2023-12-11 11:23:05, Nuevo Producto, libro 3, Se agregó al inventario
-2023-12-11 11:42:49, Nuevo Producto, djsdjf, Se agregó al inventario
-2023-12-11 12:02:59, Modificación, libro 2, libro 2.0
-2023-12-11 15:37:08, Modificación, libro 3, libro 3.0
-2023-12-11 17:04:43, Salida, libro 2.0, Se retiraron 3 unidades
-2023-12-11 17:05:44, Salida, libro 2.0, Se retiraron 5 unidades
-2023-12-11 17:10:36, Salida, libro 3.0, Se retiraron 20 unidades
-2023-12-11 17:10:40, Salida, libro 3.0, Se retiraron 21 unidades
-2023-12-11 17:52:13, Salida, libro 1, Se retiraron 10 unidades
-2023-12-11 17:52:16, Salida, libro 1, Se retiraron 7 unidades
-2023-12-11 17:53:00, Salida, libro 1, Se retiraron 1 unidades
-2023-12-11 18:38:49, Generación de Código, libro 3.0, Se generó un código de barras
+2023-12-11 19:00:05, Nuevo Producto, libro 1, Se agregó al inventario
+2023-12-11 19:00:18, Nuevo Producto, libro 2, Se agregó al inventario
+2023-12-11 19:00:57, Nuevo Producto, libro 3, Se agregó al inventario
+2023-12-11 19:04:32, Generación de Código, libro 2, Se generó un código de barras
+2023-12-11 19:04:35, Generación de Código, libro 1, Se generó un código de barras
+2023-12-11 19:04:38, Generación de Código, libro 3, Se generó un código de barras
+2023-12-11 19:04:50, Salida, libro 1, Se retiraron 2 unidades
+2023-12-11 19:05:01, Salida, libro 3, Se retiraron 4 unidades

@@ -4,30 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInventario.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="commit casi final">
+      <change afterPath="$PROJECT_DIR$/Buscar producto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CantidadEntrada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Captura de pantalla 2023-12-08 170631.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 16 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 23 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 25 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 7 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group 9 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Historial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buscarExistencias-buscarNombre-lentes1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buscarNueva.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cantidadSalida.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entradaProductos-Nombre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fondo rosado3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons8-código-de-barras-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInicioSesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMenuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaNotificadorExito.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/CodigoBarra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/CodigoBarra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaHistorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702262867457</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="commit casi final">
+      <option name="closed" value="true" />
+      <created>1702330774897</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702330774897</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -227,7 +248,8 @@
     <MESSAGE value="actualizacion de estetica ventanas" />
     <MESSAGE value="actualizacion de estetica ventanas&#10;en mostrarproducto ya se ve el codigo de barras" />
     <MESSAGE value="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="el GestorHistorial añade metodo para mostrar la generacion de codigobarras y la VentanaHistorial ahora en el metodo generarYMostrarCodigoAutomatico implementa este nuevo metodo del GestorHistorial" />
+    <MESSAGE value="commit casi final" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit casi final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
