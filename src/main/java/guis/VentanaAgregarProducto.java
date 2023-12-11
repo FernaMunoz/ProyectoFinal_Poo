@@ -35,7 +35,7 @@ public class VentanaAgregarProducto extends JFrame{
         JLabel etiqueta4 = new JLabel("Precio*");
         precio = new JTextField();
 
-        JButton agregarProducto = new JButton("Agregar producto");
+        JButton agregarProducto = new JButton();
         ImageIcon volver = new ImageIcon("Group 6.png");
         ImageIcon agregar = new ImageIcon("Group 7 (2).png");
 

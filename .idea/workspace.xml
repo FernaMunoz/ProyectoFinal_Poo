@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto listas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarCodigoBarras.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaBuscarPorTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas">
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702297821504</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas">
+      <option name="closed" value="true" />
+      <created>1702303585361</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1702303585368</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,6 +409,7 @@
     <MESSAGE value="ventana Editar producto lista" />
     <MESSAGE value="actualizacion" />
     <MESSAGE value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto listas" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto listas" />
+    <MESSAGE value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas" />
   </component>
 </project>
