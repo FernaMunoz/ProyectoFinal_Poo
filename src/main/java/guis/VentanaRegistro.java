@@ -65,7 +65,6 @@ public class VentanaRegistro extends JFrame {
         contrasena.setBorder(new LineBorder(Color.WHITE,2,true));
         confContrasena.setBorder(new LineBorder(Color.WHITE,2,true));
 
-
         botonRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,6 +77,10 @@ public class VentanaRegistro extends JFrame {
                     usuario = gestor.registrarUsuario(name, empresaName, password, confPassword);
                     gestorHistorial.crearHistorial(usuario);
                     dispose();
+
+                    VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuario);
+                    ventanaMenuPrincipal.setVisible(true);
+
                 } catch (IllegalArgumentException ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "pruebe de nuevo", JOptionPane.ERROR_MESSAGE);
                 }

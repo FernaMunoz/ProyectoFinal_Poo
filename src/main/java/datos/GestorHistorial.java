@@ -57,6 +57,7 @@ public class GestorHistorial {
             escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + ", Entrada, " + productoSeleccionado + ", Se agregaron " + cantidad + " unidades\n");
             escritor.flush();
         } catch (IOException e){
+            // Agrega un mensaje de registro o muestra un mensaje en la interfaz gráfica.
             e.printStackTrace();
         }
     }

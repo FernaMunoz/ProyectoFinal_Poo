@@ -23,6 +23,9 @@ public class GestorInventario {
 
             System.out.println("Producto agregado al inventario exitosamente");
 
+            GestorHistorial gestorHistorial = new GestorHistorial();
+            gestorHistorial.registrarNuevoProducto(usuario, producto);
+
         } catch (IOException e){
             e.printStackTrace();
         }

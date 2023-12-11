@@ -21,6 +21,10 @@ public class GestorProductos {
 
                 if (nombreProducto.equals(productoSeleccionado)) {
                     lineas.add("\"" + nuevoNombre + "\",\"" + nuevoStock + "\",\"" + nuevoPrecio + "\",\"null\"");
+
+                    GestorHistorial gestorHistorial = new GestorHistorial();
+                    gestorHistorial.registrarModificacion(usuarioActual, productoSeleccionado, nuevoNombre);
+
                 } else {
                     lineas.add(linea);
                 }
@@ -87,6 +91,10 @@ public class GestorProductos {
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual + cantidadStock;
                     lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+
+                    GestorHistorial gestorHistorial = new GestorHistorial();
+                    gestorHistorial.registrarEntrada(usuarioActual, productoSeleccionado, nuevoStock);
+
                 } else {
                     lineas.add(linea);
                 }
@@ -112,6 +120,10 @@ public class GestorProductos {
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual - cantidadStock;
                     lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+
+                    GestorHistorial gestorHistorial = new GestorHistorial();
+                    gestorHistorial.registrarSalida(usuarioActual,productoSeleccionado,nuevoStock);
+
                 } else {
                     lineas.add(linea);
                 }

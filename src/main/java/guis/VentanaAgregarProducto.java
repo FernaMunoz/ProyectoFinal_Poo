@@ -83,8 +83,6 @@ public class VentanaAgregarProducto extends JFrame{
                 ventanaMenuPrincipal.setVisible(true);
             }
 
-
-
         });
 
         panel.add(nombreProducto);
