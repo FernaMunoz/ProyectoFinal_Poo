@@ -14,7 +14,6 @@ import java.util.List;
 
 public class VentanaOpciones extends JFrame {
     private Usuario usuarioActual;
-
     private JComboBox<String> comboBox;
     private GestorProductos gestorProductos = new GestorProductos();
 
@@ -80,34 +79,35 @@ public class VentanaOpciones extends JFrame {
         boton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
                 String productoSeleccionado = (String) comboBox.getSelectedItem();
                 new VentanaSalidaProducto(usuarioActual, productoSeleccionado);
-
             }
         });
 
         boton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
                 String productoSeleccionado = (String) comboBox.getSelectedItem();
                 new VentanaEntradaProducto(usuarioActual, productoSeleccionado);
-
             }
         });
         boton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
                 String productoSeleccionado = (String) comboBox.getSelectedItem();
                 VentanaMostrarProducto ventanaMostrarProducto = new VentanaMostrarProducto(usuarioActual, productoSeleccionado);
                 ventanaMostrarProducto.setVisible(true);
-
             }
         });
 
         botonvolver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto();
+                dispose();
+                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
                 ventanaBuscarPorTexto.setVisible(true);
             }
         });
