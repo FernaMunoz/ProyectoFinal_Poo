@@ -1,5 +1,6 @@
 package guis;
 
+import datos.GestorHistorial;
 import datos.GestorProductos;
 import modelo.Producto;
 import modelo.Usuario;
@@ -98,6 +99,9 @@ public class VentanaGenerar extends JFrame {
 
                     gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
 
+                    GestorHistorial gestorHistorial = new GestorHistorial();
+                    gestorHistorial.registrarGeneracionCodigo(usuarioActual, productoSeleccionado);
+
                     JOptionPane.showMessageDialog(this,
                             "Código generado para '" + productoSeleccionadoNombre + "':\n" + codigoBarraInfo.getCodigoBarras(),
                             "Código de Barras",
@@ -119,13 +123,14 @@ public class VentanaGenerar extends JFrame {
         }
     }
 
+
     private Producto obtenerProducto(String nombreProducto) {
         List<Producto> productos = gestorProductos.obtenerProductosSimilares(nombreProducto, usuarioActual);
 
         if (!productos.isEmpty()) {
             return productos.get(0);
         } else {
-            // Si no se encuentra el producto
+
             throw new IllegalArgumentException("Producto no encontrado: " + nombreProducto);
         }
     }
