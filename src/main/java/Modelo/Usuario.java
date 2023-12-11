@@ -10,6 +10,9 @@ public class Usuario {
         this.contrasena = contrasena;
     }
 
+    public Usuario(String nombreUsuario) {
+    }
+
     public String getNombre() {
         return this.nombre;
     }

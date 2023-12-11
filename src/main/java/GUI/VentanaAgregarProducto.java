@@ -1,5 +1,4 @@
 package GUI;
-import datos.GestorHistorial;
 import datos.GestorInventario;
 import Modelo.Inventario;
 import Modelo.Producto;
@@ -17,8 +16,6 @@ public class VentanaAgregarProducto extends JFrame{
     private JTextField nombreProducto;
     private JTextField stockInicial;
     private JTextField precio ;
-
-
     public VentanaAgregarProducto(Usuario usuarioActual) {
         super("Agregar Producto");
         setSize(375, 667);
@@ -27,7 +24,6 @@ public class VentanaAgregarProducto extends JFrame{
         JPanel panel = new JPanel();
         panel.setLayout(null);
         this.usuario = usuarioActual;
-        GestorHistorial gestorHistorial = new GestorHistorial();
 
         JLabel etiqueta1 = new JLabel(new ImageIcon("AgregarProducto.png"));
         JButton btnvolver = new JButton();
@@ -74,7 +70,6 @@ public class VentanaAgregarProducto extends JFrame{
                 GestorInventario gestorInventario = new GestorInventario();
                 gestorInventario.agregarProductoAInventario(usuario, producto);
 
-                gestorHistorial.registrarNuevoProducto(usuario, producto);
             }
         });
 
@@ -84,8 +79,8 @@ public class VentanaAgregarProducto extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
-                ventanaMenuPrincipal.setVisible(true);
+                VentanaInicio ventanaInicio = new VentanaInicio();
+                ventanaInicio.setVisible(true);
             }
         });
 

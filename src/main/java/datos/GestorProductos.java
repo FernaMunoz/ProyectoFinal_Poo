@@ -44,6 +44,7 @@ public class GestorProductos {
         }
     }
 
+
     public List<Producto> obtenerProductosSimilares(String textoBusqueda, Usuario usuarioActual) {
         List<Producto> productosSimilares = new ArrayList<>();
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
@@ -122,6 +123,60 @@ public class GestorProductos {
         escribirCSV(rutaCsv, lineas);
     }
 
+    public boolean productoTieneCodigoBarra(Usuario usuarioActual, Producto producto) {
+        String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
+
+        try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))) {
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] partes = linea.split(",");
+                if (partes.length >= 5) {
+                    String nombreProducto = partes[0].replace("\"", "");
+                    String codigoBarra = partes[4].replace("\"", "");
+
+                    if (nombreProducto.equals(producto.getNombre()) && codigoBarra != null && !codigoBarra.isEmpty() && !codigoBarra.equals("no hay código de barras asignado")) {
+                        return true;
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+
+    public void actualizarCSV(Usuario usuarioActual, Producto producto) {
+        String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
+        List<String> lineas = new ArrayList<>();
+
+        try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))) {
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] partes = linea.split(",");
+                String nombreProducto = partes[0].replace("\"", "");
+                String codigoBarra = partes[4].replace("\"", "");
+
+                if (nombreProducto.equals(producto.getNombre())) {
+                    if (codigoBarra == null || codigoBarra.isEmpty() || codigoBarra.equals("no hay código de barras asignado")) {
+                        lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
+                    } else {
+                        lineas.add(linea);
+                    }
+                } else {
+                    lineas.add(linea);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        escribirCSV(rutaCsv, lineas);
+    }
+
+
+
     private void escribirCSV(String rutaCsv, List<String> lineas) {
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv))) {
             for (String linea : lineas) {
@@ -137,4 +192,5 @@ public class GestorProductos {
             e.printStackTrace();
         }
     }
+
 }

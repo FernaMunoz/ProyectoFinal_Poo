@@ -1,6 +1,4 @@
 package GUI;
-
-import GUI.VentanaBuscarPorTexto;
 import Modelo.Usuario;
 
 import javax.swing.border.LineBorder;
@@ -14,7 +12,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         super("Buscar");
         setSize(375, 667);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
@@ -26,7 +24,6 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         JButton boton2 = new JButton();
         JButton boton3 = new JButton();
 
-
         ImageIcon buscar = new ImageIcon("buscarExistencias icon.png");
         ImageIcon scanner = new ImageIcon("Group 5.png");
         ImageIcon volver = new ImageIcon("mingcute_back-2-fill.png");
@@ -36,7 +33,6 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton3.setBounds(18, 13, 45, 48);
         etiqueta1.setBounds(0, 0, 375, 667);
 
-
         boton1.setIcon(new ImageIcon(buscar.getImage().getScaledInstance(boton1.getWidth(), boton1.getHeight(), Image.SCALE_SMOOTH)));
         boton2.setIcon(new ImageIcon(scanner.getImage().getScaledInstance(boton2.getWidth(), boton2.getHeight(), Image.SCALE_SMOOTH)));
         boton3.setIcon(new ImageIcon(volver.getImage().getScaledInstance(boton3.getWidth(), boton3.getHeight(), Image.SCALE_SMOOTH)));
@@ -45,8 +41,8 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton2.setBackground(Color.WHITE);
         boton3.setBackground(Color.pink);
 
-        boton1.setBorder(new LineBorder(Color.WHITE, 6, true));
-        boton2.setBorder(new LineBorder(Color.WHITE, 6, true));
+        boton1.setBorder(new LineBorder(Color.WHITE, 11, true));
+        boton2.setBorder(new LineBorder(Color.WHITE, 10, true));
 
         panel.add(boton1);
         panel.add(boton2);
@@ -73,6 +69,7 @@ public class VentanaBuscar extends JFrame implements ActionListener {
         boton3.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                dispose();
                 VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
                 ventanaMenuPrincipal.setVisible(true);
 
