@@ -79,8 +79,8 @@ public class VentanaAgregarProducto extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                VentanaInicio ventanaInicio = new VentanaInicio();
-                ventanaInicio.setVisible(true);
+                VentanaMenuPrincipal ventanaMenuPrincipal = new VentanaMenuPrincipal(usuarioActual);
+                ventanaMenuPrincipal.setVisible(true);
             }
         });
 

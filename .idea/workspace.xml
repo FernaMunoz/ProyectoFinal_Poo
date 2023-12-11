@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas">
-      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaAgregarProducto.java" afterDir="false" />
-    </list>
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="ventana agregar lista" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -374,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702303585368</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="ventana agregar lista">
+      <option name="closed" value="true" />
+      <created>1702303906147</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1702303906150</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,6 +416,7 @@
     <MESSAGE value="actualizacion" />
     <MESSAGE value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto listas" />
     <MESSAGE value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahora si ventana editar, ventana entrada, Ventana Mostrar Producto y ventana salida de producto edtidas y busqueda por codigo listas" />
+    <MESSAGE value="ventana agregar lista" />
+    <option name="LAST_COMMIT_MESSAGE" value="ventana agregar lista" />
   </component>
 </project>
