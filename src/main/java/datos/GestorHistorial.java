@@ -82,4 +82,15 @@ public class GestorHistorial {
             e.printStackTrace();
         }
     }
+    public void registrarGeneracionCodigo(Usuario usuarioActual, Producto producto) {
+        String rutaCsv = usuarioActual.getNombre() + "_historial.csv";
+
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv, true))){
+            escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + ", Generación de Código, " + producto.getNombre() + ", Se generó un código de barras\n");
+            escritor.flush();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }
