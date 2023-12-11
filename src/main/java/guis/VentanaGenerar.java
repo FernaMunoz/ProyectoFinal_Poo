@@ -96,7 +96,6 @@ public class VentanaGenerar extends JFrame {
                     CodigoBarra codigoBarraGenerator = new CodigoBarra();
                     CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
 
-                    // Actualizar CSV después de generar el código de barras
                     gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
 
                     JOptionPane.showMessageDialog(this,

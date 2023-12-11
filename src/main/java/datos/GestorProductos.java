@@ -158,7 +158,6 @@ public class GestorProductos {
                 String nombreProducto = partes[0].replace("\"", "");
 
                 if (nombreProducto.equals(producto.getNombre())) {
-                    // Actualiza solo la línea del producto modificado
                     lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
                 } else {
                     lineas.add(linea);
