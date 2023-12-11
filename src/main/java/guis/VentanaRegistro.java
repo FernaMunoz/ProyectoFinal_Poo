@@ -65,6 +65,7 @@ public class VentanaRegistro extends JFrame {
         contrasena.setBorder(new LineBorder(Color.WHITE,2,true));
         confContrasena.setBorder(new LineBorder(Color.WHITE,2,true));
 
+
         botonRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

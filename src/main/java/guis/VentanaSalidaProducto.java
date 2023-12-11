@@ -92,8 +92,8 @@ public class VentanaSalidaProducto extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
-                ventanaBuscarPorTexto.setVisible(true);
+                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado);
+                ventanaOpciones.setVisible(true);
             }
         });
     }

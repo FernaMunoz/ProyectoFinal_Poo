@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="modificaciones para generar codigo de barra">
-      <change afterPath="$PROJECT_DIR$/src/main/java/datos/GestorHistorial.java" afterDir="false" />
+    <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="actualizacion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaInventario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pngtree-barcode-vector-png-png-image_6121156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEditarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaEntradaProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaMostrarProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaSalidaProducto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +302,71 @@
       <option name="project" value="LOCAL" />
       <updated>1702248911261</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="actualizaciones">
+      <option name="closed" value="true" />
+      <created>1702250229278</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702250229281</updated>
+    </task>
+    <task id="LOCAL-00030" summary="ventana menu principal lista">
+      <option name="closed" value="true" />
+      <created>1702253062504</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702253062508</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ventana Buscar por texto lista y VentanaBuscar lista esteticamente falta ponerle el evento al boton">
+      <option name="closed" value="true" />
+      <created>1702254213260</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1702254213265</updated>
+    </task>
+    <task id="LOCAL-00032" summary="ventana opciones lista">
+      <option name="closed" value="true" />
+      <created>1702254269834</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1702254269834</updated>
+    </task>
+    <task id="LOCAL-00033" summary="ventana Salida producto lista">
+      <option name="closed" value="true" />
+      <created>1702257397344</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1702257397352</updated>
+    </task>
+    <task id="LOCAL-00034" summary="ventana mostrar producto lista">
+      <option name="closed" value="true" />
+      <created>1702260051144</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1702260051149</updated>
+    </task>
+    <task id="LOCAL-00035" summary="ventana Editar producto lista">
+      <option name="closed" value="true" />
+      <created>1702263165155</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1702263165162</updated>
+    </task>
+    <task id="LOCAL-00036" summary="actualizacion">
+      <option name="closed" value="true" />
+      <created>1702263456002</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1702263456010</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,10 +388,18 @@
     <MESSAGE value="ventana registrar usuario cambiado a csv" />
     <MESSAGE value="ventana inicio sesion cambiado a csv" />
     <MESSAGE value="ventana agregar producto" />
-    <MESSAGE value="actualizacion" />
     <MESSAGE value="Menu principal, Buscar, Buscar por texto y opciones arreglado esteticamente" />
     <MESSAGE value="algunas ventanas nuevas agregadas y modificadas" />
     <MESSAGE value="modificaciones para generar codigo de barra" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificaciones para generar codigo de barra" />
+    <MESSAGE value="actualizaciones" />
+    <MESSAGE value="ventana menu principal lista" />
+    <MESSAGE value="ventana Buscar por texto lista y VentanaBuscar lista esteticamente falta ponerle el evento al boton" />
+    <MESSAGE value="ventana opciones lista" />
+    <MESSAGE value="ventana Salida producto lista" />
+    <MESSAGE value="ventana Entrada producto lista" />
+    <MESSAGE value="ventana mostrar producto lista" />
+    <MESSAGE value="ventana Editar producto lista" />
+    <MESSAGE value="actualizacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion" />
   </component>
 </project>

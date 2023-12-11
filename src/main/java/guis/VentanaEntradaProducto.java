@@ -91,10 +91,10 @@ public class VentanaEntradaProducto extends JFrame  {
         });
         btnVolver.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
                 dispose();
-                VentanaBuscarPorTexto ventanaBuscarPorTexto = new VentanaBuscarPorTexto(usuarioActual);
-                ventanaBuscarPorTexto.setVisible(true);
+                VentanaOpciones ventanaOpciones = new VentanaOpciones(usuarioActual, productoSeleccionado);
+                ventanaOpciones.setVisible(true);
             }
         });
     }
