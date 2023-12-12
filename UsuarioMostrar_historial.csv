@@ -7,3 +7,8 @@ Fecha y Hora, Acción, Producto, Detalles
 2023-12-11 19:04:38, Generación de Código, libro 3, Se generó un código de barras
 2023-12-11 19:04:50, Salida, libro 1, Se retiraron 2 unidades
 2023-12-11 19:05:01, Salida, libro 3, Se retiraron 4 unidades
+2023-12-11 23:48:02, Nuevo Producto, libro 8, Se agregó al inventario
+2023-12-11 23:48:18, Generación de Código, libro 8, Se generó un código de barras
+2023-12-11 23:49:01, Salida, libro 3, Se retiraron 100 unidades
+2023-12-11 23:55:30, Entrada, libro 1, Se agregaron 1000 unidades
+2023-12-11 23:55:59, Entrada, libro 2.0, Se agregaron 0 unidades

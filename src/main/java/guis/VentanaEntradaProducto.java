@@ -97,8 +97,8 @@ public class VentanaEntradaProducto extends JFrame  {
                 } catch (NumberFormatException ex) {
                 }
                 mostrarCantidad();
-                gestorProductos.salidaStock(cantidad, usuarioActual, productoSeleccionado);
-                gestorHistorial.registrarSalida(usuarioActual, productoSeleccionado, cantidad);
+                gestorProductos.entradaStock(cantidad, usuarioActual, productoSeleccionado);
+                gestorHistorial.registrarEntrada(usuarioActual, productoSeleccionado, cantidad);
             }
         });
 
