@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Inventario {
     private Usuario usuario;
-    private List<Producto> productos;//revisar
+    private List<Producto> productos;
 
     public Inventario(Usuario usuario) {
         this.usuario = usuario;
@@ -12,7 +12,7 @@ public class Inventario {
     }
 
     public void agregarProducto(Producto producto) {
-        this.productos.add(producto);//revisar
+        this.productos.add(producto);
     }
 
     public Usuario getUsuario() {

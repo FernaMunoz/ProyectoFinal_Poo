@@ -81,12 +81,16 @@ public class GestorProductos {
             String linea;
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
-                String nombreProducto = partes[0].replace("\"", "");
-                int stockActual = Integer.parseInt(partes[1].replace("\"", ""));
+                String nombreProducto = partes[0].replace("\"", "").trim();
+                int stockActual = Integer.parseInt(partes[1].replace("\"", "").trim());
 
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual + cantidadStock;
-                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                    if (partes.length == 5) {
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\",\"" + partes[4].replace("\"", "").trim() + "\"");
+                    } else {
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\"");
+                    }
                 } else {
                     lineas.add(linea);
                 }
@@ -106,12 +110,16 @@ public class GestorProductos {
             String linea;
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
-                String nombreProducto = partes[0].replace("\"", "");
-                int stockActual = Integer.parseInt(partes[1].replace("\"", ""));
+                String nombreProducto = partes[0].replace("\"", "").trim();
+                int stockActual = Integer.parseInt(partes[1].replace("\"", "").trim());
 
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual - cantidadStock;
-                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                    if (partes.length == 5) {
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\",\"" + partes[4].replace("\"", "").trim() + "\"");
+                    } else {
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\"");
+                    }
                 } else {
                     lineas.add(linea);
                 }
