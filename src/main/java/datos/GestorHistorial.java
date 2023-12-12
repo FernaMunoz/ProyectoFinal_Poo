@@ -57,7 +57,6 @@ public class GestorHistorial {
             escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + ", Entrada, " + productoSeleccionado + ", Se agregaron " + cantidad + " unidades\n");
             escritor.flush();
         } catch (IOException e){
-            // Agrega un mensaje de registro o muestra un mensaje en la interfaz gráfica.
             e.printStackTrace();
         }
     }
@@ -66,8 +65,7 @@ public class GestorHistorial {
         String rutaCsv = usuarioActual.getNombre() + "_historial.csv";
 
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv, true))){
-
-            escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + ", Salida, " + productoSeleccionado + ", quedan " + cantidad + " unidades\n");
+            escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + ", Salida, " + productoSeleccionado + ", Se retiraron " + cantidad + " unidades\n");
             escritor.flush();
         } catch (IOException e){
             e.printStackTrace();

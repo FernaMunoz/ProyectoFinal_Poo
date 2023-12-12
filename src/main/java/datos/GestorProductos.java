@@ -48,7 +48,6 @@ public class GestorProductos {
         }
     }
 
-
     public List<Producto> obtenerProductosSimilares(String textoBusqueda, Usuario usuarioActual) {
         List<Producto> productosSimilares = new ArrayList<>();
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
@@ -86,11 +85,11 @@ public class GestorProductos {
             while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.split(",");
                 String nombreProducto = partes[0].replace("\"", "");
-                int stockActual = Integer.parseInt(partes[1].replace("\"", ""));
+                int stockActual = Integer.parseInt(partes[1].trim().replace("\"", ""));
 
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual + cantidadStock;
-                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\"," + partes[2] + "," + partes[3]);
 
                     GestorHistorial gestorHistorial = new GestorHistorial();
                     gestorHistorial.registrarEntrada(usuarioActual, productoSeleccionado, nuevoStock);
@@ -119,10 +118,10 @@ public class GestorProductos {
 
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual - cantidadStock;
-                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2] + "\",\"" + partes[3] + "\"");
+                    lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\"," + partes[2] + "," + partes[3]);
 
                     GestorHistorial gestorHistorial = new GestorHistorial();
-                    gestorHistorial.registrarSalida(usuarioActual,productoSeleccionado,nuevoStock);
+                    gestorHistorial.registrarSalida(usuarioActual, productoSeleccionado, nuevoStock);
 
                 } else {
                     lineas.add(linea);

@@ -13,7 +13,7 @@ public class GestorInventario {
         String rutaCsv = usuario.getNombre() + "_inventario.csv";
 
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv, true))){
-            escritor.write("\"" + producto.getNombre() + "\",");
+            escritor.write( producto.getNombre() + ",");
             escritor.write("\"" + producto.getStock() + "\",");
             escritor.write("\"" + producto.getPrecio() + "\",");
             escritor.write("\"" + producto.getImagen() + "\"");
@@ -55,12 +55,14 @@ public class GestorInventario {
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
         List<String> atributosProducto = null;
 
+        System.out.println("Ruta del archivo: " + rutaCsv);
+
         try (BufferedReader lector = new BufferedReader(new FileReader(rutaCsv))){
             String linea;
 
             while ((linea = lector.readLine()) != null) {
                 List<String> atributos = Arrays.asList(linea.split(","));
-                if (atributos.get(0).equals("\"" + productoSeleccionado + "\"")) {
+                if (atributos.get(0).equals(productoSeleccionado)) {
                     atributosProducto = atributos;
                     break;
                 }
@@ -72,7 +74,7 @@ public class GestorInventario {
 
         return atributosProducto;
     }
-    public List<String> buscarProductoPorCodigoBarra(Usuario usuarioActual, String codigoBarra) {
+public List<String> buscarProductoPorCodigoBarra(Usuario usuarioActual, String codigoBarra) {
         String rutaCsv = usuarioActual.getNombre() + "_inventario.csv";
         List<String> atributosProducto = null;
 
