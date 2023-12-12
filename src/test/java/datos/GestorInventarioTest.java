@@ -28,15 +28,15 @@ public class GestorInventarioTest {
         gestorInventario.agregarProductoAInventario(usuario, producto);
 
         DefaultTableModel modeloTabla = GestorInventario.cargarInventario(usuario.getNombre());
-        assertEquals(3, modeloTabla.getRowCount());
-        assertEquals("ProductoTest", modeloTabla.getValueAt(0, 0));
-        assertEquals("\"10\"", modeloTabla.getValueAt(0, 1));
-        assertEquals("\"20.0\"", modeloTabla.getValueAt(0, 2));
+        assertEquals(2, modeloTabla.getRowCount());
+        assertEquals("ProductoTest", modeloTabla.getValueAt(1, 0));
+        assertEquals("\"10\"", modeloTabla.getValueAt(1, 1));
+        assertEquals("\"20.0\"", modeloTabla.getValueAt(1, 2));
     }
 
     @Test
     public void testBuscarProducto() {
-        Producto producto = new Producto("Test", 10, 20.0, "imagen");
+        Producto producto = new Producto("\"Test\"", 10, 20.0, "imagen");
 
         gestorInventario.agregarProductoAInventario(usuario, producto);
 

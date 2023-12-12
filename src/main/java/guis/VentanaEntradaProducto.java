@@ -19,7 +19,7 @@ public class VentanaEntradaProducto extends JFrame  {
 
     public VentanaEntradaProducto(Usuario usuarioActual, String productoSeleccionado, String tipoBusqueda) {
 
-        super("Salida de productos");
+        super("Entrada de productos");
         setSize(375, 667);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -89,7 +89,7 @@ public class VentanaEntradaProducto extends JFrame  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarCantidad();
-                gestorProductos.salidaStock(cantidad, usuarioActual, productoSeleccionado);
+                gestorProductos.entradaStock(cantidad, usuarioActual, productoSeleccionado);
             }
         });
         btnVolver.addActionListener(new ActionListener() {
