@@ -3,7 +3,7 @@ package guis;
 import datos.GestorInventario;
 import modelo.Usuario;
 import datos.GestorProductos;
-
+import datos.GestorHistorial;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,6 +17,8 @@ public class VentanaEditarProducto extends JFrame {
     private GestorProductos gestorProductos;
     private Usuario usuarioActual;
 
+    private GestorHistorial gestorHistorial;
+
     public VentanaEditarProducto(Usuario usuarioActual, String productoSeleccionado) {
         super("Editar Producto");
         setSize(375, 667);
@@ -24,7 +26,7 @@ public class VentanaEditarProducto extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         gestorProductos = new GestorProductos();
-
+        gestorHistorial = new GestorHistorial();
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
@@ -107,7 +109,7 @@ public class VentanaEditarProducto extends JFrame {
                     double precio = Double.parseDouble(precioEditar.getText());
 
                     gestorProductos.modificarProducto(productoSeleccionado, nombre, stock, precio, usuarioActual);
-
+                    gestorHistorial.registrarModificacion(usuarioActual, productoSeleccionado, nombre);
                     dispose();
                     JOptionPane.showMessageDialog(null, "Producto modificado con éxito", "Exito", JOptionPane.INFORMATION_MESSAGE);
                 } catch (NumberFormatException ex) {

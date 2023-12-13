@@ -43,7 +43,8 @@ public class GestorHistorial {
         String rutaCsv = usuarioActual.getNombre() + "_historial.csv";
 
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaCsv, true))){
-            escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + ", Modificación, " + productoAnterior + ", " + productoNuevo + "\n");
+            escritor.write(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+                    + ", Modificación, " + productoAnterior + ", " + productoNuevo + "\n");
             escritor.flush();
         } catch (IOException e){
             e.printStackTrace();
