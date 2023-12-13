@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4085c75e-79f0-4f1a-91ab-6e93db2b4c1b" name="Changes" comment="final">
+      <change afterPath="$PROJECT_DIR$/nombreUsuario_historial.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nombreUsuario_inventario.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nombre_historial.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nombre_inventario.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_historial.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UsuarioMostrar_inventario.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/registro.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorInventario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datos/GestorProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaGenerar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guis/VentanaOpcionesBarras.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702353719010</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="final">
+      <option name="closed" value="true" />
+      <created>1702420963959</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702420963959</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">

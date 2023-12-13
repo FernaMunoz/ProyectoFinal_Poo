@@ -34,7 +34,8 @@ public class GestorInventario {
         modeloTabla.addColumn("stock");
         modeloTabla.addColumn("precio");
 
-        try (BufferedReader br = new BufferedReader(new FileReader(nombre + "_inventario.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(nombre
+                + "_inventario.csv"))) {
             String linea;
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(",");

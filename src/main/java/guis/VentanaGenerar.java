@@ -95,8 +95,6 @@ public class VentanaGenerar extends JFrame {
 
                     CodigoBarra codigoBarraGenerator = new CodigoBarra();
                     CodigoBarra.CodigoBarraInfo codigoBarraInfo = codigoBarraGenerator.generarCodigoBarra(usuarioActual, productoSeleccionado);
-
-                    gestorProductos.actualizarCSV(usuarioActual, productoSeleccionado);
                     GestorHistorial gestorHistorial = new GestorHistorial();
                     gestorHistorial.registrarGeneracionCodigo(usuarioActual, productoSeleccionado);
 
@@ -114,7 +112,8 @@ public class VentanaGenerar extends JFrame {
                             JOptionPane.INFORMATION_MESSAGE);
                 }
             } else {
-                JOptionPane.showMessageDialog(this, "Producto no encontrado: " + productoSeleccionadoNombre, "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Producto no encontrado: " +
+                        productoSeleccionadoNombre, "Error", JOptionPane.ERROR_MESSAGE);
             }
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);

@@ -87,9 +87,14 @@ public class GestorProductos {
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual + cantidadStock;
                     if (partes.length == 5) {
-                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\",\"" + partes[4].replace("\"", "").trim() + "\"");
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\""
+                                + partes[2].replace("\"", "").trim() + "\",\""
+                                + partes[3].replace("\"", "").trim() + "\",\""
+                                + partes[4].replace("\"", "").trim() + "\"");
                     } else {
-                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\"");
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\""
+                                + partes[2].replace("\"", "").trim() + "\",\""
+                                + partes[3].replace("\"", "").trim() + "\"");
                     }
                 } else {
                     lineas.add(linea);
@@ -116,9 +121,14 @@ public class GestorProductos {
                 if (nombreProducto.equals(productoSeleccionado)) {
                     int nuevoStock = stockActual - cantidadStock;
                     if (partes.length == 5) {
-                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\",\"" + partes[4].replace("\"", "").trim() + "\"");
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\""
+                                + partes[2].replace("\"", "").trim() + "\",\""
+                                + partes[3].replace("\"", "").trim() + "\",\""
+                                + partes[4].replace("\"", "").trim() + "\"");
                     } else {
-                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\"" + partes[2].replace("\"", "").trim() + "\",\"" + partes[3].replace("\"", "").trim() + "\"");
+                        lineas.add("\"" + nombreProducto + "\",\"" + nuevoStock + "\",\""
+                                + partes[2].replace("\"", "").trim() + "\",\""
+                                + partes[3].replace("\"", "").trim() + "\"");
                     }
                 } else {
                     lineas.add(linea);
@@ -142,7 +152,8 @@ public class GestorProductos {
                     String nombreProducto = partes[0].replace("\"", "");
                     String codigoBarra = partes[4].replace("\"", "");
 
-                    if (nombreProducto.equals(producto.getNombre()) && codigoBarra != null && !codigoBarra.isEmpty() && !codigoBarra.equals("no hay código de barras asignado")) {
+                    if (nombreProducto.equals(producto.getNombre()) && codigoBarra != null && !codigoBarra.isEmpty()
+                            && !codigoBarra.equals("no hay código de barras asignado")) {
                         return true;
                     }
                 }
@@ -174,7 +185,8 @@ public class GestorProductos {
 
                 if (nombreProducto.equals(producto.getNombre())) {
                     if (codigoBarra == null || codigoBarra.isEmpty() || codigoBarra.equals("no hay código de barras asignado")) {
-                        lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio() + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
+                        lineas.add("\"" + producto.getNombre() + "\",\"" + producto.getStock() + "\",\"" + producto.getPrecio()
+                                + "\",\"" + producto.getImagen() + "\",\"" + producto.getCodigoBarra() + "\"");
                     } else {
                         lineas.add(linea);
                     }

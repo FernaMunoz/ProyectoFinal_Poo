@@ -75,8 +75,8 @@ public class VentanaOpcionesBarras extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
-                String nombreProducto = (String) label.getText();
-                new VentanaSalidaProducto(usuarioActual, nombreProducto);
+                String nombreProductoSinComillas = nombreProducto.replace("\"", "");
+                new VentanaSalidaProducto(usuarioActual, nombreProductoSinComillas);
             }
         });
 
@@ -84,8 +84,8 @@ public class VentanaOpcionesBarras extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 dispose();
-                String nombreProducto = (String) label.getText();
-                new VentanaEntradaProducto(usuarioActual, nombreProducto);
+                String nombreProductoSinComillas = nombreProducto.replace("\"", "");
+                new VentanaEntradaProducto(usuarioActual, nombreProductoSinComillas);
             }
         });
 
